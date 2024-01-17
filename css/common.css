@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+* {font-family: "Noto Sans KR", sans-serif; padding-bottom: 2px;}
+
+/* 홈 페이지 전체 레이아웃 지정 */
+body
+{
+    margin: auto 0;
+}
+
+#nav
+{
+    position: fixed;
+    display: flex;
+    padding-top: 50px;
+    margin: auto 0;
+    border-right : solid 2px #ddd;
+}

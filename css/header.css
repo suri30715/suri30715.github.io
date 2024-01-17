@@ -1,0 +1,31 @@
+/* header 레이아웃 조정*/
+#wrapper-header
+{
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    border-bottom: 2px solid green;
+    background: rgb(187, 238, 187);
+    z-index: 1;
+}
+
+/* menu-img의 label용 체크 박스 없애기 */
+#menu-icon-checkbox
+{
+    display: none;
+}
+
+/* 메뉴 아이콘 정렬 */
+#menu-icon
+{
+    text-align: right;
+    cursor: pointer;
+
+}
+
+/* 메뉴 아이콘 이미지 width, margin 조정 */
+#menu-img
+{
+    margin: 9px;
+    width: 30px;
+}
