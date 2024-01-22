@@ -1,7 +1,14 @@
+// function init()
+// {
+//     $(".header").load("../html/header.html");
+//     $(".leftSide").load("../html/nav.html");
+// }
+
+// init();
+
 function init()
 {
-    $("header").load("../html/header.html");
-    $("#nav").load("../html/menu.html");
+    $(".sidebar").load("../html/nav.html");
 }
 
 init();

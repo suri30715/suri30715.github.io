@@ -1,0 +1,19 @@
+#wrapper-nav
+{
+    left: 0;
+    padding: 10px;
+    padding-bottom: 5000px;
+    position: fixed;
+    background-color: #435749;
+}
+
+#nav div
+{
+    cursor: pointer;
+}
+
+.title
+{
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}

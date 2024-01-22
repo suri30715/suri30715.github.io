@@ -1,0 +1,24 @@
+/* 홈 페이지 전체 레이아웃 지정 */
+body
+{
+  margin: 0px;
+}
+
+.layout {
+  display: grid;
+  grid:
+    "sidebar body" 1fr
+    / 15% auto;
+  gap: 8px
+}
+  
+.sidebar 
+{ 
+  grid-area: sidebar; 
+  border-right: 2px solid #ddd;
+}
+
+.body 
+{ 
+  grid-area: body; 
+}
