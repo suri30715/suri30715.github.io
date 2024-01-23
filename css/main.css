@@ -6,16 +6,14 @@ body
 
 .layout {
   display: grid;
-  grid:
-    "sidebar body" 1fr
-    / 15% auto;
+  grid:"sidebar body" 15% / 75% auto;
   gap: 8px
 }
   
 .sidebar 
 { 
   grid-area: sidebar; 
-  border-right: 2px solid #ddd;
+  background-color: #1d201e;
 }
 
 .body 

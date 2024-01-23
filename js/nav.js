@@ -35,6 +35,10 @@ function init()
     if(document.getElementById("cs"))
     {
         document.getElementById("cs").addEventListener("click", event=>{window.location.href="../html/cs.html"})
+    }
+    if(document.getElementById("goMain"))
+    {
+        document.getElementById("goMain").addEventListener("click", event=>{window.location.href="../html/main.html"})
     }   
 }
 
