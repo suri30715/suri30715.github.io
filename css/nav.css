@@ -13,6 +13,14 @@
     font-size: 15px;
     font-weight: bold;
     color: #3f3d3d;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 17px;
+}
+
+.profile > p
+{
+    line-height: 17px;
 }
 
 .title-wrapper
