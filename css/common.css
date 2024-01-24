@@ -1,3 +1,4 @@
+/* 폰트 임포트 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 * 
@@ -7,6 +8,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
+/* 전체 레이아웃 지정 */
+.layout
+{
+  display:flex;
+}
+
+.sidebar
+{
+    position: fixed;
+}
+
+.body
+{
+    padding: 100px 100px 100px 300px;
+}
+
+/* 글자 크기 지정 */
+
+h1
+{
+    font-size: 30px;
+}
+
+h2
+{
+    font-size: 25px;
+}
+
+p
+{
+    font-weight: normal;
+}
+
+a
+{
+    color:tomato;
+    text-decoration-line: none;
+}
 

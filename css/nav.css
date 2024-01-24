@@ -1,10 +1,7 @@
 #wrapper-nav
 {
-    /* left: 0; */
-    padding: 10px;
-    /*밑에 공간 남아서 그냥 임의로 많이 늘렸음*/
-    padding-bottom: 5000px;
-    background-color: #1d201e;
+    padding: 10px 10px 100px 10px;
+    border-right: 2px solid #ddd;
 }
 
 .title
@@ -18,7 +15,7 @@
 {
     cursor: pointer;
     font-size: 0.6em;
-    color: #ddd;
+    color: #3f3d3d;
     font-weight: bold;
     line-height: 30px;
 }
