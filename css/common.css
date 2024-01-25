@@ -103,6 +103,13 @@
     {
         color: lightseagreen;
     }
+
+    figcaption
+    {
+        font-weight: lighter;
+        font-size: 5px;
+        text-align: center;
+    }
 }
 
 /* 폭: 1000~무한px */
@@ -176,7 +183,7 @@
     img
     {
         width: 100%;
-        padding: 10px 0px 10px 0px;
+        padding: 10px 0px 0px 0px;
         align-items: center;
     }
     
@@ -184,5 +191,12 @@
     .number
     {
         color: lightseagreen;
+    }
+
+    figcaption
+    {
+        font-weight: lighter;
+        font-size: 10px;
+        text-align: center;
     }
 }

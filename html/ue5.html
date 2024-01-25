@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자료실</title>
     <link rel = "stylesheet" href = "../css/common.css">
-    <link rel = "stylesheet" href = "../css/nav.css">
 </head>
 <body>
     <section class="layout">
@@ -16,7 +15,7 @@
                 <h1>Unreal engine5 Portfolio</h1><br>
                 <p>언리얼 엔진5 포트폴리오 입니다. <br>
                     제작 기간: 23.03.03 ~ 23.03.19<br>
-                    <a href = https://github.com/dury2011/ue5portfolio>&#128073; Github 링크(이전 중)</a><br><br>
+                    <a href = https://github.com/dury2011/ue5portfolio  target="_blank" rel="noopener noreferrer">&#128073; Github 링크(이전 중)</a><br><br>
                     <p align = "middle"><iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/FaxgvJg4JC4?si=5H44JMKO46GG0FtH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
                 </p>
             </div>
@@ -28,9 +27,11 @@
                 <p> <span class = "number">1.</span> 우선 더미의 CapsuleComponent를 무시하도록 콜리전 프리셋을 커스텀으로 설정하였습니다.<br><br>
                     <span class = "number">2.</span> 더미의 Physics Asset의 각 부위에 Physics Material을 오버라이드, <br> 
                     CProjectile의 BeginOverlap함수의 SweepResult 파라미터를 통해 이름을 비교하여 <br>
-                    더미의 각 부위(머리, 몸, 다리)별 다른 데미지가 적용되도록 구현하였습니다. <br><br>
+                    더미의 각 부위(머리, 몸, 다리)별 다른 데미지가 적용되도록 구현하였습니다. <br>
+                    <figure><img src = "../img/ue53.png"><figcaption>(코드)CProjectile의 BeginOverlap()함수에<br>
+                        Physics Material의 String에 따라 다른 데미지가 적용되도록 함</figcaption></figure><br>
                     <span class = "number">3.</span> 결과(이미지) &#128071;<br>
-                    <img src = "../img/ue51.png">
+                    <figure><img src = "../img/ue51.png"><figcaption>위 코드에 의한 결과</figcaption></figcaptionL></figure>
                 </p>
             </div>
         </div>
