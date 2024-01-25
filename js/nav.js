@@ -19,6 +19,10 @@ function init()
     if(document.getElementById("c++"))
     {
         document.getElementById("c++").addEventListener("click", event=>{window.location.href="../html/c++.html"})
+    }
+    if(document.getElementById("csharp"))
+    {
+        document.getElementById("csharp").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
     }   
     if(document.getElementById("d&a"))
     {
@@ -36,10 +40,22 @@ function init()
     {
         document.getElementById("cs").addEventListener("click", event=>{window.location.href="../html/cs.html"})
     }
+    if(document.getElementById("js"))
+    {
+        document.getElementById("js").addEventListener("click", event=>{window.location.href="../html/js.html"})
+    }
+    if(document.getElementById("css"))
+    {
+        document.getElementById("css").addEventListener("click", event=>{window.location.href="../html/css.html"})
+    }
+    if(document.getElementById("html"))
+    {
+        document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/html.html"})
+    }
     if(document.getElementById("goMain"))
     {
         document.getElementById("goMain").addEventListener("click", event=>{window.location.href="../html/main.html"})
-    }   
-}
+    }
+}   
 
 init();

@@ -14,67 +14,175 @@
     font-weight: bold;
 }
 
-/* 전체 레이아웃 지정 */
-.layout
+/* https://codingbroker.tistory.com/66 */
+*::-webkit-scrollbar
 {
-    margin: auto 0;
-    display: flex;
+    width:5px;
 }
 
-.sidebar
+*::-webkit-scrollbar-thumb
 {
-    position: fixed;
+    background-color:#295792;
+    border-radius: 10px;
 }
 
-.body
+*::-webkit-scrollbar-track
 {
-    padding: 100px 250px 100px 450px;
+    background-color:#a9c5ea;
 }
 
-/* 폰트 지정 */
-h1
-{
-    font-size: 50px;
-    font-weight: bolder;
-    padding-bottom: 50px;
+/* 폭: 0~1000px */
+@media only screen and (max-width:1000px)
+{    
+    /* 전체 레이아웃 지정 */
+    .layout
+    {
+        display: grid;
+        grid-template-columns: repeat(64, 1fr);
+    }
+    
+    .header
+    {
+        display: block;
+    }
+
+    .sidebar
+    {
+        display: none;
+    }
+
+    .body
+    {
+        grid-column: 3/62;
+    }
+    
+    /* 폰트 지정 */
+    h1
+    {
+        font-size: 25px;
+        font-weight: bolder;
+        padding-bottom: 20px;
+    }
+    
+    h2
+    {
+        font-size: 15px;
+        font-weight: bolder;
+        padding-bottom: 10px;
+    }
+    
+    p
+    {
+        font-weight: normal;
+        line-height: 22px;
+    }
+    
+    a
+    {
+        color:tomato;
+        text-decoration-line: none;
+    }
+    
+    /* 내용 박스 지정 */
+    .content
+    {
+        border-bottom: 2px solid #ddd;
+        padding: 5px 10px 5px 10px;
+    }
+    
+    /* 이미지 크기 지정 */
+    img
+    {
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+        align-items: center;
+    }
+    
+    /* 내용 순서 리스트 숫자 지정 */
+    .number
+    {
+        color: lightseagreen;
+    }
 }
 
-h2
+/* 폭: 1000~무한px */
+@media not screen and (max-width:1000px)
 {
-    font-size: 35px;
-    font-weight: bolder;
-    padding-bottom: 30px;
-}
-
-p
-{
-    font-weight: normal;
-    line-height: 32px;
-}
-
-a
-{
-    color:tomato;
-    text-decoration-line: none;
-}
-
-/* 내용 박스 지정 */
-.content
-{
-    border-bottom: 3px solid #ddd;
-    padding: 70px 100px 70px 100px;
-}
-
-/* 이미지 크기 지정 */
-img
-{
-    width: 95%;
-    padding: 10px 0px 10px 0px;
-    align-items: center;
-}
-
-/* 내용 순서 리스트 숫자 지정 */
-.number
-{
-    color: lightseagreen;
+    /* 전체 레이아웃 지정 */
+    .layout
+    {
+        display: grid;
+        grid-template-columns: repeat(32, 1fr);
+    }
+    
+    .header
+    {
+        display: none;
+    }
+    
+    .sidebar
+    {
+        position:fixed;
+        background-color: #6991c7;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+        grid-column: 1/12;
+        /* https://rgy0409.tistory.com/4997 */
+        overflow-y: auto;
+        top: 0;
+        height: 100%;
+    }
+    
+    .body
+    {
+        /* padding: 100px 250px 100px 450px; */
+        grid-column: 10/31;
+    }
+    
+    /* 폰트 지정 */
+    h1
+    {
+        font-size: 50px;
+        font-weight: bolder;
+        padding-bottom: 50px;
+    }
+    
+    h2
+    {
+        font-size: 35px;
+        font-weight: bolder;
+        padding-bottom: 30px;
+    }
+    
+    p
+    {
+        font-weight: normal;
+        line-height: 32px;
+    }
+    
+    a
+    {
+        color:tomato;
+        text-decoration-line: none;
+    }
+    
+    /* 내용 박스 지정 */
+    .content
+    {
+        border-bottom: 3px solid #ddd;
+        padding: 70px 100px 70px 100px;
+    }
+    
+    /* 이미지 크기 지정 */
+    img
+    {
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+        align-items: center;
+    }
+    
+    /* 내용 순서 리스트 숫자 지정 */
+    .number
+    {
+        color: lightseagreen;
+    }
 }
