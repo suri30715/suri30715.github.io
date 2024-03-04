@@ -221,7 +221,12 @@
     
     a
     {
-        color:tomato;
+        color:rgb(79, 59, 227);
         text-decoration-line: none;
+    }
+
+    img
+    {
+        border-radius: 8px;
     }
 }

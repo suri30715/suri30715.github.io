@@ -20,11 +20,11 @@ function setCardItem(cardItemId, imgSrc, paragraph, link)
     //$(".img").css("background-image" , imgSrc);
 }
 
-
 init();
 
 // test
-setCardItem(1, "../img/ue53.png", "UE4포트폴리오", "../html/ue4.html");
-setCardItem(2, "../img/ue53.png", "UE5포트폴리오", "../html/ue5.html");
-setCardItem(3, "../img/sg1.png", "SG스텝스 홈페이지", "../html/sg.html");
-setCardItem(4, "../img/ue53.png", "C++", "../html/ue5.html");
+setCardItem(1, "../img/ue53.png", "🔗 UE4포트폴리오", "../html/ue4.html");
+setCardItem(2, "../img/ue53.png", "🔗 UE5포트폴리오", "../html/ue5.html");
+setCardItem(3, "../img/sg1.png", "🔗 SG스텝스 운영페이지", "../html/sg.html");
+setCardItem(4, "../img/ue53.png", "🔗 C++ 정리", "../html/c++.html");
+setCardItem(5, "../img/ue53.png", "🔗 자료구조&알고리즘 정리", "../html/d&a.html");

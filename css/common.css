@@ -14,6 +14,11 @@
     font-weight: bold;
 }
 
+.colorscripter-code
+{
+    font-weight: lighter;
+}
+
 /* https://codingbroker.tistory.com/66 */
 *::-webkit-scrollbar
 {
@@ -146,24 +151,60 @@
     }
     
     /* 폰트 지정 */
+    body
+    {
+        font-size: 17px;
+    }
+
     h1
     {
-        font-size: 50px;
+        font-size: 2em;
         font-weight: bolder;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     
     h2
     {
-        font-size: 35px;
+        font-size: 1.8em;
         font-weight: bolder;
         padding-bottom: 30px;
+        color:#30b565;
+    }
+    
+    h3
+    {
+        font-size: 1.6em;
+        padding-bottom: 30px;
+    }
+
+    h4
+    {
+        font-size: 1.4em;
+        padding-bottom: 15px;
+    }
+
+    h5
+    {
+        font-size: 1.2em;
+        padding-bottom: 15px;
+    }
+
+    h5:last-child
+    {
+        padding-bottom: 30px;
+    }
+
+    h6
+    {
+        font-size: 1em;
+        padding-bottom: 5px;
     }
     
     p
     {
         font-weight: normal;
-        line-height: 32px;
+        line-height: 27.5px;
+        padding-bottom: 20px;
     }
     
     a
@@ -173,12 +214,38 @@
     }
     
     /* 내용 박스 지정 */
-    .content
+    .rights
     {
-        border-bottom: 3px solid #ddd;
-        padding: 70px 100px 70px 100px;
+        margin: 30px 0px 30px 0px;
+        border: 2px solid tomato;
+        border-radius: 8px;
+        padding: 10px;
+        color: tomato;
     }
-    
+
+    .content1
+    {
+        border: 5px solid #295792;
+        border-radius: 8px;
+        padding: 60px 55px 60px 55px;
+    }
+
+    .content2
+    {
+        border: 3px solid #6991c7;
+        border-radius: 8px;
+        padding : 25px;
+        margin-bottom: 15px;
+    }
+
+    .content3
+    {
+        border: 3px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
     /* 이미지 크기 지정 */
     img
     {
