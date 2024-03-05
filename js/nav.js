@@ -20,6 +20,10 @@ function init()
     {
         document.getElementById("c++").addEventListener("click", event=>{window.location.href="../html/c++.html"})
     }
+    if(document.getElementById("stl"))
+    {
+        document.getElementById("stl").addEventListener("click", event=>{window.location.href="../html/stl.html"})
+    }
     if(document.getElementById("csharp"))
     {
         document.getElementById("csharp").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
