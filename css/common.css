@@ -117,6 +117,12 @@
         color:tomato;
         text-decoration-line: none;
     }
+
+    /*내용 지정*/
+    .emphasis
+    {
+        color:#30b565;
+    }
     
     /* 내용 박스 지정 */
     .rights
@@ -268,7 +274,13 @@
         color:tomato;
         text-decoration-line: none;
     }
-    
+
+    /*내용 지정*/
+    .emphasis
+    {
+        color:#30b565;
+    }
+
     /* 내용 박스 지정 */
     .rights
     {
