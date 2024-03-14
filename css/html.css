@@ -1,0 +1,32 @@
+/* .tag-explain1 태그 분류 
+/* .tag-explain2 빈 태그 여부 
+ * .tag-explain3 디폴트 display (block인지 inline인지 
+ */
+.tag-explain1
+{
+    border: 2px solid tomato;
+    border-radius: 8px;
+    padding: 2px;
+    background-color: tomato;
+    color:white
+    
+}
+
+.list-content
+{
+    display: none;
+    border: 2px solid mediumseagreen;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+li:hover > .list-content
+{
+    display:block;
+}

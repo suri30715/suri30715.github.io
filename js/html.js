@@ -1,0 +1,486 @@
+function setTagList(getListId, setTagName, setContent1Id, setContent2Id, setContents1, setContents2)
+{
+    $('#' + getListId).append
+    (
+        '<li>' + 
+        '&lt;' + setTagName + '&gt;' +
+        '<div class = "list-content">'+
+            '<h6>- 설명</h6>' +
+                '<p' + " " + 'id = ' + setContent1Id + '></p>' +
+            '<h6>- 속성, 속성값</h6>' +
+                '<p' + " " + 'id = ' + setContent2Id + '></p>' +
+        '</div></li>'
+    );
+
+    for(var i = 0; i < setContents1.length; i++) 
+    {
+        $('#' + setContent1Id).append
+        (
+            "· " + setContents1[i] + '<br>'
+        );
+    }
+
+    for(var i = 0; i < setContents2.length; i++) 
+    {
+        $('#' + setContent2Id).append
+        (
+            "· " + setContents2[i] + '<br>'
+        );
+    }
+}
+
+setTagList
+(
+    "list1", 
+    "!DOCTYPE html", 
+    "doctypehtml1", 
+    "doctypehtml2", 
+    [
+        "마크업 언어용 Document Type Definition 태그", 
+        "웹 브라우저가 이 문서를 html로 읽어들임"
+    ],
+    []
+)
+setTagList
+(
+    "list1", 
+    "html", 
+    "html1", 
+    "html2", 
+    [
+        "모든 태그의 루트(root)",
+        "즉, 최상위 태그이다. "
+    ],
+    []
+)
+setTagList
+(
+    "list1",
+    "head",
+    "head1",
+    "head2",
+    [
+
+    ],
+    [
+
+    ]
+)
+setTagList
+(
+    "list1",
+    "body",
+    "body1",
+    "body2",
+    [
+        "웹 문서의 몸체"
+    ],
+    [
+
+    ]
+)
+setTagList
+(
+    "list2",
+    "h1 ~ 6",
+    "h1",
+    "h2",
+    ["목차를 만들 경우 유용"],
+    []
+)
+setTagList
+(
+    "list5",
+    "header",
+    "header1",
+    "header2",
+    [],
+    []
+)
+setTagList
+(
+    "list5",
+    "section",
+    "section1",
+    "section2",
+    [],
+    []
+)
+setTagList
+(
+    "list5",
+    "footer",
+    "footer1",
+    "footer2",
+    [],
+    []
+)
+setTagList
+(
+    "list5",
+    "main",
+    "main1",
+    "main2",
+    [],
+    []
+)
+setTagList
+(
+    "list5",
+    "article",
+    "article1",
+    "article2",
+    [],
+    []
+)
+setTagList
+(
+    "list5",
+    "nav",
+    "nav1",
+    "nav2",
+    [],
+    []
+)
+setTagList
+(
+    "list5",
+    "aside",
+    "aside1",
+    "aside2",
+    [],
+    []
+)
+setTagList
+(
+    "list2",
+    "p",
+    "p1",
+    "p2",
+    [],
+    []
+)
+setTagList
+(
+    "list2",
+    "br",
+    "br1",
+    "br2",
+    [
+        "글을 입력하고 끝에 <br>을 적으면 다음 출력의 줄을 바꿈",
+        "쉽게 말해 워드에서 글을 타이핑하고 Enter키를 누르는 것과 같음. ",
+        "break 약자"
+    ],
+    []
+)
+setTagList
+(
+    "list2",
+    "hr",
+    "hr1",
+    "hr2",
+    [
+        "검은 실선을 그음. ", 
+        "문단을 나눌 때 더 가시적으로 보이게 함. ", 
+        "horizontal rule 약자", 
+        "이렇게 됨 ↓<hr>"
+    ],
+    []
+)
+setTagList
+(
+    "list2",
+    "b",
+    "b1",
+    "b2",
+    ["문자를 굵게 함", "HTML4.01은 비권장 태그였으나 HTML5부터 strong보다 약한 강조의 의미인 태그가 됨. "],
+    []
+)
+setTagList
+(
+    "list2",
+    "strong",
+    "strong1",
+    "strong2",
+    ["문자를 굵게 함"],
+    []
+)
+setTagList
+(
+    "list2",
+    "i",
+    "i1",
+    "i2",
+    ["문자를 기울임", "idomatic의 약자"],
+    []
+)
+setTagList
+(
+    "list2",
+    "em",
+    "em1",
+    "em2",
+    ["문자를 기울임", "emphasis의 약자"],
+    []
+)
+setTagList
+(
+    "list2",
+    "u",
+    "u1",
+    "u2",
+    ["문자 밑에 밑줄", "underline의 약자", "u태그 보다는 CSS의 text-decoration을 사용하는 것이 좋다. "],
+    []
+)
+setTagList
+(
+    "list2",
+    "s",
+    "s1",
+    "s2",
+    ["취소선", "strikethrough의 약자", "문자 중간에 검은 선을 그음", "<s>이렇게 됨</s>"],
+    []
+)
+setTagList
+(
+    "list2",
+    "blockquote",
+    "blockquote1",
+    "blockquote2",
+    ["인용구 삽입 시 사용","이렇게 됨 <blockquote>인용구입니다. </blockquote>"],
+    []
+)
+setTagList
+(
+    "list2",
+    "textarea",
+    "textarea1",
+    "textarea2",
+    [],
+    []
+)
+setTagList
+(
+    "list3",
+    "ul",
+    "ul1",
+    "ul2",
+    ["순서가 정해지지 않은 목록 작성 시 사용", "unordered list의 약자", "<li>태그의 부모가 되야함. "],
+    []
+)
+setTagList
+(
+    "list3",
+    "ol",
+    "ol1",
+    "ol2",
+    ["순서가 정해진 목록 작성 시 사용", "ordered list의 약자", "<li>태그의 부모가 되야함. "],
+    []
+)
+setTagList
+(
+    "list3",
+    "li",
+    "li1",
+    "li2",
+    [],
+    []
+)
+setTagList
+(
+    "list4",
+    "table",
+    "table1",
+    "table2",
+    [],
+    []
+)
+setTagList
+(
+    "list4",
+    "tr",
+    "tr1",
+    "tr2",
+    [],
+    []
+)
+setTagList
+(
+    "list4",
+    "td",
+    "td1",
+    "td2",
+    [],
+    []
+)
+setTagList
+(
+    "list4",
+    "th",
+    "th1",
+    "th2",
+    [],
+    []
+)
+setTagList
+(
+    "list6",
+    "img",
+    "img1",
+    "img2",
+    [],
+    []
+)
+setTagList
+(
+    "list6",
+    "a",
+    "a1",
+    "a2",
+    [],
+    []
+)
+setTagList
+(
+    "list6",
+    "audio",
+    "audio1",
+    "audio2",
+    [],
+    []
+)
+setTagList
+(
+    "list6",
+    "video",
+    "video1",
+    "video2",
+    [],
+    []
+)
+setTagList
+(
+    "list6",
+    "canvas",
+    "canvas1",
+    "canvas2",
+    [],
+    []
+)
+setTagList
+(
+    "list7",
+    "output",
+    "output1",
+    "output2",
+    [],
+    []
+)
+setTagList
+(
+    "list7",
+    "datalist",
+    "datalist1",
+    "datalist2",
+    [],
+    []
+)
+setTagList
+(
+    "list7",
+    "datalist",
+    "datalist1",
+    "datalist2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "div",
+    "div1",
+    "div2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "span",
+    "span1",
+    "span2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "details",
+    "details1",
+    "details2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "embed",
+    "embed1",
+    "embed2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "object",
+    "object1",
+    "object2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "figure",
+    "figure1",
+    "figure2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "figurecaption",
+    "figurecaption1",
+    "figurecaption2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "iframe",
+    "iframe1",
+    "iframe2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "time",
+    "time1",
+    "time2",
+    [],
+    []
+)
+setTagList
+(
+    "listE",
+    "mark",
+    "mark1",
+    "mark2",
+    [],
+    []
+)
