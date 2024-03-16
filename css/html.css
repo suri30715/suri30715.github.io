@@ -1,6 +1,6 @@
 /* .tag-explain1 태그 분류 
 /* .tag-explain2 빈 태그 여부 
- * .tag-explain3 디폴트 display (block인지 inline인지 
+ * .tag-explain3 요소 종류2가지 블록 요소, 인라인 요소
  */
 .tag-explain1
 {
@@ -8,11 +8,17 @@
     border-radius: 8px;
     padding: 2px;
     background-color: tomato;
-    color:white
-    
+    color:white;
+    margin-bottom: 2px;
 }
 
-.list-content
+.tag-content
+{
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* .list-content
 {
     display: none;
     border: 2px solid mediumseagreen;
@@ -29,4 +35,4 @@ li
 li:hover > .list-content
 {
     display:block;
-}
+} */
