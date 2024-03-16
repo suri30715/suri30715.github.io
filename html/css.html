@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자료실</title>
     <link rel = "stylesheet" href = "../css/common.css">
+    <link rel = "stylesheet" href = "../css/css.css">
 </head>
 <body>
     <section class="layout">
@@ -15,6 +16,63 @@
                 만약 내용상 오류가 있어 수정을 원한다면 게시판에 문의부탁드립니다. (구현 예정)
             </div>
             <h1>CSS Reference</h1>
+            <div class = "content1">
+                <h2>CSS</h2>
+                <div class = "content2">
+                    <h3>CSS란? </h3>
+                    CSS의 스타일 형식↓
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">선택자&nbsp;</span>{<span style="color:#4be6fa">&nbsp;속성명1</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;속성값1</span><span style="color:#ff3399">;</span><span style="color:#4be6fa">&nbsp;속성명2</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;속성값2</span><span style="color:#ff3399">;</span><span style="color:#E083FF">&nbsp;</span>}</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    <p>
+                        · Cascading Style Sheet의 약자, Cascading즉, 절차적이다. <br>
+                        · 마크업이 실제 표시되는 방법을 기술하는 스타일 언어 <br>
+                        · HTML, XHTML에서 주로 사용, XML에서도 사용 가능, W3C표준이다. <br>
+                        · '{'는 선언 시작 '}' 는 선언 끝을 나타낸다.  <br>
+                        · 선택자에 해당하는 요소를 선언안에 정의된 스타일로 바꾼다. <br>
+                        · 웹 문서의 내용과 상관 없이 디자인만 다룸 <br>
+                        · 따라서 다양한 기기에 맞는 탄력적 디자인 적용이 가능하고, 디자인 적용이 훨씬 편리해짐 <br>
+                        · <span class = "emphasis">선택자의 종류: </span> <br>
+                        (앞에 아무것도 안 붙임)HTML요소 선택자, (앞에 #붙임)id 선택자, (앞에 .붙임)class선택자, group 선택자가 있다. <br> 
+                        <br>
+                        · <span class = "emphasis">CSS 적용법: </span><br>
+                        인라인 스타일: style 속성을 활용하여 태그에 직접 정의 스타일 편집이 번거로움<br>
+                        내부 스타일 시트: style 태그를 이용하여 head 태그 안에 정의<br>
+                        외부 스타일 시트: link 태그를 사용하여 head 태그 안에 정의, 외부의 스타일 시트 파일을 불러옴, 유지보수 편리<br>
+                        <br>
+                        · <span class = "emphasis">스타일 우선순위: </span><br>
+                        · <b>적용 범위에 따른</b> <br>
+                        1. !important(예: 속성: 속성값 important!의 형태)<br>
+                        2.인라인 스타일(태그의 style 속성을 사용)<br>
+                        3. id 스타일(선택자로 #id를 사용)<br> 
+                        4. 클래스 스타일(선택자로 .class를 사용)<br>
+                        5. 타입 스타일(선택자로 태그 이름 사용)<br>
+                        <br>
+                        · <b>작성 순서에 따른</b><br>
+                        · 만약 CSS스타일 내부에서 같은 속성을 사용했다면, 나중에 적은 것이 적용됨(절차적)<br>
+                        <br>
+                        · <b>중요도에 따른</b><br>
+                        1. 컴퓨터 사용자 스타일(예: 시각장애인용 고대비)<br>
+                        2. 웹 문서 제작자 스타일<br>
+                        3. 웹 브라우저 기본 스타일 <br>
+                        <br>
+                        · <span class = "emphasis">스타일 상속: </span><br>
+                        · 태그 상속 관계에 따라 부모 태그(포함 하는 쪽의 태그) to 자식 태그(포함 당하는 쪽의 태그)<br>
+                        · 스타일 상속이란, 자식 요소에 스타일을 따로 지정하지 않으면, 부모의 스타일이 자식 요소에게 그대로 전달된다. 
+                        <br>(예: body태그는 모든 요소의 부모 요소 이므로 body태그의 스타일은 모든 요소에 적용됨)
+                    </p>
+                </div>
+                <div class = "content2">
+                    <h3>속성</h3>
+                    <div class = "content3">
+                        <div class = "style-explain1">글꼴 관련</div>
+                        <h5>font-family: &lt;글꼴 이름&gt; | [&lt;글꼴 이름&gt;, &lt;글꼴 이름&gt;]</h5>
+                    </div>
+                    
+                    <p>
+                    
+                    </p>
+                </div>
+            </div>
+            </div>
         </div>
     </section>
 </body>
