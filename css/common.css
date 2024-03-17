@@ -123,6 +123,11 @@
     {
         color:#30b565;
     }
+
+    .keyword
+    {
+        color:firebrick;
+    }
     
     /* 내용 박스 지정 */
     .rights
@@ -281,6 +286,11 @@
         color:#30b565;
     }
 
+    .keyword
+    {
+        color:firebrick;
+    }
+    
     /* 내용 박스 지정 */
     .rights
     {
