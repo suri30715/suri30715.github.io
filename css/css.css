@@ -1,3 +1,4 @@
+/*🔗· <br> &lt; &gt;*/
 .style-explain1
 {
     color:white;
@@ -7,5 +8,32 @@
     margin-bottom: 2px;
     font-weight: normal;
     text-shadow: 5px, 5px, black;
-    line-height: 200%
+    line-height: 200%;
+}
+
+/*공동 태그 스타일*/
+.style-default, .style-must
+{
+    padding: 2px;
+    color: white;
+    border-radius: 5px;
+    font-weight:normal;
+}
+
+/*디폴트 속성값 태그 스타일*/
+.style-default
+{
+    background-color:blue;
+}
+
+/*필수 유형 태그 스타일*/
+.style-must
+{
+    background-color:crimson;
+}
+
+/*예시: border-style:groove, css.html line377*/
+.border-groove
+{
+    border: groove 20px;
 }
