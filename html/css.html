@@ -31,7 +31,7 @@
                         · 웹 문서의 내용과 상관 없이 디자인만 다룸 <br>
                         · 따라서 다양한 기기에 맞는 탄력적 디자인 적용이 가능하고, 디자인 적용이 훨씬 편리해짐 <br>
                         · <span class = "emphasis">선택자의 종류: </span> <br>
-                        (앞에 아무것도 안 붙임)HTML요소 선택자, (앞에 #붙임)id 선택자, (앞에 .붙임)class선택자, group 선택자가 있다. <br> 
+                        (앞에 아무것도 안 붙임)HTML요소 선택자(타입 선택자), (앞에 #붙임)id 선택자, (앞에 .붙임)class선택자, group 선택자가 있다. (여러 선택자를 ,로 묶어서 쓸 수 있음) <br> 
                         <br>
                         · <span class = "emphasis">CSS 적용법: </span><br>
                         인라인 스타일: style 속성을 활용하여 태그에 직접 정의 스타일 편집이 번거로움<br>
@@ -57,17 +57,80 @@
                         · <span class = "emphasis">스타일 상속: </span><br>
                         · 태그 상속 관계에 따라 부모 태그(포함 하는 쪽의 태그) to 자식 태그(포함 당하는 쪽의 태그)<br>
                         · 스타일 상속이란, 자식 요소에 스타일을 따로 지정하지 않으면, 부모의 스타일이 자식 요소에게 그대로 전달된다. <br>
-                        (예: body태그는 모든 요소의 부모 요소 이므로 body태그의 스타일은 모든 요소에 적용됨)
+                        (예: body태그는 모든 요소의 부모 요소 이므로 body태그의 스타일은 모든 요소에 적용됨) <br>
+                        · background-color와 background-img는 스타일 상속이 안됨. 
                     </p>
                 </div>
+                <!--🔗 · -->
                 <div class = "content2">
                     <h3>속성</h3>
+                    <p>
+                        · 기본형 표기 방식의 기호, W3C 표준규약에서 쓰니 숙지하자 <br>
+                        · 직접 스타일 시트 작성에 쓰는것이아닌 속성이 어떤 속성값을 사용하는지 볼 때 쓴다. <br>
+                        · |: 나열한 속성값중 하나가 반드시 그 속성의 속성값이 되어야한다. <br>         
+                        · 어떤 속성의 사용되는 속성값들을 전부 나열하여 보여줄 때 쓴다. 
+                    </p>
+                    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">font-varient:&nbsp;값1&nbsp;|&nbsp;값2&nbsp;|&nbsp;값3</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    <p>
+                        · 
+                    </p>
+                    <div class = "style-explain1">글꼴 관련</div>
                     <div class = "content3">
-                        <div class = "style-explain1">글꼴 관련</div>
                         <h5>font-family: &lt;글꼴 이름&gt; | [&lt;글꼴 이름&gt;, &lt;글꼴 이름&gt;]</h5>
+                        <p>
+                            · 글꼴이름 하나, 혹은 여러 개의 글꼴이름을 속성값으로 가진다. <br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>font-size: &lt;절대 크기&gt; | &lt;상대 크기&gt; | &lt;크기&gt; | &lt;백분율&gt;</h5>
+                        <p>
+                            · 글자 크기는 '절대 크기' | '상대 크기' | '크기' | '백분율' 중 한 가지를 가진다. <br>
+                            · 절대 크기: 웹 브라우저에서의 지정된 크기<br>
+                            · 상대 크기: 부모 요소 글자 크기 기준 상대 크기 <br>
+                            · 크기: 웹 브라우저와 상관 없이 직접 크기 지정 <br>
+                            · 백분율: 부모 요소 글자 크기 기준 백분율 크기<br>
+                            <br>
+                            · <span class = "emphasis">크기 지정</span><br>
+                            · <b>키워드 사용 글자 크기 지정 (잘 안씀)</b><br>
+                            · xx-small < x-small < small < medium < large < x-large < xx-large<br>
+                            <br>
+                            · <b>단위 사용 직접 지정</b><br>
+                            · 음수X(크기 이므로)<br>
+                            · em: 부모 요소의 글꼴의 대문자 M 너비(1em)기준 비율 (상대 크기)<br>
+                            · rem: root(&lt;html&gt;)에서 지정한 글자 크기(1rem)기준 지율 (상대 크기)<br>
+                            · ex: 사용 글꼴의 소문자 x 높이(1ex)기분 비율 (크기)<br>
+                            · px: 모니터의 1픽셀(1px)기준 비율 (크기)<br>
+                            · pt: 포인트, 일반 문서에서 많이 사용 (크기)<br>
+                            · % : 부모 요소 글자 크기 기준 백분율(%) (백분율)
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>font-style: normal | italic | oblique</h5>
+                        <p>
+                            · 글자 크기는 'normal', 'italic', 'oblique' 중 한 가지를 가진다. <br>
+                            · normal: 디폴트, 일반 형태<br>
+                            · italic: 이텔릭체 (주로 사용)<br>
+                            · oblique: 이텔릭체
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>font-weight: normal | bold | bolder | lighter | 100 | 200 | ... | 800 | 900</h5>
+                        <p>
+                            · normal: 디폴트, 보통<br>
+                            · bold: 굵게<br>
+                            · bolder: 원래보다 굵게<br>
+                            · lighter: 원래보다 가늘게<br>
+                            · 100 ~ 900: 400은 normal, 700은 bold에 해당함 숫자로 굵기를 세밀하게 조정 가능<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>@font-face { font-family: &lt;글꼴 이름&gt;;&nbsp;&nbsp;&nbsp;src: &lt;글꼴 파일&gt; [&lt;글꼴 파일&gt, &lt;글꼴 파일&gt, ... ]};</h5>
+                        <p>
+                            · <br>
+                        </p>
                     </div>
                     <p>
-                        
+
                     </p>
                 </div>
             </div>
