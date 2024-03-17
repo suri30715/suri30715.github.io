@@ -32,8 +32,31 @@
     background-color:crimson;
 }
 
-/*예시: border-style:groove, css.html line377*/
+/*예시용 스타일: border-style:groove, css.html line374 쯤*/
 .border-groove
 {
-    border: groove 20px;
+    border: groove 5cqmin;
+}
+
+/*예시용 스타일: border-style:inset; border-collapse:sperate css.html line376 쯤*/
+.border-inset > table
+{
+    border-collapse: seperate;
+    border: inset 5px; 
+}
+
+.border-outset > table
+{
+    border-collapse: sperate;
+    border: outset 5px;
+}
+
+.border-ridge
+{
+    border: ridge 50px;
+}
+
+span > a
+{
+    color:#30b565;
 }

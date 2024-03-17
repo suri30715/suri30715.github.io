@@ -174,7 +174,7 @@
                             <p>
                                 · 글자의 색 스타일<br>
                                 <br>
-                                · <span class = "emphasis" id = "dest-color"><색상>의 유형</span><br>
+                                · <span class = "emphasis" id = "dest-color"><색상> 유형</span><br>
                                 · <span class = "keyword">#RRGGBB</span>: 16진수 표현(0~9, a, b, c, d, e, f) 00~ff까지 RGB 표현 RGB자리 두수가 중복되면 한 수만 적어도 됨(예: #ddd)<br>
                                 · <span class = "keyword">hsl(숫자%, 숫자%, 숫자%), hsla(〃)</span>: 숫자는 백분율, 숫자 순서대로 hsl(hsla의 경우 hsla)CSS3부터 가능, hue(색상), saturation(채도), lightness(명도)의 축약형 hsla의 a는 alpha(불투명도)<br>
                                 · <span class = "keyword">rgb(숫자, 숫자, 숫자)와 rgba(〃)</span>: 숫자는 0(섞이지 않음) ~ 255(가득 섞임), 숫자 순서대로 RGB(rgba의 경우 rgba)를 의미<br>
@@ -298,7 +298,7 @@
                             · 이를 두줄로 둘 것인지 하나로 합칠 것인지 결정
                         </p>
                     </div>
-                    <div class = "style-explain1">박스 모델 관련</div>
+                    <div class = "style-explain1" id = "dest-box-model">박스 모델 관련</div>
                     <p>
                         · <span class = "keyword">박스 모델</span>: HTML의 요소는 박스형태로 되어있다. (요소 == 박스 모델)<br>
                         · 박스 모델은 4개의 박스가 겹쳐 있다. content ⊂ padding ⊂ border ⊂ margin 이렇게 포개져있다. <br>
@@ -364,7 +364,7 @@
                         <p>
                             · border(== 테두리)의 스타일<br>
                             <br>
-                            · <span class = "keyword">none</span>: <span class = "style-default">디폴트 속성값</span> 테두리가 안보이는 것이 아니라 테두리가 없는 것<br>
+                            · <span class = "keyword">none</span>: <span class = "style-default">디폴트 속성값</span> 테두리가 안보이는 것이 아니라, 아예 테두리가 없는 것 따라서 너비, 높이를 차지하지 않음. <br>
                             · <span class = "keyword">hidden</span>: 테두리 감춤<br>
                             · <span class = "keyword">solid</span>: 테두리 실선<br>
                             · <span class = "keyword">dotted</span>: 테두리 점(...)<br>
@@ -372,29 +372,217 @@
                             · <span class = "keyword">double</span>: 테두리 이중선 border-width속성으로 이중선 간격 조절<br>
                             · <span class = "keyword">groove</span>: 조각 테두리 같이 표현됨 (예: 아래 확인)<br>
                             <div class = "border-groove">border-style: groove;<br>border-width: 20px<br>입니다. </div><br>
-                            · <span class = "keyword">inset</span>: 표에서 border-collapse: sperate;: 전체 박스 테두리가 창에 박힌듯, collapse이면 groove와 같다. (예: 아래 확인)<br>
-                            · <span class = "keyword">outset</span>: <br>
-                            · <span class = "keyword">ridge</span>: <br>
+                            · <span class = "keyword">inset</span>: 표에서 border-collapse: sperate, collapse에 따라 다름. (collapse의 경우 groove와 같음. ) (예: 아래 확인)<br>
+                            <div>
+                                <button>클릭</button>
+                                <table class = "border-inset">
+                                <tr>
+                                  <th scope="col">1</td>
+                                  <th scope="col">2</td>
+                                  <th scope="col">3</td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>5</td>
+                                  <td>6</td>
+                                </tr>
+                                <tr>
+                                  <td>7</td>
+                                  <td>8</td>
+                                  <td>9</td>
+                                </tr>
+                              </table>
+                            </div>
+                            · <span class = "keyword">outset</span>: 표에서 border-collapse: sperate | collapse에 따라 다름. (collapse일 경우 ridge와 같음. )(예: 아래 확인)<br>
+                            <div>
+                                <button>클릭</button>
+                                    <div class = "border-outset">
+                                    <table>
+                                        <tr>
+                                            <th scope="col">1</td>
+                                            <th scope="col">2</td>
+                                            <th scope="col">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                        </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>8</td>
+                                            <td>9</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            · <span class = "keyword">ridge</span>: (예: 아래 확인)<br>
+                            <div class = "border-ridge">border-style: ridge; <br>border-width: 50px; <br>입니다. </div>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>border-width: <크기> | thin | medium | thick </h5>
+                        <p>
+                            · <크기> 유형 혹은 3가지 속성값 예약어를 사용하여 테두리 두깨를 지정<br>
+                            <br>    
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
+                            · <span class = "keyword">숫자px</span>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>border-color: <색상> ??</h5>
+                        <p>
+                            · 테두리 색상을 지정<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-color">🔗<색상> 유형</a></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>border-radius: <크기> | <백분율></h5>
+                        <p>
+                            · 테두리의 꼭짓점 4곳에 원을 내접한 뒤 꼭짓점 네 곳을 반지름 크기 만큼의 원의 형태로 둥글게 처리함<br>
+                            · border-top-left-radius, border-bottom-right-radius 등의 속성으로 각 꼭짓점마다 별개 지정도 가능<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
+                            · <span class = "keyword">숫자px</span><br>
+                            · <span class = "keyword">숫자em</span><br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<백분율> 유형</a></span><br>
+                            · <span class = "keyword">숫자%</span>: 현재 요소의 크기 기준 * %로 지정 (위 링크와는 또 다름 주의)
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>border</h5>
+                        <p>
+                            · 테두리 속성들을 여럿이 묶어 지정
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>margin: <크기> | <백분율> | auto</h5>
+                        <p>
+                            · margin의 크기지정<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
+                            · 숫자는 4개(시계방향 상, 우, 하, 좌), 3개(상, 좌우, 하), 2개(상하, 좌우), 1개(상하좌우)이다. <br>
+                            · <span class = "keyword">숫자px</span><br>
+                            · <span class = "keyword">숫자em</span><br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<백분율> 유형</a></span><br>
+                            · <span class = "keyword">숫자%</span>: 부모 요소의 크기 * %<br>
+                            <br>
+                            · <span class = "keyword">auto</span>: display의 속성값에 맞게 적절히 지정
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>padding</h5>
+                        <p>
+                            · content와 border 사이의 여백인 padding을 지정<br>
+                            · margin같은 방식
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>display</h5>
+                        <p>
+                            · 웹 문서에 요소를 어떻게 <a href = "#dest-box-model">🔗나열</a>할지 지정<br>
+                            <br>
+                            · <span class = "keyword">block</span>: 블록 레벨 요소는 이것이 <span class = "style-default">디폴트 속성값</span><br>
+                            · <span class = "keyword">inline</span>: 인라인 레벨 요소는 이것이 <span class = "style-default">디폴트 속성값</span><br>
+                            · <span class = "keyword">inline-block</span>: 인라인 레벨 요소의 한 줄을 다 차지하지 않는 특성 + 블록 레벨 요소의 마진 패딩 지정 특성 ?<br>
+                            · <span class = "keyword">flex</span>: <br>
+                            · <span class = "keyword">none</span>: 웹 문서상에 표시하지 않음<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>float</h5>
+                        <p>
+                            · 블록 레벨 요소의 좌측 혹은 우측 끝에 뜨도록(== 왼쪽 혹은 오른쪽 구석에 배치된다. ) 지정한다.  <br>
+                            · (그림 추가: 수조 그림)
+                            <br>
+                            · <span class = "keyword">left</span>: 웹 문서 왼쪽에 배치<br>
+                            · <span class = "keyword">right</span>: 웹 문서 오른쪽에 배치<br>
+                            · <span class = "keyword">none</span>: <span class = "style-default">디폴트 속성값</span>어디에도 배치 안함<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>clear</h5>
+                        <p>
+                            · float 속성은 한 박스에 지정하면 그 아래 형제 요소들에게 모두 전파됨 따라서 쓰기 싫은 요소가 있다면 clear를 해야함 <br>
+                            <br>
+                            · <span class = "keyword">left</span>: float: left 지정 해제<br>
+                            · <span class = "keyword">right</span>: float: right 지정 해제<br>
+                            · <span class = "keyword">both</span>: float: left와 right 모두 지정 해제<br>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
-                        <p>· <br>· <span class = "emphasis"></span><br><span class = "keyword"></span><br>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
-                        <p>· <br>· <span class = "emphasis"></span><br><span class = "keyword"></span><br>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
-                        <p>· <br>· <span class = "emphasis"></span><br><span class = "keyword"></span><br>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
-                        <p>· <br>· <span class = "emphasis"></span><br><span class = "keyword"></span><br>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            · <span class = "emphasis"></span><br>
+                            · <span class = "keyword"></span><br>
                         </p>
                     </div>
                 </div>
