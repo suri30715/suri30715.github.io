@@ -1,4 +1,4 @@
-/*🔗· <br> &lt; &gt;*/
+/*🔗· <br> &lt; &gt; 〃*/
 /* · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br> */
 /* · <span class = "emphasis"><a href = "#dest-color">🔗<색상> 유형</a></span><br> */
 .style-explain1
@@ -61,4 +61,11 @@
 span > a
 {
     color:#30b565;
+}
+
+.img-explain
+{
+    width: 50%;
+    display: block; /*img는 인라이 요소이므로 display:block을 적용하고*/
+    margin: auto;  /* 상하 좌우 마진을 display 속성에 따라 자동으로 지정하면 중앙 정렬 됨 */
 }
