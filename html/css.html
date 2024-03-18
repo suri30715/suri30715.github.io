@@ -370,7 +370,7 @@
                             · <span class = "keyword">hidden</span>: 테두리 감춤<br>
                             · <span class = "keyword">solid</span>: 테두리 실선<br>
                             · <span class = "keyword">dotted</span>: 테두리 점(...)<br>
-                            · <span class = "keyword">dashed</span>: 테두리 데시(---)<br>
+                            · <span class = "keyword">dashed</span>: 테두리 대시(---)<br>
                             · <span class = "keyword">double</span>: 테두리 이중선 border-width속성으로 이중선 간격 조절<br>
                             · <span class = "keyword">groove</span>: 조각 테두리 같이 표현됨 (예: 아래 확인)<br>
                             <div class = "border-groove">border-style: groove;<br>border-width: 20px<br>입니다. </div><br>
@@ -627,135 +627,97 @@
                         <h5>linear-gradient(to <방향> or <각도>, <색상 중지점>, [<색상 중지점>, ...]);</h5>
                         <p>
                             · 색상이 선형으로 일정하게 변하도록 지정<br>
+                            · repeating-을 앞에 붙이면 반복 가능<br>
                             <br>
-                            · <span class = "emphasis"><방향> 유형</span><br>
-                            · <span class = "keyword">left</span><br>
-                            · <span class = "keyword">right</span><br>
-                            · <span class = "keyword">top</span><br>
-                            · <span class = "keyword">bottom</span><br>
+                            · <span class = "emphasis">to <방향> 유형</span><br>
+                            · <span class = "keyword">left</span>: to left (오른쪽에서) 왼쪽으로 <br>
+                            · <span class = "keyword">right</span>: to right(왼쪽에서) 오른쪽으로 <br>
+                            · <span class = "keyword">top</span>: to top (아래쪽에서) 위쪽으로<br>
+                            · <span class = "keyword">bottom</span>: <span class = "style-default">디폴트 속성값: 위치, 방향 생략 시에만</span>to bottom (위쪽에서) 아래쪽으로<br>
                             <br>
                             · <span class = "emphasis"><각도> 유형</span><br>
-                            · <span class = "emphasis"><색상 중지점> 유형</span><br>
+                            · 그라데이션이 끝나는 방향<br>
+                            · <span class = "keyword">숫자deg</span>: 시계방향으로 숫자가 커짐 으로 컴퍼스를 돌린다 생각하면된다. 컴퍼스 중심 축부터 끝 방향으로 그라데이션이 퍼진다. <br>
+                            <br>
+                            · <span class = "emphasis" id = "dest-color-stop"><색상 중지점> 유형</span><br>
+                            · <span class = "keyword">시작 색상, 중지점 색상 위치, 끝 색상</span>: 색상은 <a href = "#dest-color">🔗<색상> 유형</a></span>과 같고, 위치는 시작 위치로 부터 얼마나 떨어져 있는지 %로 표현<br>
                         </p>
                     </div>
                     <div class = "content3">
-                        <h5></h5>
+                        <h5>radial-gradient(<모양> <크기> at <위치>, <색상 중지점>)</h5>
                         <p>
-                            · <br>
+                            · 원 형태의 그라데이션을 표현<br>
+                            · repeating-을 앞에 붙이면 반복 가능<br>
                             <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
+                            · <span class = "emphasis"><모양> 유형</span><br>
+                            · <span class = "keyword">circle</span>: 원형<br>
+                            · <span class = "keyword">ellipse</span>:<span class = "style-default">디폴트 속성값</span>타원형<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
+                            · <span class = "keyword">closet-side</span>: <br>
+                            · 원형: 그라데이션 중심에서 요소 측면까지의 거리중 가장 가까운 거리의 요소 측면에 그라데이션이 닿을 때까지 그림 <br>
+                            · 타원형: 〃 가로축면 or 세로축 면 닿을 때 까지 그림 <br>
+                            · <span class = "keyword">closet-corner</span>: 그라데이션 중심에서 요소 코너까지의 거리 중 가장 가까운 코너에 그라데이션이 닿을 때까지 그림<br>
+                            · <span class = "keyword">farthest-side</span>: <br>
+                            · 원형: 그라데이션 중심에서 요소 측면 까지의 거리 중 가장 먼 거리의 요소 측면에 그라데이션이 닿을 때 까지 그림<br>
+                            · 타원형: 〃 가로축면 or 세로 축면이 닿을 때 까지 그림<br>
+                            · <span class = "keyword">farthest-corner</span>:<span class = "style-default">디폴트 속성값</span>그라데이션 중심에서 요소 코나까지의 거리 중 가장 먼 코너에 그라데이션이 닿을 때까지 그림<br>
+                            <br>
+                            · <span class = "emphasis">at <위치 유형></span><br>
+                            · <span class = "keyword">at left | center<span class = "style-default">디폴트 속성값</span> | right</span>: 그라데이션의 가로 위치 지정<br>
+                            · <span class = "keyword">at top | center<span class = "style-default">디폴트 속성값</span> | bottom</span>: 그라데이션의 세로 위치 지정<br>
+                            · at <span class = "emphasis"><a href = "#dest-size">🔗<백분율> 유형</a></span><br>
+                            · <span class = "keyword">숫자% 숫자%</span>: 그라데이션을 '요소의 가로 * %' '요소의 세로 * %'로 가로 세로 위치 지정<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-color-stop">🔗<색상 중지점> 유형</a></span>  
+                        </p>
+                    </div>
+                </div>
+                <div class = "content2">
+                    <h3>CSS고급 선택자</h3>
+                    <p>
+                        · 여기서 단계라 함은 포함 단계의 준말임<br>
+                        · <span class = "keyword">하위 요소</span>: 특정 요소 기준으로 한 단계 이상 밑에 있는 요소 혹은 요소들 모두를 '특정 요소의 하위 요소'라고 정의<br>
+                        · <span class = "keyword">상위 요소</span>: 특정 요소 기준으로 한 단계 이상 위에 있는 요소 혹은 요소들 모두를 '특정 요소의 상위 요소'라고 정의<br>
+                        <br>
+                        · <span class = "keyword">부모 요소</span>: 특정 요소 기준으로 바로 한 단계 위에 있는 요소를 '특정 요소의 부모 요소' 라고 정의<br>
+                        · <span class = "keyword">자식 요소</span>: 특정 요소 기준으로 바로 한 단계 밑에 있는 요소를 '특정 요소의 자식 요소'라고 정의<br>
+                        · <span class = "keyword">손자 요소</span>: 특정 요소 기준으로 두 단계 이상 밑에 있는 요소들 모두를 '특정 요소의 손자 요소'라고 정의<br>
+                        <br>
+                        · <span class = "emphasis">형제 요소</span>: 특정 요소가 부모 요소가 같은 경우 '특정 요소는 형제 요소'라고 정의 <br>
+                        · <span class = "keyword">형 요소</span>: 형제 요소 중 먼저 나온 요소 <br>
+                        · <span class = "keyword">동생 요소</span>: 형제 요소 중 나중에 나온 요소 <br>
+                        
+                    </p>
+                    <div class = "content3">
+                        <h5>상위 요소 하위 요소</h5>
+                        <p>
+                            · 이렇게 작성 하면 하위 선택자(descendant-selector; 자손 손택자) 라고 한다. <br>
+                            · 상위 요소에게 포함된 하위 요소를 모두 선택하는 선택자이다. <br>
+                            · 하위 요소에 스타일이 적용된다. 
                         </p>
                     </div>
                     <div class = "content3">
-                        <h5></h5>
+                        <h5>부모 요소 > 자식 요소</h5>
                         <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
+                            · 이렇게 작성하면 자식 선택자(child selector) 라고한다. <br>
+                            · 자식 요소에 스타일이 적용된다. <br>
                         </p>
                     </div>
                     <div class = "content3">
-                        <h5></h5>
+                        <h5>요소1 + 요소2</h5>
                         <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
+                            · 이렇게 작성하면 인접 형제 선택자(adjacent selector) 라고 한다.  <br>
+                            · 형 요소(요소1)의 바로 다음 동생 요소(요소2)에만 스타일이 적용된다. 
                         </p>
                     </div>
                     <div class = "content3">
-                        <h5></h5>
+                        <h5>요소1 ~ 요소2</h5>
                         <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
+                            · 이렇게 작성하면 형제 선택자(sibling selector) 라고 한다. <br>
+                            · 형 요소(요소1)의 다음 동생 요소(요소2)모두를 찾아서 스타일이 적용된다. 
                         </p>
                     </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-                    <div class = "content3">
-                        <h5></h5>
-                        <p>
-                            · <br>
-                            <br>
-                            · <span class = "emphasis"></span>
-                            · <span class = "keyword"></span>
-                        </p>
-                    </div>
-
                 </div>
             </div>
             </div>
