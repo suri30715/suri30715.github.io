@@ -54,7 +54,7 @@ function init()
     }
     if(document.getElementById("html"))
     {
-        document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/html.html"})
+        document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/htm.html"})
     }
     if(document.getElementById("goMain"))
     {

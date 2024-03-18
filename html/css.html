@@ -131,7 +131,7 @@
                         <p>
                             · 폰트의 이텔릭체, 디폴트 스타일<br>
                             · 글자 크기는 'normal', 'italic', 'oblique' 중 한 가지를 가진다. <br>
-                            · normal: 디폴트, 일반 형태<br>
+                            · normal: <span class = "style-default">디폴트 속성값</span>일반 형태<br>
                             · italic: 이텔릭체 (주로 사용)<br>
                             · oblique: 이텔릭체
                         </p>
@@ -140,7 +140,7 @@
                         <h5>font-weight: normal | bold | bolder | lighter | 100 | 200 | ... | 800 | 900</h5>
                         <p>
                             · 폰트의 굵기 스타일<br>
-                            · normal: 디폴트, 보통<br>
+                            · normal: <span class = "style-default">디폴트 속성값</span>보통<br>
                             · bold: 굵게<br>
                             · bolder: 원래보다 굵게<br>
                             · lighter: 원래보다 가늘게<br>
@@ -275,7 +275,8 @@
                         <h5>caption-side: top | bottom</h5>
                         <p>
                             · 캡션의 정렬 <br>
-                            · <span class = "keyword">top</span>: 디폴트 값, 캡션을 표 윗 부분에<br>
+                            <br>
+                            · <span class = "keyword">top</span>: <span class = "style-default">디폴트 속성값</span> 캡션을 표 윗 부분에<br>
                             · <span class = "keyword">bottom</span>: 캡션을 표 아랫 부분에<br>
                         </p>
                     </div>
@@ -363,6 +364,7 @@
                         <h5>border-style</h5>
                         <p>
                             · border(== 테두리)의 스타일<br>
+                            · border-위치-style(위치: left, right, top, bottom)속성으로 각각의 테두리에 따로 적용 가능<br>
                             <br>
                             · <span class = "keyword">none</span>: <span class = "style-default">디폴트 속성값</span> 테두리가 안보이는 것이 아니라, 아예 테두리가 없는 것 따라서 너비, 높이를 차지하지 않음. <br>
                             · <span class = "keyword">hidden</span>: 테두리 감춤<br>
@@ -424,6 +426,7 @@
                         <h5>border-width: <크기> | thin | medium | thick </h5>
                         <p>
                             · <크기> 유형 혹은 3가지 속성값 예약어를 사용하여 테두리 두깨를 지정<br>
+                            · border-위치-width(위치: left, right, top, bottom)속성으로 각각의 테두리에 따로 적용 가능<br>
                             <br>    
                             · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
                             · <span class = "keyword">숫자px</span>
@@ -433,6 +436,7 @@
                         <h5>border-color: <색상> ??</h5>
                         <p>
                             · 테두리 색상을 지정<br>
+                            · border-위치-color(위치: left, right, top, bottom)속성으로 각각의 테두리에 따로 적용 가능<br>
                             <br>
                             · <span class = "emphasis"><a href = "#dest-color">🔗<색상> 유형</a></span><br>
                         </p>
@@ -441,7 +445,7 @@
                         <h5>border-radius: <크기> | <백분율></h5>
                         <p>
                             · 테두리의 꼭짓점 4곳에 원을 내접한 뒤 꼭짓점 네 곳을 반지름 크기 만큼의 원의 형태로 둥글게 처리함<br>
-                            · border-top-left-radius, border-bottom-right-radius 등의 속성으로 각 꼭짓점마다 별개 지정도 가능<br>
+                            · border-위치-radius(위치: left, right, top, bottom)속성으로 각각의 테두리에 따로 적용 가능<br>
                             <br>
                             · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
                             · <span class = "keyword">숫자px</span><br>
@@ -461,6 +465,7 @@
                         <h5>margin: <크기> | <백분율> | auto</h5>
                         <p>
                             · margin의 크기지정<br>
+                            · margin-위치(위치: left, right, top, bottom)속성으로 각각의 margin에 따로 적용 가능<br>
                             <br>
                             · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
                             · 숫자는 4개(시계방향 상, 우, 하, 좌), 3개(상, 좌우, 하), 2개(상하, 좌우), 1개(상하좌우)이다. <br>
@@ -477,6 +482,7 @@
                         <h5>padding</h5>
                         <p>
                             · content와 border 사이의 여백인 padding을 지정<br>
+                            · padding-위치(위치: left, right, top, bottom)속성으로 각각의 padding에 따로 적용 가능<br>
                             · margin같은 방식
                         </p>
                     </div>
@@ -514,77 +520,242 @@
                         </p>
                     </div>
                     <div class = "content3">
-                        <h5></h5>
+                        <h5>left, right, top, bottom</h5>
                         <p>
-                            · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            · 웹 문서의 원하는 위치 기준(left끝, right끝, top끝, bottom끝)으로부터 <a href = "#dest-size">🔗<크기></a>만큼 떨어진 곳에 요소를 지정<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-size">🔗<크기> 유형</a></span><br>
+                            · <span class = "keyword">숫자px</span>: 음수: 기준으로 향함, 양수, 기준에서 멀어짐. 
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>position</h5>
+                        <p>
+                            · 웹 문서의 요소를 자유자재로 배치할수 있도록 해줌. 중요! <br>
+                            · 이 값을 설정한 후 위의 left, right, top, bottom 속성을 적절히 사용하여 위치를 조정함 <br>
+                            <br>
+                            · <span class = "keyword">static</span>:<span class = "style-default">디폴트 속성값</span> 웹 문서 흐름에 맞게 배치<br>
+                            · <span class = "keyword">relative</span>: static과 같지만 위치 수정이 가능<br>
+                            · <span class = "keyword">absolute</span>: relative 값을 사용한 상위 요소를 기준으로 위치를 지정하여 배치, <br>
+                            · 부모 요소가 이 값이 없으면 상위 요소에서 나올 때 까지 찾음 따라서 잘 작동하려면 부모가 relative여야 함. <br>
+                            · 즉 position: relative가 부모 요소에 있어야지만, position: absolute가 잘 작동함. <br>
+                            · <span class = "keyword">fixed</span>: 웹 브라우저 창을 기준으로 배치<br>
+                        </p>
+                    </div>
+                    <div class = "style-explain1">배경 관련</div>
+                    <div class = "content3">
+                        <h5>background-color</h5>
+                        <p>
+                            · 배경색의 지정<br>
+                            <br>
+                            · <span class = "emphasis"><a href = "#dest-color">🔗<색상> 유형</a></span><br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-clip</h5>
+                        <p>
+                            · 박스 모델에서 배경 색을 어디까지 적용할지 지정<br>
+                            <br>
+                            · <span class = "keyword">border-box</span>: <span class = "style-default">디폴트 속성값</span> border까지 적용<br>
+                            · <span class = "keyword">padding-box</span>: padding 까지 적용<br>
+                            · <span class = "keyword">content-box</span>: content만 적용<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-img: url('파일 경로')</h5>
+                        <p>
+                            · 요소에 배경으로 이미지를 지정<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-repeat</h5>
+                        <p>
+                            · 이미지의 반복, 비반복을 지정<br>
+                            <br>
+                            · <span class = "keyword">repeat</span>: <span class = "style-default">디폴트 속성값</span>웹 브라우저에 가득 찰 때까지 가로 세로 반복<br>
+                            · <span class = "keyword">repeat-x</span>: 웹 브라우저에 너비에 찰 때까지 가로로 반복<br>
+                            · <span class = "keyword">repeat-y</span>: 웹 프라우저에 높이에 찰 떄까지 세로로 반복<br>
+                            · <span class = "keyword">no-repeat</span>: 반복하지 않음
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-position: <수평 위치> <수직 위치>;<br>
+                        수평 위치: left | center | right | <백분율> | <길이 값><br>
+                        수직 위치: top  | center | bottom | <백분율> | <길이 값>
+                    </h5>
+                        <p>
+                            · 배경 이미지의 수평, 수직 위치 지정<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-origin</h5>
+                        <p>
+                            · padding이나 border가 있는 박스모델에서 배경 이미지를 어디까지 표시할지 지정<br>
+                            <br>
+                            · <span class = "keyword">content-box</span>: <span class = "style-default">디폴트 속성값</span>박스 모델에서 content 부분에만 배경 이미지 표시<br>
+                            · <span class = "keyword">padding-box</span>: 박스 모델에서 padding 까지만 배경 이미지 표시<br>
+                            · <span class = "keyword">border-box</span>: 박스 모델에서 border 까지만 배경 이미지 표시<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-attachment</h5>
+                        <p>
+                            · 스크롤시 배경이미지를 고정할지 안할지<br>
+                            <br>
+                            · <span class = "keyword">scroll</span>: <span class = "style-default">디폴트 속성값</span>스크롤하면 이미지도 따라 움직임<br>
+                            · <span class = "keyword">scroll</span>: 배경 이미지 고정 다른 요소만 스크롤<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>background-size</h5>
+                        <p>
+                            · 배경 이미지 크기 지정<br>
+                            · 배경 이미지가 요소보다 작거나 크면 조절할 수 있다. <br>
+                            <br>
+                            · <span class = "keyword">auto</span>: <span class = "style-default">디폴트 속성값</span>원래 이미지 크기<br>
+                            · <span class = "keyword">contain</span>: 요소 안에 다 들어가도록 자동 크기 조절<br>
+                            · <span class = "keyword">cover</span>: <br>
+                            <br>
+                            · <span class = "emphasis"><크기> 유형</span><br>
+                            · 이미지의 너비, 높이 지정, 값이 1개면 너비만(이 때 높이는 자동 조절)<br>
+                            <br>
+                            · <span class = "emphasis"><백분율> 유형</span><br>
+                            · <span class = "keyword">숫자%</span>: 이미지 들어갈 요소 크기 * %로 이미지 크기 지정;
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>linear-gradient(to <방향> or <각도>, <색상 중지점>, [<색상 중지점>, ...]);</h5>
+                        <p>
+                            · 색상이 선형으로 일정하게 변하도록 지정<br>
+                            <br>
+                            · <span class = "emphasis"><방향> 유형</span><br>
+                            · <span class = "keyword">left</span><br>
+                            · <span class = "keyword">right</span><br>
+                            · <span class = "keyword">top</span><br>
+                            · <span class = "keyword">bottom</span><br>
+                            <br>
+                            · <span class = "emphasis"><각도> 유형</span><br>
+                            · <span class = "emphasis"><색상 중지점> 유형</span><br>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
                     <div class = "content3">
                         <h5></h5>
                         <p>
                             · <br>
-                            · <span class = "emphasis"></span><br>
-                            · <span class = "keyword"></span><br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
                         </p>
                     </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5></h5>
+                        <p>
+                            · <br>
+                            <br>
+                            · <span class = "emphasis"></span>
+                            · <span class = "keyword"></span>
+                        </p>
+                    </div>
+
                 </div>
             </div>
             </div>
