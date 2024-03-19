@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .colorscripter-code
@@ -223,17 +223,21 @@
         font-size: 17px;
     }
 
+    h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a,
+    h1 > del, h2 > del, h3 > del, h4 > del, h5 > del, h6 > del
+    {
+        font-weight: bolder;
+    }
+
     h1
     {
         font-size: 2em;
-        font-weight: bolder;
         padding-bottom: 30px;
     }
     
     h2
     {
         font-size: 1.8em;
-        font-weight: bolder;
         padding-bottom: 30px;
         color:#30b565;
     }
@@ -267,9 +271,9 @@
         padding-bottom: 5px;
     }
     
+
     p
     {
-        font-weight: normal;
         line-height: 27.5px;
         padding-bottom: 20px;
     }
@@ -284,11 +288,13 @@
     .emphasis
     {
         color:#30b565;
+        font-size:22px
     }
 
     .keyword
     {
         color:firebrick;
+        font-weight: bold;
     }
     
     /* 내용 박스 지정 */
@@ -324,6 +330,13 @@
         margin-bottom: 15px;
     }
 
+    .example
+    {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 5px;
+    }   
+
     /* 이미지 크기 지정 */
     img
     {
@@ -344,4 +357,9 @@
         font-size: 10px;
         text-align: center;
     }
+}
+
+.emphasis2
+{
+    font-weight: bolder;
 }

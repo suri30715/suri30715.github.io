@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자료실</title>
     <link rel = "stylesheet" href = "../css/common.css">
-    <link rel = "stylesheet" href = "../css/HTM.css">
+    <link rel = "stylesheet" href = "../css/html.css">
 </head>
 <body>
     <section class = "layout">
@@ -28,7 +28,7 @@
                         <abbr title = "World Wide Web Consortium">W3C</abbr><br>
                         <a href = "https://html.spec.whatwg.org/" target = "_blank">🔗W3C 영문판</a> <br>
                         <a href = "https://momdo.github.io/html/" target = "_blank">🔗W3C 일본어 번역판</a> <br>
-                        <a href = "https://www.tcpschool.com/html/html5_intro_element" target = "_blank">🔗TCP SCHOOL.com: HTML5 변경사항</a>
+                        <a href = "https://www.tcpschool.com/html/html5_intro_element" target = "_blank">🔗TCP SCHOOL.com: HTML5 변경사항</a> <br>
                         <a href = "https://www.tcpschool.com/html/html5_intro_addition" target = "_blank">🔗TCP SCHOOL.com: HTML5 추가 요소</a>
                     </p>
                     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">열린</span>&nbsp;<span style="color:#a8ff58">태그</span>&nbsp;<span style="color:#a8ff58">속성</span>&nbsp;<span style="color:#a8ff58"></span>=<span style="color:#a8ff58"></span>&nbsp;<span style="color:#ffd500">"속성값"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>요소<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">/닫힌</span>&nbsp;<span style="color:#a8ff58">태그</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
@@ -40,7 +40,7 @@
                         · Markup 이란 '표시한다' 즉, '웹 브라우저에 내용을 보여주는 텍스트, 이미지, 영상등의 위치를 표시한다. '라는 의미. <br>
                         · 프로그래밍 언어가 아닌 마크업 언어 <br>
                         · 웹 페이지(= HTML 문서)는 HTML 태그들로 구성 <br>
-                        · 태그(tag): 웹 브라우저가 문서의 어느 부분이 무엇을 의미하는지 구별하도록 해주는 꼬리표이다. <br>
+                        · <span class = "keyword">태그(tag)</span>: 웹 브라우저가 문서의 어느 부분이 무엇을 의미하는지 구별하도록 해주는 꼬리표이다. <br>
                         · <span class = "emphasis">시멘틱 태그(semantic tag)</span>: HTML 구조 설계에 있어 태그에 의미(semantic)를 부여하여, 웹 페이지 구조를 쉽게 파악하도록 한 태그(예: &lt;header&gt;, &lt;nav&gt;, &lt;article&gt; 등) <br>
                         · 빈 태그(empty tag): 닫힌 태그가 없는 태그를 말한다. (예: &lt;br&gt;, &lt;img&gt; 등)<br>
                         · HTML5부터 속성값에 따옴표를 강제하지 않지만, <br>
@@ -100,11 +100,12 @@
                 <div class = "tag-explain1">A</div>
                 <div class = "content3">
                     <h5>&lt;a&gt;</h5>
+                    <span class = "tag-ib">inline</span>
                     <p>
                         · 하이퍼링크 정의
                     </p>
                     <p>
-                        · href = "이동할 url"
+                        · <span class = "keyword">href</span> = URL
                     </p>
                 </div>
                 <div class = "content3">
@@ -114,7 +115,7 @@
                         · 내용에 커서를 올리면 커서 밑에 표시됨. 
                     </p>
                     <p>
-                        · title = "단어 축약형에 대한 풀이"<br>
+                        · <span class = "keyword">title</span> = 텍스트: 단어 축약형에 대한 풀이<br>
                     </p>
                 </div>
                 <div class = "content3">
@@ -200,22 +201,20 @@
                 <div class = "tag-explain1">B</div>
                 <div class = "content3">
                     <h5>&lt;b&gt;</h5>
+                    <span class = "tag-ib">inline</span>
                     <p>
                         · 텍스트를 굵게 정의<br>
                         · HTML5는 hn태그들은 em태그, 중요의미 텍스트는 strong태그, 하이라이트 텍스트는 mark태그 사용해야함<br>
                     </p>
-                    <p>
-                        · <br>
-                    </p>
                 </div>
                 <div class = "content3">
                     <h5>&lt;base&gt;</h5>
+                    <span class = "tag-must-child">head의 자식 요소</span>
                     <p>
                         · 웹 문서의 주소에 대한 기본 주소를 제공해줌<br>
                         · 1개만 존재해야하며 head태그 내부에 있어야함. <br>
                         · href, target 둘중 하나는 반드시 적어야함. 
-                    </p>
-                    <p>
+                        <br>
                         · href = "다른 url의 기준(앞에오는)이 되는 url"<br>
                         · target = "_blank", "_parent", "_self", "_top", "프레임 명"<br>
                     </p>
@@ -226,9 +225,6 @@
                         · HTML5부터 지원X<br>
                         · 대신 CSS 사용<br>
                         · 글꼴의 정의에 사용<br>
-                    </p>
-                    <p>
-                        · <br>
                     </p>
                 </div>
                 <div class = "content3">
@@ -278,6 +274,7 @@
                 </div>
                 <div class = "content3">
                     <h5>&lt;br&gt;</h5>
+                    <span class = "tag-empty">빈 태그</span>
                     <p>
                         · 빈 태그<br>
                         · 줄 바꿈 정의<br>
@@ -667,6 +664,7 @@
                     </p>
                 </div>
                 <h5>&lt;hn&gt</h5>
+                <span class = "tag-ib">block</span>
                 <p>
                     · 제목용 태그,h1 ~ h6까지 있으며, 숫자가 클 수록 윗 제목의 하위 제목이다. <br>
                     · 검색 엔진은 각 웹 사이트 내용을 이 태그를 통해 수집하고 파악한다. 따라서 문서 제목은 h태그로 작성하는 것이 좋다. <br>

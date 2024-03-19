@@ -20,6 +20,10 @@ function init()
     {
         document.getElementById("c++").addEventListener("click", event=>{window.location.href="../html/c++.html"})
     }
+    if(document.getElementById("c#"))
+    {
+        document.getElementById("c#").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
+    }
     if(document.getElementById("stl"))
     {
         document.getElementById("stl").addEventListener("click", event=>{window.location.href="../html/stl.html"})
@@ -54,7 +58,7 @@ function init()
     }
     if(document.getElementById("html"))
     {
-        document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/htm.html"})
+        document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/html.html"})
     }
     if(document.getElementById("goMain"))
     {

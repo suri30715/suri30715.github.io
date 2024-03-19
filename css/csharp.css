@@ -1,0 +1,10 @@
+.csh-vr, .csh-integer
+{
+    border-radius: 8px;
+    color: white;
+}
+
+.csh-integer
+{
+    background-color: red;
+}

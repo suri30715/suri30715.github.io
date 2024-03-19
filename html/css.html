@@ -502,7 +502,6 @@
                         <h5>float</h5>
                         <p>
                             · 블록 레벨 요소의 좌측 혹은 우측 끝에 뜨도록(== 왼쪽 혹은 오른쪽 구석에 배치된다. ) 지정한다.  <br>
-                            · (그림 추가: 수조 그림)
                             <br>
                             · <span class = "keyword">left</span>: 웹 문서 왼쪽에 배치<br>
                             · <span class = "keyword">right</span>: 웹 문서 오른쪽에 배치<br>
@@ -675,7 +674,7 @@
                     </div>
                 </div>
                 <div class = "content2">
-                    <h3>CSS고급 선택자</h3>
+                    <h3>연결 선택자</h3>
                     <p>
                         · 아래 키워드 설명에서 '단계'라 함은 '포함 단계'의 준말임<br>
                         · <span class = "keyword">하위 요소</span>: 특정 요소 기준으로 한 단계 이상 밑에 있는 요소 혹은 요소들 모두를 '특정 요소의 하위 요소'라고 정의<br>
@@ -718,6 +717,249 @@
                             · 이렇게 작성하면 형제 선택자(sibling selector) 라고 한다. <br>
                             · 형 요소(요소1)의 다음 동생 요소(요소2)모두를 찾아서 스타일이 적용된다. 
                         </p>
+                    </div>
+                </div>
+                <div class = "content2">
+                    <h3>속성 선택자</h3>
+                    <div class = "content3">
+                        <h5> [속성]과 [속성 = 값]</h5>
+                        <p>
+                            · '속성'을 가지는 것에 스타일 적용 <br>
+                            · '속성' = '값'을 가지는 것에 스타일 적용<br>
+                            · 선택자가 있으면 그 선택자에 해당하는 요소 중 +, 없으면 모든 요소<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · a[href]: a 요소에서 href 속성을 가지는 것에 스타일 적용<br>
+                            · [target = _blank]: 모든 요소 중target = "_blank"를 가지는 것에 스타일 <br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>[속성 ~= 값]</h5>
+                        <p>
+                            · 속성' = '값'을 가지는 요소에 스타일 적용<br>
+                            · 선택자가 있으면 그 선택자에 해당하는 요소 중, 없으면 모든 요소<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · div[class ~= content]: div 요소 중 class = "content" 를 가지는 요소에 스타일 적용<br>
+                            · [class ~= content]: 모든 요소 중 class = "content" 를 가지는 요소에 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>[속성 |= 값]</h5>
+                        <p>
+                            · '속성' = '값' 혹은 '속성 ='값-(하이픈)(다른 문자로 이어짐)'을 가지는 요소에 스타일 적용<br>
+                            · 선택자가 있으면 그 선택자에 해당하는 요소 중, 없으면 모든 요소<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · div[class |= content]: div 요소 중 class = "content" 혹은 class = "content-example" 를 가지는 것에 스타일 적용<br>
+                            · [class |= content]: 모든 요소 중class = "content" 혹은 class = "content-example" 를 가지는 것에 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>[속성 ^= 값]</h5>
+                        <p>
+                            · '속성' = '값으로 시작'하는 요소에 스타일 적용<br>
+                            · 선택자가 있으면 그 선택자에 해당하는 요소 중, 없으면 모든 요소<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · div[class ^= content]: div 요소 중 class = "content" 혹은 class = "content로 시작"를 가지는 것에 스타일 적용<br>
+                            · [class ^= content]: 모든 요소 중class = "content" 혹은 class = "content로 시작"를 가지는 것에 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>[속성 $= 값]</h5>
+                        <p>
+                            · '속성' = '값으로 끝'나는 요소에 스타일 적용<br>
+                            · 선택자가 있으면 그 선택자에 해당하는 요소 중, 없으면 모든 요소<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · div[class $= content]: div 요소 중 class = "content로 끝"나는 요소에 스타일 적용<br>
+                            · [class $= content]: 모든 요소 중 class = "content로 끝"나는 요소에 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>[속성 *= 값]</h5>
+                        <p>
+                            · '속성' = '값의 일부가 일치하는' 요소에 스타일 적용<br>
+                            · 선택자가 있으면 그 선택자에 해당하는 요소 중, 없으면 모든 요소<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · div[class *= content]: div 요소 중 class의 속성값에 "content"라는 문자열이 일부 일치하는 요소에 스타일 적용<br>
+                            · [class *= content]: 모든 요소 중 class의 속성값에 "content"라는 문자열이 일부 일치하는 요소에 스타일 적용
+                        </p>
+                    </div>
+                </div>
+                <div class = "content2">
+                    <h3>가상 클래스와 가상 요소</h3>
+                    <p>
+                        · link, visited, hover, active는 링크로 메뉴를 만들 때 잘 사용된다. <br>
+                        · link > visited > hover > active 순으로 사용해야한다. 순서가 바뀌면 스타일이 제대로 적용되지 않는다. <br>
+                    </p>
+                    <div class = "content3">
+                        <h5>:link</h5>
+                        <p>
+                            · 링크를 가지는 요소에서 방문 하지 않은 링크인 요소에 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:visited</h5>
+                        <p>
+                            · 링크를 가지는 요소에서 방문한 링크인 요소에 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:hover</h5>
+                        <p>
+                            · 요소에 마우스 포인터를 올려놓을 때 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:active</h5>
+                        <p>
+                            · 요소를 클릭하는 순간 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:focus</h5>
+                        <p>
+                            · 요소에 포커스가 가면 스타일 적용 <br>
+                            · tab으로 입력 커서가 어떤 요소에 맞춰지거나, 마우스로 어떤 요소에 초점이 맞춰질 때
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:target</h5>
+                        <p>
+                            · 요소에 앵커로 이동된 순간 스타일 적용
+                            <br>
+                            · <span class = "keyword">링크</span>: 웹 문서에서 같은 사이트 다른 웹 문서 이동, 혹은 다른 사이트로 이동할 때 사용한다.  <br>
+                            · <span class = "keyword">앵커</span>: 웹 문서에서 다른 위치로 이동할 때 사용한다. <br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · #explain:target: id = "explain"인 요소에 앵커로 이동된 순간 스타일 적용
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:enabled, :disabled</h5>
+                        <p>
+                            · 요소의 사용 가능 여부에 따른 스타일 적용 <br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · textarea:disabled: &lt;textarea&gt;가 disabled 속성을 가질 경우 스타일 적용 <br>
+                            · textarea:enabled: &lt;textarea&gt;가 사용 가능 상태일 경우 스타일 적용 <br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:checked</h5>
+                        <p>
+                            · 라디오 박스, 체크 박스에서 checked 속성을 가질 경우 스타일 적용 <br>
+                            · checked속성은 체크가 됬을 때 자동 부여됨<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · input:checked + label: input중(라디오 박스, 체크 박스 한정?) checked 속성을 가지면 바로 아래 동생 요소에 스타일 적용<br>
+                            <div class = "example">
+                                <input id = "explain-checked1" type = "radio" name = "explain- checked">
+                                <label for = "explain-checked1">라디오 버튼1을 눌러 보세요</label><br>
+                                <input id = "explain-checked1" type = "radio" name = "explain- checked">
+                                <label for = "explain-checked1">라디오 버튼2을 눌러 보세요</label>
+                            </div>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>:not()</h5>
+                        <p>
+                            · 괄호 안에 해당하는 요소를 제외한 요소에 스타일 적용 <br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · input:not([type = radio]): input 요소 중 type = radio 인 것을 빼고 스타일 적용 
+                        </p>
+                    </div>
+                    <div class = "style-explain1">구조 가상 클래스</div>
+                    <div class = "content3">
+                        <h5>부모 선택자 :only-child</h5>
+                        <p>
+                            · 부모 요소의안에 자식 요소가 하나 뿐일 때 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 자식 선택자:only-type-of</h5>
+                        <p>
+                            · 부모 요소안에 자식 요소가 하나 뿐일 때 자식 선택자에 해당하는 요소 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 :first-child</h5>
+                        <p>
+                            · 부모 요소의 첫 번째 자식 요소 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 :last-child</h5>
+                        <p>
+                            · 부모 요소의 마지막 자식 요소 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 자식 선택자:first-of-type</h5>
+                        <p>
+                            · 부모 요소 안의 자식 요소 중 자식 선택자에 해당하는 첫 번째 요소 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 자식 선택자:last-of-type</h5>
+                        <p>
+                            · 부모 요소 안의 자식 요소 중 자식 선택자에 해당하는 마지막 요소 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 :nth-child(n)</h5>
+                        <p>
+                            · 부모 요소의 자식 요소들 중 n 번째 선택<br>
+                            · n에는 수식 사용 가능 밑에 나오는 나머지 구조 가상 클래스도 동일<br>
+                            <br>
+                            · <span class = "emphasis">예시</span><br>
+                            · .content :nth-child(2n+1); 홀수 번째 자식 요소를 선택
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 :nth-last-child(n)</h5>
+                        <p>
+                            · 부모 요소의 자식 요소들 중 끝에서 n 번째 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 자식 선택자:nth-of-type(n)</h5>
+                        <p>
+                            · 부모 요소 안의 선택자에 해당하는 자식 요소 중 n 번째 선택<br>
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>부모 선택자 선택자:nth-last-of-type(n)</h5>
+                        <p>
+                            · 부모 요소 안의 선택자에 해당하는 자식 요소 중 끝에서 n번째 선택 <br>
+                        </p>
+                    </div>
+                    <div class = "style-explain1">가상 요소</div>
+                    <p>
+                        · 문서의 특정 부분에 가상으로 요소를 만든다. <br>
+                        · 그 부분에 스타일을 지정하기 위해 사용 <br>
+                    </p>
+                    <div class = "content3">
+                        <h5>::first-line, ::first-letter</h5>
+                        <p>
+                            · 요소의 첫 줄 혹은 첫 글자에 스타일 적용<br>  
+                            · ::first-letter은 첫번 째 글자가 첫 번째 줄에 있어야함 만약 첫번 째 줄에 &lt;br&gt;이 있어서 줄이 없다면 적용 안됨<br>  
+                        </p>
+                    </div>
+                    <div class = "content3">
+                        <h5>::before, ::after</h5>
+                        <p>
+                            · 요소의 앞 뒤에 스타일 적용<br>
+                            · 요소의 앞 뒤에 스타일 시트를 사용하여 텍스트를 넣을 때 사용<br>
+                        </p>
+                        <div class = "example">
+                            <li class = "dc">소고기</li>
+                            <li>닭고기</li>
+                        </div>
                     </div>
                 </div>
             </div>
