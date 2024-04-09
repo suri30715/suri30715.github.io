@@ -3,6 +3,7 @@
  * 목차 안의 내용에서 순서 리스트를 만들 경우 <li>말고 <span class = "number></span>으로 감쌀 것
 */
 /* 폰트 임포트 */
+/* <!--🔗· --> */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 * 
@@ -165,7 +166,7 @@
     /* 이미지 크기 지정 */
     img
     {
-        width: 100%;
+        
         padding: 10px 0px 10px 0px;
         align-items: center;
     }
@@ -179,7 +180,7 @@
     figcaption
     {
         font-weight: lighter;
-        font-size: 5px;
+        font-size: 7px;
         text-align: center;
     }
 }
@@ -288,7 +289,6 @@
     .emphasis
     {
         color:#30b565;
-        
     }
 
     .keyword
@@ -341,9 +341,9 @@
     /* 이미지 크기 지정 */
     img
     {
-        width: 100%;
+        display: block;
+        margin: auto;
         padding: 10px 0px 0px 0px;
-        align-items: center;
     }
     
     /* 내용 순서 리스트 숫자 지정 */
@@ -360,9 +360,9 @@
     }
 }
 
-p
+p, h5, h6
 {
-    padding-left: 1em;
+    padding-left: 1.2em;
 }
 
 .emphasis2
@@ -381,8 +381,9 @@ table
 
 th, td
 {
-    width: 200px;
+    width: 250px;
     height: 50px;
+    box-sizing: border-box;
 }
 
 
@@ -407,24 +408,47 @@ table[class = var] td:nth-child(1)
 
 table[class = var] td:nth-child(2)
 {
-    width: 320px;
+    width: 50px;
     text-align:left;
 }
 
 table[class = var] td:nth-child(3)
 {
-    width: 600px;
+    width: 1000px;
     text-align: left;
 }
 
 table[class = specifier] td:nth-child(2)
 {
-    text-align: left;
     width: 1500px;
+    text-align: left;
 }
 
-.tag-c-n-11::after, .tag-dep::after, .tag-specifier::after, .tag-datatype::after, .tag-variable::after, 
-.tag-ref::after
+table[class = function-param] td:nth-child(2)
+{
+    width: 1000px;
+    text-align: left;
+}
+
+table[class = constructor] td:nth-child(2)
+{
+    width: 1000px;
+    text-align: left;
+}
+
+table[class = classspecifier] td:nth-child(2)
+{
+    width: 2000px;
+    text-align: left;
+}
+
+table[class = classmember] td:nth-child(2)
+{
+    width: 2000px;
+    text-align: left;
+}
+
+.tag-c11::after, .tag-dep::after, .tag-specifier::after, .tag-datatype::after, .tag-variable::after, .tag-ref::after
 {
     font-size: 10px;
     font-weight: bold;
@@ -433,12 +457,17 @@ table[class = specifier] td:nth-child(2)
     border-radius: 8px;
     margin: auto 3px;
     border: 3px solid;
+    font-size: 12px
 }
 
 .tag-specifier::after, .tag-datatype::after, .tag-variable::after
-.tag-ref::after
 {
     font-size: 20px;
+}
+
+.tag-ref::after
+{
+    font-size: 0.8em;
 }
 
 .tag-specifier::after
@@ -462,19 +491,19 @@ table[class = specifier] td:nth-child(2)
     border-color:#ff6347;
 }
 
+.tag-c11::after
+{
+    content: "C++11";
+    background-color: red;
+    border-color: red;
+}
+
 .tag-ref::after
 {
     content: "참고";
     background-color:brown;
     border-color:brown
 };
-
-.tag-c-n-11::after
-{
-    content: "C++11";
-    background-color: crimson;
-    border-color: crimson;
-}
 
 .tag-dep::after
 {
@@ -483,4 +512,13 @@ table[class = specifier] td:nth-child(2)
     border-color:  gray;
 }
 
+li
+{
+    list-style-type: none;
+    padding: 1px;
+}
 
+.colorscripter-code
+{
+    text-align: center;
+}
