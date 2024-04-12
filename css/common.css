@@ -360,9 +360,19 @@
     }
 }
 
-p, h5, h6
+p, h5
 {
-    padding-left: 1.2em;
+    padding-left: 1.5em;
+}
+
+h6
+{
+    padding-left: 3.0em;
+}
+
+h6 + p
+{
+    padding-left: 3.0em;
 }
 
 .emphasis2
@@ -445,6 +455,12 @@ table[class = classspecifier] td:nth-child(2)
 table[class = classmember] td:nth-child(2)
 {
     width: 2000px;
+    text-align: left;
+}
+
+table[class = "OOP5"] td:nth-child(2)
+{  
+    width: 1000px;
     text-align: left;
 }
 
