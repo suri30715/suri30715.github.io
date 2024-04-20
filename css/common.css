@@ -37,432 +37,72 @@
     background-color:#a9c5ea;
 }
 
-/* 폭: 0~1000px */
-    @media only screen and (max-width:1000px)
-    {    
-        /* 전체 레이아웃 지정 */
-        .layout
-    {
-        display: grid;
-        grid-template-columns: repeat(64, 1fr);
-    }
-    
-    .header
-    {
-        display: block;
-    }
-
-    .sidebar
-    {
-        display: none;
-    }
-
-    .body
-    {
-        grid-column: 3/62;
-    }
-    
-    /* 폰트 지정 */
-    h1
-    {
-        font-size: 2em;
-        font-weight: bolder;
-        padding-bottom: 20x;
-    }
-    
-    h2
-    {
-        font-size: 1.8em;
-        font-weight: bolder;
-        padding-bottom: 20px;
-        color:#30b565;
-    }
-    
-    h3
-    {
-        font-size: 1.6em;
-        padding-bottom: 20px;
-    }
-
-    h4
-    {
-        font-size: 1.4em;
-        padding-bottom: 10px;
-    }
-
-    h5
-    {
-        font-size: 1.2em;
-        padding-bottom: 10px;
-    }
-
-    h5:last-child
-    {
-        padding-bottom: 30px;
-    }
-
-    h6
-    {
-        font-size: 1em;
-        padding-bottom: 5px;
-    }
-    
-    p
-    {
-        font-weight: normal;
-        line-height: 27.5px;
-    }
-    
-    a
-    {
-        color:tomato;
-        text-decoration-line: none;
-    }
-
-    /*내용 지정*/
-    .emphasis
-    {
-        color:#30b565;
-    }
-
-    .keyword
-    {
-        color:firebrick;
-    }
-    
-    /* 내용 박스 지정 */
-    .rights
-    {
-        margin: 30px 0px 30px 0px;
-        border: 2px solid tomato;
-        border-radius: 8px;
-        padding: 5px;
-        color: tomato;
-    }
-    
-    .content1
-    {
-        border: 3px solid #295792;
-        border-radius: 8px;
-        padding: 20px 15px 20px 15px;
-    }
-
-    .content2
-    {
-        border: 2px solid #6991c7;
-        border-radius: 8px;
-        padding : 15px;
-        margin-bottom: 15px;
-    }
-
-    .content3
-    {
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-    
-    /* 이미지 크기 지정 */
-    img
-    {
-        
-        padding: 10px 0px 10px 0px;
-        align-items: center;
-    }
-    
-    /* 내용 순서 리스트 숫자 지정 */
-    .number
-    {
-        color: lightseagreen;
-    }
-
-    figcaption
-    {
-        font-weight: lighter;
-        font-size: 7px;
-        text-align: center;
-    }
+.sidebar
+{
+    position:fixed;
+    background-color: #6991c7;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    grid-column: 1/12;
+    /* https://rgy0409.tistory.com/4997 */
+    overflow-y: auto;
+    top: 0;
+    height: 100%;
 }
 
-/* 폭: 1000~무한px */
-@media not screen and (max-width:1000px)
+a
 {
-    /* 전체 레이아웃 지정 */
-    .layout
-    {
-        display: grid;
-        grid-template-columns: repeat(32, 1fr);
-    }
-    
-    .header
-    {
-        display: none;
-    }
-    
-    .sidebar
-    {
-        position:fixed;
-        background-color: #6991c7;
-        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
-        grid-column: 1/12;
-        /* https://rgy0409.tistory.com/4997 */
-        overflow-y: auto;
-        top: 0;
-        height: 100%;
-    }
-    
-    .body
-    {
-        /* padding: 100px 250px 100px 450px; */
-        grid-column: 10/31;
-    }
-    
-    /* 폰트 지정 */
-    body
-    {
-        font-size: 17px;
-    }
-
-    h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a,
-    h1 > del, h2 > del, h3 > del, h4 > del, h5 > del, h6 > del
-    {
-        font-weight: bolder;
-    }
-
-    h1
-    {
-        font-size: 2em;
-        padding-bottom: 30px;
-    }
-    
-    h2
-    {
-        font-size: 1.8em;
-        padding-bottom: 30px;
-        color:#30b565;
-    }
-    
-    h3
-    {
-        font-size: 1.6em;
-        padding-bottom: 30px;
-    }
-
-    h4
-    {
-        font-size: 1.4em;
-        padding-bottom: 15px;
-    }
-
-    h5
-    {
-        font-size: 1.2em;
-        padding-bottom: 15px;
-    }
-
-    h5:last-child
-    {
-        padding-bottom: 30px;
-    }
-
-    h6
-    {
-        font-size: 1em;
-        padding-bottom: 5px;
-    }
-    
-
-    p
-    {
-        line-height: 27.5px;
-        padding-bottom: 20px;
-    }
-    
-    a
-    {
-        color:tomato;
-        text-decoration-line: none;
-    }
-
-    /*내용 지정*/
-    .emphasis
-    {
-        color:#30b565;
-    }
-
-    .keyword
-    {
-        color:firebrick;
-        font-weight: bold;
-    }
-    
-    /* 내용 박스 지정 */
-    .rights
-    {
-        margin: 30px 0px 30px 0px;
-        border: 2px solid #ff6347;
-        border-radius: 8px;
-        padding: 10px;
-        color: tomato;
-        font-weight: bold;
-    }
-
-    .content1
-    {
-        border: 5px solid #295792;
-        border-radius: 8px;
-        padding: 60px 55px 60px 55px;
-    }
-
-    .content2
-    {
-        border: 3px solid #6991c7;
-        border-radius: 8px;
-        padding : 25px;
-        margin-bottom: 15px;
-    }
-
-    .content3
-    {
-        border: 3px solid #ddd;
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    .example
-    {
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        padding: 5px;
-    }   
-
-    /* 이미지 크기 지정 */
-    img
-    {
-        display: block;
-        margin: auto;
-        padding: 10px 0px 0px 0px;
-    }
-    
-    /* 내용 순서 리스트 숫자 지정 */
-    .number
-    {
-        color: lightseagreen;
-    }
-
-    figcaption
-    {
-        font-weight: lighter;
-        font-size: 10px;
-        text-align: center;
-    }
+    color:tomato;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+/*내용 지정*/
+.emphasis
+{
+    color:#30b565;
+}
+.keyword
+{
+    color:firebrick;
+    font-weight: bold;
 }
 
-p, h5
+/* 내용 박스 지정 */
+.rights
 {
-    padding-left: 1.5em;
+    margin: 30px 0px 30px 0px;
+    border: 2px solid #ff6347;
+    border-radius: 8px;
+    padding: 10px;
+    color: tomato;
+    font-weight: bold;
 }
-
-h6
+.content1
 {
-    padding-left: 3.0em;
+    border: 5px solid #295792;
+    border-radius: 8px;
+    padding: 60px 55px 60px 55px;
 }
-
-h6 + p
+.content2
 {
-    padding-left: 3.0em;
+    border: 3px solid #6991c7;
+    border-radius: 8px;
+    padding : 25px;
+    margin-bottom: 15px;
 }
-
-.emphasis2
+.content3
 {
-    font-weight: bolder;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
-
-
-table
+.example
 {
-    border: 3px solid #295792;
-    border-collapse: collapse;
-    text-align: center;
-    margin: 10px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
 }   
 
-th, td
-{
-    width: 250px;
-    height: 50px;
-    box-sizing: border-box;
-}
-
-
-th
-{
-    background-color: #295792;
-    border: 2px solid #ddd;
-    border-bottom: none;
-    color: white;
-    font-weight: 400
-}
-
-td
-{
-    border: 2px solid gray;
-}
-
-table[class = var] td:nth-child(1)
-{
-    width: 180px
-}
-
-table[class = var] td:nth-child(2)
-{
-    width: 50px;
-    text-align:left;
-}
-
-table[class = var] td:nth-child(3)
-{
-    width: 1000px;
-    text-align: left;
-}
-
-table[class = specifier] td:nth-child(2)
-{
-    width: 1500px;
-    text-align: left;
-}
-
-table[class = function-param] td:nth-child(2)
-{
-    width: 1000px;
-    text-align: left;
-}
-
-table[class = constructor] td:nth-child(2)
-{
-    width: 1000px;
-    text-align: left;
-}
-
-table[class = classspecifier] td:nth-child(2)
-{
-    width: 2000px;
-    text-align: left;
-}
-
-table[class = classmember] td:nth-child(2)
-{
-    width: 2000px;
-    text-align: left;
-}
-
-table[class = "OOP5"] td:nth-child(2)
-{  
-    width: 1000px;
-    text-align: left;
-}
 
 .tag-c11::after, .tag-dep::after, .tag-specifier::after, .tag-datatype::after, .tag-variable::after, .tag-ref::after
 {
@@ -538,3 +178,277 @@ li
 {
     text-align: center;
 }
+
+@media only screen and (max-width:1000px)
+{ 
+    /* grid 컨테이너 */
+    .layout
+    {
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: 50px 1fr;
+    }
+
+    /* grid 아이템 */
+    .sidebar
+    {
+        display: none;
+    }
+
+    .header
+    {
+        grid-row: 1/2;
+    }
+
+    .body
+    {
+        grid-row: 2/2;
+        grid-column: 2/20;
+    }
+
+    /* 글자 스타일 */
+    p
+    {
+        font-size: 0.8em;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    h1, h2, h3, h4, h5, h6
+    {
+        font-weight: bolder;
+        padding-bottom: 10px;
+    }
+
+    h1
+    {
+        color:#30b565;
+    }
+
+    h5
+    {
+        padding-left: 5px;
+    }
+
+    h6
+    {
+        padding-left: 12px;
+    }
+
+    /* div 스타일 */
+    .content1, .content2, .content3
+    {
+        padding: 15px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    /* 이미지 */
+    img
+    {
+        display: block;
+        margin: auto;
+    }
+
+    figcaption
+    {
+        font-weight: lighter;
+        font-size: 5px;
+        text-align: center;
+    }
+}
+
+/* 폭: 1000~무한px */
+@media not screen and (max-width:1000px)
+{ 
+    /* 레이아웃 지정 */
+    .layout
+    {
+        display: grid;
+        grid-template-columns: repeat(32, 1fr);
+    }
+    
+    .header
+    {
+        display: none;
+    }
+    
+    .body
+    {
+        /* padding: 100px 250px 100px 450px; */
+        grid-column: 10/31;
+    }
+    
+    /* 폰트 지정 */
+    body
+    {
+        font-size: 17px;
+    }
+
+    h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a,
+    h1 > del, h2 > del, h3 > del, h4 > del, h5 > del, h6 > del
+    {
+        font-weight: bolder;
+    }
+
+    h1
+    {
+        font-size: 2em;
+        padding-bottom: 30px;
+    }
+
+    h3
+    {
+        font-size: 1.6em;
+        padding-bottom: 30px;
+    }
+    h4
+    {
+        font-size: 1.4em;
+        padding-bottom: 15px;
+    }
+    h5
+    {
+        font-size: 1.2em;
+        padding-bottom: 15px;
+    }
+    h5:last-child
+    {
+        padding-bottom: 30px;
+    }
+    h6
+    {
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+
+    p
+    {
+        line-height: 27.5px;
+        padding-bottom: 20px;
+    }
+    /* 이미지 크기 지정 */
+    img
+    {
+        display: block;
+        margin: auto;
+        padding: 10px 0px 0px 0px;
+    }
+
+    figcaption
+    {
+        font-weight: lighter;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    p, h5
+    {
+        padding-left: 1.5em;
+    }
+
+    h6
+    {
+        padding-left: 3.0em;
+    }
+
+    h6 + p
+    {
+        padding-left: 3.0em;
+    }
+
+    .emphasis2
+    {
+        font-weight: bolder;
+    }
+
+    /* 내용 순서 리스트 숫자 지정 */
+    .number
+    {
+        color: lightseagreen;
+    }
+
+    /* 테이블 */
+    
+table
+{
+    border: 3px solid #295792;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px auto;
+}   
+
+th, td
+{
+    width: 250px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+th
+{
+    background-color: #295792;
+    border: 2px solid #ddd;
+    border-bottom: none;
+    color: white;
+    font-weight: 400
+}
+
+td
+{
+    border: 2px solid gray;
+}
+
+table[class = var] td:nth-child(1)
+{
+    width: 180px
+}
+
+table[class = var] td:nth-child(2)
+{
+    width: 50px;
+    text-align:left;
+}
+
+table[class = var] td:nth-child(3)
+{
+    width: 1000px;
+    text-align: left;
+}
+
+table[class = specifier] td:nth-child(2)
+{
+    width: 1500px;
+    text-align: left;
+}
+
+table[class = function-param] td:nth-child(2)
+{
+    width: 1000px;
+    text-align: left;
+}
+
+table[class = constructor] td:nth-child(2)
+{
+    width: 1000px;
+    text-align: left;
+}
+
+table[class = classspecifier] td:nth-child(2)
+{
+    width: 2000px;
+    text-align: left;
+}
+
+table[class = classmember] td:nth-child(2)
+{
+    width: 2000px;
+    text-align: left;
+}
+
+table[class = "OOP5"] td:nth-child(2)
+{  
+    width: 1000px;
+    text-align: left;
+}
+}
+
