@@ -179,6 +179,16 @@ li
     text-align: center;
 }
 
+.info
+{
+    color:tomato;
+    margin: 50px 0px 50px 0px;
+    padding: 15px;
+    font-weight: bolder;
+    border: 2px solid tomato;
+    border-radius: 8px;
+}
+
 @media only screen and (max-width:1000px)
 { 
     /* grid 컨테이너 */
@@ -197,7 +207,9 @@ li
 
     .header
     {
+        position:fixed;
         grid-row: 1/2;
+        grid-column: 1/21;
     }
 
     .body
@@ -284,8 +296,8 @@ li
         font-size: 17px;
     }
 
-    h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a,
-    h1 > del, h2 > del, h3 > del, h4 > del, h5 > del, h6 > del
+    h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a
+    /* h1 > del, h2 > del, h3 > del, h4 > del, h5 > del, h6 > del */
     {
         font-weight: bolder;
     }
@@ -294,6 +306,7 @@ li
     {
         font-size: 2em;
         padding-bottom: 30px;
+        color:#30b565;
     }
 
     h3
@@ -368,87 +381,91 @@ li
     }
 
     /* 테이블 */
-    
-table
-{
-    border: 3px solid #295792;
-    border-collapse: collapse;
-    text-align: center;
-    margin: 10px auto;
-}   
+    table
+    {
+        border: 3px solid #295792;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 10px auto;
+    }   
 
-th, td
-{
-    width: 250px;
-    height: 50px;
-    box-sizing: border-box;
-}
+    th, td
+    {
+        width: 250px;
+        height: 50px;
+        box-sizing: border-box;
+    }
 
-th
-{
-    background-color: #295792;
-    border: 2px solid #ddd;
-    border-bottom: none;
-    color: white;
-    font-weight: 400
-}
+    th
+    {
+        background-color: #295792;
+        border: 2px solid #ddd;
+        border-bottom: none;
+        color: white;
+        font-weight: 400
+    }
 
-td
-{
-    border: 2px solid gray;
-}
+    td
+    {
+        border: 2px solid gray;
+    }
 
-table[class = var] td:nth-child(1)
-{
-    width: 180px
-}
+    table[class = var] td:nth-child(1)
+    {
+        width: 180px
+    }
 
-table[class = var] td:nth-child(2)
-{
-    width: 50px;
-    text-align:left;
-}
+    table[class = var] td:nth-child(2)
+    {
+        width: 50px;
+        text-align:left;
+    }
 
-table[class = var] td:nth-child(3)
-{
-    width: 1000px;
-    text-align: left;
-}
+    table[class = var] td:nth-child(3)
+    {
+        width: 1000px;
+        text-align: left;
+    }
 
-table[class = specifier] td:nth-child(2)
-{
-    width: 1500px;
-    text-align: left;
-}
+    table[class = specifier] td:nth-child(2)
+    {
+        width: 1500px;
+        text-align: left;
+    }
 
-table[class = function-param] td:nth-child(2)
-{
-    width: 1000px;
-    text-align: left;
-}
+    table[class = function-param] td:nth-child(2)
+    {
+        width: 1000px;
+        text-align: left;
+    }
 
-table[class = constructor] td:nth-child(2)
-{
-    width: 1000px;
-    text-align: left;
-}
+    table[class = constructor] td:nth-child(2)
+    {
+        width: 1000px;
+        text-align: left;
+    }
 
-table[class = classspecifier] td:nth-child(2)
-{
-    width: 2000px;
-    text-align: left;
-}
+    table[class = classspecifier] td:nth-child(2)
+    {
+        width: 2000px;
+        text-align: left;
+    }
 
-table[class = classmember] td:nth-child(2)
-{
-    width: 2000px;
-    text-align: left;
-}
+    table[class = classmember] td:nth-child(2)
+    {
+        width: 2000px;
+        text-align: left;
+    }
 
-table[class = "OOP5"] td:nth-child(2)
-{  
-    width: 1000px;
-    text-align: left;
-}
-}
+    table[class = "OOP5"] td:nth-child(2)
+    {  
+        width: 1000px;
+        text-align: left;
+    }
 
+    table[class = "math-binary-operation"] td:nth-child(2)
+    {
+        width: 2000px;
+        text-align: left;
+    }
+}
