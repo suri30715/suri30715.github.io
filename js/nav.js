@@ -8,9 +8,9 @@ function init()
     {
         document.getElementById("ue5").addEventListener("click", event=>{window.location.href="../html/ue5.html"})
     }   
-    if(document.getElementById("bb"))
+    if(document.getElementById("m"))
     {
-        document.getElementById("bb").addEventListener("click", event=>{window.location.href="../html/bb.html"})
+        document.getElementById("m").addEventListener("click", event=>{window.location.href="../html/m.html"})
     }   
     if(document.getElementById("sg"))
     {

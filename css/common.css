@@ -91,7 +91,7 @@ a
 }
 .content3
 {
-    border: 3px solid #ddd;
+    border: 3px solid #ababab;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
@@ -250,7 +250,7 @@ li
     /* div 스타일 */
     .content1, .content2, .content3
     {
-        padding: 15px;
+        padding: 10px;
         margin: 5px 0px 5px 0px;
     }
 
@@ -302,6 +302,11 @@ li
         font-weight: bolder;
     }
 
+    h1, h2, h3, h4, h5
+    {
+        padding-top: 35px;
+    }
+
     h1
     {
         font-size: 2em;
@@ -328,6 +333,7 @@ li
     {
         padding-bottom: 30px;
     }
+
     h6
     {
         font-size: 1em;
@@ -359,14 +365,26 @@ li
         padding-left: 1.5em;
     }
 
-    h6
+
+
+    h5 + .content3
     {
-        padding-left: 3.0em;
+        margin-left: 1.7em;
     }
 
-    h6 + p
+    h5 + p + .content3
     {
-        padding-left: 3.0em;
+        margin-left: 1.7em;
+    }
+
+    h6
+    {
+        padding-left: 5.0em;
+    }
+
+    h6 + p, h6 + .content3
+    {
+        padding-left: 5.0em;
     }
 
     .emphasis2
@@ -399,7 +417,7 @@ li
     th
     {
         background-color: #295792;
-        border: 2px solid #ddd;
+        border: 2px solid #ababab;
         border-bottom: none;
         color: white;
         font-weight: 400
