@@ -1,5 +1,5 @@
 /* 아래는 공통 css임
- * 모든 문서의 목차 안의 내용은 <div class = "content"></div>로 감쌀 것
+ * 모든 문서의 목차 안의 내용은 <div class = "contentN"></div>(contentN의 N은 숫자)로 감쌀 것
  * 목차 안의 내용에서 순서 리스트를 만들 경우 <li>말고 <span class = "number></span>으로 감쌀 것
 */
 /* 폰트 임포트 */

@@ -6,21 +6,17 @@
 .profile
 {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: lighter;
     color: #3f3d3d;
     border: 2px solid #ddd;
     border-radius: 8px;
-    padding: 17px;
-}
+    padding: 20px;
 
-.profile > p
-{
-    line-height: 17px;
 }
 
 .title-wrapper
 {
-    padding: 23px 0px 23px 0px;
+    padding: 30px;
 }
 
 .title
@@ -37,4 +33,9 @@
     color: #3f3d3d;
     font-weight: bold;
     line-height: 30px;
+}
+
+#go-main
+{
+    color: #3b1da8;
 }

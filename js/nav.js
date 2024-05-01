@@ -60,9 +60,9 @@ function init()
     {
         document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/html.html"})
     }
-    if(document.getElementById("goMain"))
+    if(document.getElementById("go-main"))
     {
-        document.getElementById("goMain").addEventListener("click", event=>{window.location.href="../html/main.html"})
+        document.getElementById("go-main").addEventListener("click", event=>{window.location.href="../html/main.html"})
     }
 }   
 

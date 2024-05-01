@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자료실</title>
     <link rel = "stylesheet" href = "../css/common.css">
+    <link rel = "stylesheet" href = "../css/math.css">
+    <!--수식을 위한 부분 참고: https://m.blog.naver.com/mathesis_time/222108156490-->
+    <head>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({            
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+            });
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    </head>
 </head>
 <body>
     <section class="layout">
@@ -114,7 +124,7 @@
                     · 이렇게 유리수와 실수처럼 체의 구조를 지니는 수 집합은 예외 없이 덧셈과 곱셈을 안전하고 자유롭게 쓸 수 있다. <br>
                     · 사칙 연산의 뺄셈, 나눗셈 연산은 교환법칙을 만족하지 않으므로 체의 구조를 지니지 않는다. <br>
                     · 뺄셈 대신 덧셈의 역원, 나눗셈 대신 곱셈의 역원을 사용하면 된다. <br>
-                    · 정리하면 유리수 실수는 덧셈, 곱셈만에 체의 구조를 만족하므로 덧셈과 곱셈을 사용하자. 
+                    · 정리하면 유리수 실수는 덧셈, 곱셈만에 체의 구조를 만족하므로 덧셈과 곱셈을 사용하자. <br>
                     (식)
                 </p>
             </div>
@@ -153,7 +163,7 @@
                 <h5>함수의 성립 조건</h5>
                 <div class = "content3">
                     · 정의역의 모든 원소는 공역의 원소에 대응해야만 한다. (함수에 넣을 값은 반드시 유효한 값이다. )<br>
-                    · 정의역의 원소 하나는 공역의 어느 한 원소에만 대응해야 한다. (함수에 값이 하나 들어갔는데 결과가 두개 이상이 나오면 상식적으로 틀리다.)
+                    · 정의역의 원소 하나는 공역의 어느 한 원소에만 대응해야 한다. (함수에 값이 하나 들어갔는데 결과가 두 개 이상이 나오면 상식적으로 틀리다.)
                 </div>
                 <h5>전사 함수(全射: surjection, 위로의 함수(on to))</h5>
                 <!-- · 全(온전할 전(전부할때 전자))射(쏠 사(발사 할때 사))즉, 공역이 정의역 모두와 대응됨<br> -->
@@ -199,8 +209,10 @@
                     · 연산에서의 <a href = "#identity-source">🔗항등원</a>과 동일한 역할을 수행한다. <br>
                     · 즉, 합성함수 연산에서의 항등원 역할이라고 보면 된다. <br>
                     (그림)<br>
-                    (식) id ∘ f = f, f ∘ id = f
                 </p>
+                <div class = "equation-h5">
+                    $id \circ f = f, f \circ id = f$
+                </div>
                 <h5>역함수(inverse function)</h5>
                 <p>
                     · 연산에서의 <a href = "#inverse-element">🔗역원</a>과 동일한 역할을 수행한다. <br>
@@ -245,31 +257,79 @@
                 <p>
                     · 벡터 공간에서의 원소
                 </p>
+                <h6>벡터의 크기(= 노름(Norm))</h6>
+                <p>
+                    · 원점으로부터의 최단거리이다. <br>
+                    · 즉, 벡터의 크기는 벡터의 길이이다. <br>
+                    · 원점과 벡터를 연결하여 최단거리를 만든 후 직각삼각형을 그려 피타고라스 정리를 사용하여 구한다. <br>
+                </p>
+                <div class = "equation-h6">
+                    $|\vec{v}|=||\vec{v}||=\sqrt{a^{2}+b^{2}}$
+                </div>
+                <h6>단위 벡터(unit vector)</h6>
+                <p>
+                    · 크기가 1인 벡터이다. <br>
+                    · $\hat{v}$는 $\vec{v}$를 단위 벡터로 표현한 것이다. 기호 $\hat{}$ 은 'hat'(모자 같이 생겨서)이라고 읽는다. <br>
+                    · 단위 벡터는 벡터 / 벡터 크기이다. <br>
+                    · <a href = "#vector-operation">🔗벡터 공간에서의 스칼라 곱셈의 성질</a>을 이용해 임의의 벡터 v를 벡터 v의 크기로 나누면 된다. <br>
+                    · 벡터를 단위벡터로 만드는 작업을 정규화(normalize)라고 한다. 
+                </p>
+                <div class = "equation-h6">
+                        $\hat{v} = \frac{\vec{v}} {|\vec{v}|}$
+                </div>
                 <h6>스칼라(scalar)</h6>
                 <p>
                     · 체의 구조를 지니는 수 집합의 원소 <br>
                     · 벡터 공간의 두 실수 x, y각각 공리적 집합론의 관점에서 '체 집합의 원소'라고 함 즉, 스칼라임 <br>
                     (그림)
                 </p>
-            </div>
-            <div class = "content2">
-                <h3>벡터와 스칼라</h3>
+                <h5 id = "vector-operation">벡터 공간의 연산</h5>
                 <p>
-                    · 크기(magnitude)와 방향(direction)을 동시에 나타낸다. 
+                    · 체가 갖는 연산의 성질에 기반하여 벡터 공간의 연산이 갖는 성질을 아래 표로 정리하였다. <br>
+                    · 이를 벡터 공간의 8가지 공리라고한다. 
                 </p>
-                <h5>벡터의 크기(= 노름(Norm))</h5>
-                <p>
-                    · 벡터의 크기는 벡터의 길이이다. 
-                </p>
-                <h6>벡터의 크기 공식</h6>
-                <p>
-                    · 공식
-                </p>
-                <h5>단위 벡터</h5>
-                <p>
-                    · 크기가 1인 벡터이다. 
-                </p>
-                <h6>단위 벡터 공식</h6>
+                <table class = "math-vector-space">
+                    <tr>
+                        <th>분류</th>
+                        <th>공리</th>
+                        <th>수식</th>
+                    </tr>
+                    <tr>
+                        <td rowspan = 4>벡터의 합</td>
+                        <td>벡터 합의 결합 법칙</td>
+                        <td>$\vec{u}+(\vec{v}+\vec{w})=(\vec{u}+\vec{v})+\vec{w}$</td>
+                    </tr>
+                    <tr>
+                        <td>벡터 합의 교환법칙</td>
+                        <td>$\vec{u}+\vec{v}=\vec{v}+\vec{u}$</td>
+                    </tr>
+                    <tr>
+                        <td>벡터 합의 항등원</td>
+                        <td>$\vec{v}+\vec{0}=\vec{v}$</td>
+                    </tr>
+                    <tr>
+                        <td>벡터 합의 역원</td>
+                        <td>$\vec{v}+(-\vec{v})=\vec{0}$</td>
+                    </tr>
+                    <tr>
+                        <td rowspan = 4>스칼라 곱셈</td>
+                        <td>스칼라 곱셈의 호환성</td>
+                        <td>$a(b\vec{v})=(ab)\vec{v}$</td>
+                    </tr>
+                    <tr>
+                        <td>스칼라 곱셈의 항등원</td>
+                        <td>$1·\vec{v}=\vec{v}$</td>
+                    </tr>
+                    <tr>
+                        <td>벡터의 합에 대한 분배 법칙</td>
+                        <td>$a(\vec{u}+\vec{v})=a\vec{u}+a\vec{v}$</td>
+                    </tr>
+                    <tr>
+                        <td>스칼라 덧셈에 대한 분배법칙</td>
+                        <td>$(a+b)\vec{v}=a\vec{v}+b\vec{v}$</td>
+                    </tr>
+                    
+                </table>
             </div>
             <div class = "content2">
                 <h3>선형 결합식과 선형 종속과 선형 독립</h3>
