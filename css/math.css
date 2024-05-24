@@ -5,6 +5,8 @@ div [class |= equation]
     border: 2px solid firebrick;
     border-radius: 8px;
     padding: 20px 30px 20px 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .equation-h5
@@ -15,4 +17,29 @@ div [class |= equation]
 .equation-h6
 {
     margin-left: 5.0em;
+}
+
+h6 + .content3
+{
+    margin-left: 5.0em;
+    padding-left: 10px;
+}
+
+.formula, .ref
+{
+    color: white;
+    font-size: 0.9em;
+   
+    border-radius: 5px;
+    padding: 1px 5px 3px 5px;
+}
+
+.formula
+{
+    background-color: tomato;
+}
+
+.ref
+{
+    background-color:cadetblue;
 }
