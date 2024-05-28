@@ -19,7 +19,13 @@ div [class |= equation]
     margin-left: 5.0em;
 }
 
-h6 + .content3
+h6 ~ .content3
+{
+    margin-left: 5.0em;
+    padding-left: 10px;
+}
+
+h6 + p
 {
     margin-left: 5.0em;
     padding-left: 10px;
