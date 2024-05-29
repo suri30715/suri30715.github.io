@@ -498,7 +498,7 @@
                         $tanθ = \frac {a} {b}$
                     </div><br>
                 </p>
-                <figure><img src = "../img/noradial.jpg" width="50%"><figcaption>출처: 이득우의 게임 수학(이득우 저) p.118</figcaption></figure>
+                <figure><img src = "../img/noradial.jpg" width="50%" id="no-radial"><figcaption>출처: 이득우의 게임 수학(이득우 저) p.118</figcaption></figure>
                 <p>
                     · 이제 삼각함수를 알아보자, 삼각비의 사잇각$\angle A$의 범위를 실수 전체(집합R)로 확장한 대응 관계를 <span class = "keyword">삼각함수(trigonometric function)</span>라고 한다. <br>
                     · 사잇각의 범위가 실수 전체가 되었으므로 직각삼각형이 아니라 데카르트 좌표계 상 원점을 중점으로 하는 반지름 $r$이 1인 단위원 상에서 생각하는 것이 알맞다. <br>
@@ -535,6 +535,7 @@
                 </div><br>
                 <h6>삼각함수의 성질</h6>
                 <figure><img src = "../img/cossin.jpg" width="50%"><figcaption>출처: 이득우의 게임 수학(이득우 저) p.120</figcaption></figure>
+                <h6></h6>
                 <p>
                     · 데카르트 좌표계에서 <span class = "keyword">각도(degree)</span>란 x축에서 원의 궤적을 따라 반시계 방향으로 회전한 크기를 의미한다. <br>
                     · 반지름이 1인 단위원상에서 반시계 방향으로의 회전을 생각해보자. <br>
@@ -548,6 +549,8 @@
                     · $sin$ 함수와 $cos$함수의 특성으로 인해 아래의 공식이 성립한다. 향후 회전 관련 계산에 유용하므로 숙지하자. 
                 </p>
                 <div class = "equation-h6">
+                    <span class = "keyword" id = go-100>삼각 함수의 성질</span>은 아래와 같다. <br>
+                    <br>
                     $cos$ 함수는 우함수이므로 다음이 성립한다. <br>
                     <br>
                     $cos(θ)=cos(-θ)$<br>
@@ -556,6 +559,7 @@
                     <br>
                     $sin(-θ)=-sin(θ)$
                 </div>
+                <h6></h6>
                 <p>
                     · tan 함수는 빗변과 무관하게 밑변과 높이의 관계만을 나타낸다. <br>
                     · sin, cos 함수와 같이 tan함수도 단위원 상에서 보면 아래의 공식이 성립한다. <br>
@@ -710,11 +714,12 @@
                 <div class = "equation-h5">
                     반대로 극좌표계를 데카르트 좌표계로 변환해보자. 극좌표계$(r, θ)$를 보자 <br>
                     <br>
-                    r은 결국 단위원의 반지름 길이, θ는 단위원 상의 중심각과 같으므로<br>
+                    r은 결국 원의 반지름 길이, θ는 단위원 상의 중심각과 같으므로<br>
                     삼각함수를 사용하여 변환할 수 있다. <br>
+                    <a href = "#no-radial">🔗삼각함수와 좌표 이미지</a>
                     <br>
-                    $x = rcosθ$<br>
-                    $y = rsinθ$<br>
+                    $x = r·cosθ$<br>
+                    $y = r·sinθ$<br>
                 </div>
             </div>
             <div class = "content2">
@@ -826,7 +831,7 @@
                 <p>
                     · $R^{2}$상의 임의의 $\vec{v}$를 선형 변환한 $\vec{w}$를 구하는 행렬의 설계 방법은 아래와 같다. 
                 </p>
-                <div class = "equation-h5" style = "text-align:left;">
+                <div class = "equation-h5" style = "text-align:left;" id = "matrix-design">
                     우선 임의의 벡터를 선형 변환하기 위해 <br>
                     벡터 공간 V에 임의의 벡터인 $\vec{v}=(x,y)$를 생성해보자<br>
                     간편한 계산을 위해 선형 독립 관계인 표준 기저 벡터를 사용, 선형 결합식에 대입하면<br>
@@ -837,7 +842,7 @@
                     이 성립한다. <br>
                     <br>
                     <br>
-                    이제 $\vec{v}$를 선형 변환하기 위해 선형 결합식에 의해 $\vec{v}$를 선형변환한 $\vec{w}$를 생성하면<br>
+                    이제 $\vec{v}$를 선형 변환하기 위해 선형 결합식을 사용하여 $\vec{v}$를 선형 변환한 $\vec{w}$를 생성하면<br>
                     <br>
                     $\vec{w}=x(a,c)+y(b,d)=(ax+by, cx+dy)$ <span class = "formula">식2</span><br>
                     <br>
@@ -892,12 +897,231 @@
                     <br>
                 </div>
                 <h6>삼각함수의 덧셈 정리</h6>
+                <p>
+                    · 의무 교육 과정에서 암기했던 이 공식을 회전행렬의 원리를 파악하면 행렬곱으로 덧셈 정리를 유도할 수 있다. 
+                </p>
+                <div class = "equation-h6">
+                    회전에 두 각 $α$, $β$가 사용된다고 하자. 
+                    회전 $R_{α}$와 $R_{β}$는 다음 공식이 성립한다. <br>
+                    <br>
+                        $R_{α}=\begin{bmatrix}cosα&-sinα\\sinα&cosα\end{bmatrix}$<br>
+                        $R_{β}=\begin{bmatrix}cosβ&-sinβ\\sinβ&cosβ\end{bmatrix}$<br>
+                    <br>
+                    두 각을 더한 후 회전한 결과는 다음과 같다. <br>
+                    <br>
+                    $R_{(α+β)}=\begin{bmatrix}cos(α+β)&-sin(α+β)\\sin(α+β)&cos(α+β)\end{bmatrix}$<br>
+                    <br>
+                    두 각 $α$, $β$를 더한 후 회전한 결과는 결국 각$α$ 만큼 회전을 수행한 후, 각$β$ 만큼 회전을 수행한 결과와 동일하다. <br>
+                    즉, 선형 변환 행렬을 사용한 벡터의 선형 변환을 활용하면 아래의 식이 성립한다. <br>
+                    <br>
+                    $R_{(α+β)}=R_{α}·R_{β}$ <br>
+                    <br>
+                    이다. <br>
+                    <br>
+                    $\begin{bmatrix}cos(α+β)&-sin(α+β)\\sin(α+β)&cos(α+β)\end{bmatrix}=\begin{bmatrix}cosαcosβ-sinαsinβ&-(cosαsinβ+sinαcosβ)\\cosαsinβ+sinαcosβ&cosαcosβ-sinαsinβ\end{bmatrix}$<br>
+                    <br>
+                    따라서 다음 식이 성립하며, 이를 <span class = "keyword">삼각함수의 덧셈 정리</span> 라고 한다. <br>
+                    <br>
+                    $cos(α+β) = cosαcosβ-sinαsinβ$<br>
+                    $sin(α+β) = sinαcosβ+cosαsinβ$
+                </div>
                 <h5>역행렬</h5>
+                <p>
+                    · 선형 변환에 사용되는 행렬은 본질적으로 함수의 성질을 지니므로, 항등 함수, 역함수에 대응하는 행렬이 존재한다. <br>
+                    · 항등 함수에 대응하는 행렬을 <span class = "keyword">항등 행렬(identity matrix)</span>이라고 한다. <br>
+                    · 항등 행렬은 원 공간의 변화 없이 동일한 공간으로 유지하는 변환을 의미한다. <br>
+                    · 항등 행렬은 I로 나타내며 아래와 같다. 
+                </p>
+                <div class = "equation-h5">
+                    앞서 학습한 <a href = "matrix-design">🔗행렬의 설계</a>부분의 식 유도 부분의 일부를 복습해보자. <br>
+                    <br>
+                    $\vec{v}=(x,y)$를 선형 변환하기 위해 선형 결합식을 사용하여 $\vec{v}$를 선형변환한 $\vec{w}$를 생성하면<br>
+                    <br>
+                    $\vec{w}=x(a,c)+y(b,d)=(ax+by, cx+dy)$<br>
+                    <br>
+                    위 식을 행렬곱의 형태로 나타내면 <br>
+                    <br>
+                    $\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}ax+by\\cx+dy\end{bmatrix}$<br>
+                    <br>
+                    즉, $R^{2}$ 상의 $\vec{v}$를 선형 변환한 결과 $\vec{w}$는 <br>
+                    <br>
+                    $\begin{bmatrix}a&b\\c&d\end{bmatrix}\vec{v}=\vec{w}$<br>
+                    <br>
+                    이다. <br>
+                    이 행렬곱이 <br>
+                    <br>
+                    $\begin{bmatrix}a&b\\c&d\end{bmatrix}\vec{v}=\vec{v}$<br>
+                    <br>
+                    이 되는 경우 앞의 2X2크기의 정방 행렬은 <br>
+                    <br>
+                    $I=\begin{bmatrix}1&0\\0&1\end{bmatrix}$<br>
+                    <br>
+                    이 되어야 하고 이를 <span class = "keyword">항등 행렬(identity matrix)</span>이라고 한다. 
+                </div>
+                <p>
+                    · 역함수에 대응하는 행렬을 <span class = "keyword">역 행렬(inverse matrix)</span>이라고 한다. <br>
+                </p>
+                <div class = "equation-h5">
+                    이제 항등 행렬을 유도 했으므로 유사한 방법으로 역행렬을 유도해보자. <br>
+                    <br>
+                    역 행렬은 아래의 조건을 만족해야한다. <br>
+                    <br>
+                    $\begin{bmatrix}a&b\\c&d\end{bmatrix}\vec{v}=I$<br>
+                    <br>
+                    여기서 항등 행렬$I$는 $\mathbb{R}^2$의 기저와 같기 때문에 <br>
+                    결국 선형 변환한 결과를 다시 원상태로 되돌리는 것이된다. <br>
+                    <br>
+                    역행렬은 위 첨자$^{-1}$을 사용하여 나타내고 임의의 행렬에 대해 다음과 같은 수식이 성립한다. <br>
+                    <br>
+                    $A·A^{-1}=A^{-1}·A=I$<br>
+                    <br>
+                </div>
+                <p>
+                    · 다음 목차에서 역행렬의 판별식과 크기, 전단, 회전, 행렬 곱에 대한 역행렬을 학습하자.
+                </p>
                 <h6>역행렬의 존재를 판별하는 행렬식</h6>
+                <p>
+                    · 함수가 역함수를 가지려면 전단사함수여야하는 조건이 있듯, <br>
+                    · 행렬도 함수이므로 두 공간 변환의 관계가 전단사 관계여야만 역행렬을 가진다. <br>
+                    · 어떤 행렬이 역행렬이 존재하는지 파악할 수 있는 특별한 수식이 있는데 이를 <span class = "keyword">행렬식(determinant)</span>이라고 한다. <br>
+                </p>
+                <div class = "equation-h6">
+                    행렬식은 $det()$기호로 표시하며 2X2 정방행렬 A의 행렬식은 다음과 같다. <br>
+                    <br>
+                    $A=\begin{bmatrix}a&b\\c&d\end{bmatrix}$<br>
+                    $det(A)=ad-bc$<br>
+                    <br>
+                    행렬식 $det()=0$이면 역행렬이 존재하지 않는다. 왜 그런지 살펴보자. <br>
+                    <br>
+                    행렬 $A=\begin{bmatrix}a&b\\c&d\end{bmatrix}$의 열벡터 각각을 데카르트 좌표계 상에 배치해보자 <br>
+                    배치 후 형성된 공간의 넓이는 좌표계를 그려 쉽게 파악할 수 있고, <br>
+                    파악 한 결과는 행렬식과 같다. <br>
+                    <br>
+                    $ad-bc = det(A)$
+                    <br>
+                    <br>
+                    앞서 학습했다시피, 역행렬은 임의의 행렬에 대해 다음과 같은 수식이 성립하여야만 한다. <br>
+                    <br>
+                    $A·A^{-1}=A^{-1}·A=I$ <span class = "formula">식 1</span><br>
+                    <br>
+                    수식은 행렬 곱의 형태이므로 결국 행렬 A에 역행렬A를 사용하여 I로 변환하는 것과 같다. <br>
+                    <br>
+                    하지만 행렬 A의 경우 데카르트 좌표계 상에서 열벡터로 생성한 공간의 넓이가 0이므로 <br>
+                    두 벡터는 같은 선 상에 놓인 선형 종속 관계이다. <br>
+                    선형 변환은 두 벡터가 선형 독립일 때만 가능하다. <br>
+                    <br>
+                    따라서, <span class = "formula">식 1</span>을 만족하는 역행렬A는 존재하지 못하므로 <br>
+                    $det(A)=ad-bc=0$일 때, 역행렬은 존재하지 않는다. 
+                </div>
+                <h6><span class = "ref">참고</span> 행렬식 계산 결과가 음수가 나온다면? </h6>
+                <div class = "equation-h6">
+                    단순하게 생각해보자 <br>
+                    <br>
+                    벡터 공간 $V$의 표준기저벡터 <br>
+                    <br>
+                    $e_{1}=(1, 0)$, $e_{2}=(0, 1)$<br>
+                    <br>
+                    이 변환되어 <br>
+                    벡터 공간 $W$의 기저벡터<br>
+                    <br>
+                    $e'_{1}=(0, 1)$, $e'_{2}=(1, 0)$이 되었다고 하자. <br>
+                    <br>
+                    잘 보면 $e'_{1}=(0, 1)$, $e'_{2}=(1, 0)$는 <br>
+                    결국 기저 벡터$e_{1}=(1, 0)$, $e_{2}=(0, 1)$가 서로 바뀐 것과 같다. <br>
+                    <br>
+                    이는 마치 손바닥면에서 손 등면으로 뒤집은 것과 똑 같은 의미라고 보면된다. <br>
+                    (그림)<br>
+                    이제 벡터 공간 V를 뒤집은 벡터 공간 W의 기저 벡터를 행렬로 나타낸 것을 A라하고 행렬식을 사용해보자. <br>
+                    <br>
+                    $A=\begin{bmatrix}a&b\\c&d\end{bmatrix}=\begin{bmatrix}0&1\\1&0\end{bmatrix}$<br>
+                    $det(A)=ad-bc=0·0-1·1=-1$<br>
+                    <br>
+                    결과가 음수이다. 즉 행렬식의 결과가 음수라면 평면의 뒤를 의미한다고 할 수 있다. <br>
+                    이처럼 행렬식의 부호를 사용하여 평면의 앞 뒤 판별, 설정을 할 수 있다. 
+                </div>
                 <h6>크기 변환 행렬의 역행렬</h6>
+                <div class = "equation-h6">
+                    크기를 원래대로 돌리는 형태이므로 아래와 같다. <br>
+                    <br>
+                    $S^{-1}=\begin{bmatrix}\frac{1} {a}&0\\0&\frac{1} {b}\end{bmatrix}$
+                    <br>
+                </div>
                 <h6>전단 변환 행렬의 역행렬</h6>
+                <div class = "equation-h6">
+                    수평 전단 행렬의 역행렬<br>
+                    <br>
+                    $\begin{bmatrix}1&-a\\0&1\end{bmatrix}$<br>
+                    <br>
+                </div>
+                <span class = "emphasis">← 전치 →</span>
+                <div class = "equation-h6" style = "margin: 0;">
+                    수직 전단 행렬의 역행렬<br>
+                    <br>
+                    $\begin{bmatrix}1&0\\-a&1\end{bmatrix}$<br>
+                    <br>
+                </div>
                 <h6>회전 변환행렬의 역행렬</h6>
-                <h6>행렬 곱의 역행렬</h6>s
+                <div class = "equation-h6">
+                    회전 변환행렬의 역행렬은 아래와 같다. <br>
+                    <br>
+                    $R_{θ}^{-1}=\begin{bmatrix}cosθ&sinθ\\-sinθ&cosθ\end{bmatrix}$<br>
+                    <br>
+                    회전 변환행렬을 유도해보자. <br>
+                    <br>
+                    회전 변환 결과를 회전하기 전으로 되돌리려면, 회전한 방향 만큼 반대방향으로 회전하면 된다. <br>
+                    따라서 회전 변환 행렬의 역행렬은<br>
+                    <br>
+                    $R_{θ}^{-1} = R_{(-θ)}$<br><br>
+
+                    $R_{θ}=\begin{bmatrix}cosθ&-sinθ\\sinθ&cosθ\end{bmatrix}$이므로, 
+                    $R_{(-θ)}=\begin{bmatrix}cos(-θ)&-sin(-θ)\\sin(-θ)&cos(-θ)\end{bmatrix}$<br>
+                    <br>
+                    <a href = "#go-100">🔗삼각 함수의 성질</a>에 의해 아래가 성립한다. <br>
+                    <br>
+                    $R_{θ}^{-1}=\begin{bmatrix}cos(-θ)&-sin(-θ)\\sin(-θ)&cos(-θ)\end{bmatrix}=\begin{bmatrix}cosθ&sinθ\\-sinθ&cosθ\end{bmatrix}$<br>
+                    <br>
+                    이 식들을 잘 살펴보면 아래가 성립한다. <br>
+                    <br>
+                    $R_{θ}^{-1}=R_{(-θ)}=R_{θ}^{T}$<br>
+                    <br>
+                    즉, 회전 변환 행렬의 역행렬는 회전 변환 행렬의 전치와 같다. <br>
+                </div>
+                <h6>행렬 곱의 역행렬</h6>
+                <div class = "equation-h6">
+                    합성 함수의 역함수에 해당하는 두 행렬곱의 역행렬은 아래 수식이 성립한다. <br>
+                    <br>
+                    $(A·B)^{-1}=B^{-1}·A^{-1}$ <br>
+                    <br>
+                    이는 합성 함수의 역함수의 수식과 형태가 같다. <br>
+                    이제 위 식을 증명해보자<br>
+                    <br>
+                    역행렬이 존재하는 A, B 행렬의 곱의 결과가 C라고 하자. <br>
+                    <br>
+                    $A·B=C$<br>
+                    <br>
+                    C도 역행렬이 존재한다면 아래 식이 성립한다. <br>
+                    <br>
+                    $C·C^{-1}=I$<br>
+                    <br>
+                    $A·B=C$이므로 이를 대입하면, <br>
+                    <br>
+                    $(A·B)·(A·B)^{-1}=I$<br>
+                    <br>
+                    위 식의 양변에 $A^{-1}$을 곱하면, <br>
+                    <br>
+                    $A^{-1}·(A·B)·(A·B)^{-1}=A^{-1}$<br>
+                    <br>
+                    행렬의 곱은 결합법칙이 성립하므로<br>
+                    <br>
+                    $(A^{-1}·A)·B·(A·B)^{-1}=A^{-1}$<br>
+                    $B·(A·B)=A^{-1}$<br>
+                    <br>
+                    양변에 $B^{-1}$을 곱하면, <br>
+                    <br>
+                    $B^{-1}·B·(A·B)^{-1}=B^{-1}·A^{-1}$<br>
+                    <br>
+                    $(A·B)^{-1}=B^{-1}·A^{-1}$
+                </div>
             </div>
             <div class = "content2">
                 <h3>6장 아핀 공간: 움직이는 가상 세계의 구축</h3>
