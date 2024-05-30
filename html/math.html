@@ -969,7 +969,7 @@
                     $\begin{bmatrix}a&b\\c&d\end{bmatrix}\vec{v}=I$<br>
                     <br>
                     여기서 항등 행렬$I$는 $\mathbb{R}^2$의 기저와 같기 때문에 <br>
-                    결국 선형 변환한 결과를 다시 원상태로 되돌리는 것이된다. <br>
+                    결국, 역행렬의 곱은 선형 변환한 결과를 다시 원상태로 되돌리는 것이된다. <br>
                     <br>
                     역행렬은 위 첨자$^{-1}$을 사용하여 나타내고 임의의 행렬에 대해 다음과 같은 수식이 성립한다. <br>
                     <br>
@@ -1126,12 +1126,155 @@
             <div class = "content2">
                 <h3>6장 아핀 공간: 움직이는 가상 세계의 구축</h3>
                 <h5>이동 변환을 위한 아핀 공간</h5>
+                <p>
+                    · 앞서 학습했다시피, 2X2크기의 정방 행렬은 선형 변환 함수와 대응된다. <br>
+                    · 선형 변환 함수는 선형성을 만족해야한다. <br>
+                    · 선형성의 조건에 기저벡터는 반드시 원점을 지나야하는데 <br>
+                    · 이동은 원점을 벗어날 수도 있으므로 선형성을 만족하지 못한다. <br>
+                    · 그럼 이동 변환은 어떻게 해야할까? <br>
+                    · 차원을 1차원 더 늘려 축을 하나 더 추가하면 해결할 수 있다. <br>
+                </p>
+                <div class = "equation-h5">
+                    이동 변환 행렬은 아래와 같다. <br>
+                    <br>
+                    $T=\begin{bmatrix}1&0&a\\0&1&b\\0&0&1\end{bmatrix}$<br>
+                    <br>
+                    $T·\begin{bmatrix}x\\y\\1\end{bmatrix}=\begin{bmatrix}x+a\\y+b\\1\end{bmatrix}$<br>
+                    <br>
+                    (그림)
+                    <br>
+                    2차원의 이동은 3차원으로 확장하여 전단 변환을 수행하는 형태라고 보면된다. <br>
+                    이는 결국 평면의 이동이 된다. <br>
+                    <br>
+                    마지막 차원값을 1로 한정한 부분 공간을 <span class = "keyword">아핀 공간</span>이라고 한다. 
+                </div><br>
+                <div class = "equation-h5">
+                    이동 변환$T$가 3X3크기의 정방 행렬이므로, <br>
+                    크기, 회전 변환을 이동 변환과 함께 쓰려면 <br>
+                    그것들 또한 3X3크기의 정방 행렬로 만들면 된다. <br> 
+                    즉 z축을 추가하면 된다. <br>
+                    <br>
+                    $S=\begin{bmatrix}a&0&0\\0&b&0\\0&0&1\end{bmatrix}$<br>
+                    $R=\begin{bmatrix}cosθ&-sinθ&0\\sinθ&cosθ&0\\0&0&1\end{bmatrix}$<br>
+                    <br>
+                    이렇게 한 차원 높여 설계한 선형 변환을 <br>
+                    <span class = "keyword">아핀 변환</span>이라고 한다. <br>
+                    <br>
+                    이동, 크기, 회전 변환 후에 생성되는 임의의 벡터들은 모두 마지막 차원 값이 1로, 아핀 공간에 닫힌 형태가된다. <br>
+                    <br>
+                    $\begin{bmatrix}a&0&0\\0&b&0\\0&0&1\end{bmatrix}\begin{bmatrix}x\\y\\1\end{bmatrix}=\begin{bmatrix}ax\\by\\1\end{bmatrix}$ (크기 변환 (S))<br>
+                    $\begin{bmatrix}cosθ&-sinθ&0\\sinθ&cosθ&0\\0&0&1\end{bmatrix}\begin{bmatrix}x\\y\\1\end{bmatrix}=\begin{bmatrix}cosθx-sinθy\\sinθx+cosθy\\1\end{bmatrix}$ (회전 변환(R))<br>
+                    $\begin{bmatrix}1&0&a\\0&1&b\\0&0&1\end{bmatrix}\begin{bmatrix}x\\y\\1\end{bmatrix}=\begin{bmatrix}x+a\\y+b\\1\end{bmatrix}$ (이동 변환(T))<br>
+                </div>
                 <h5>아핀 공간의 구성 요소</h5> 
+                <p>
+                    · 아핀 공간의 정의에 따라 아핀 공간에 속한 물체의 마지막 차원 값은 항상 1이어야 한다. 
+                </p>
                 <h6>점</h6>
+                <div class = "equation-h6">
+                    이동 가능한 2차원 아핀 공간의 점: $(x, y, 1)$<br>
+                    이동 가능한 3차원 아핀 공간의 점: $(x, y, z, 1)$<br>
+                    <br>
+                    마지막 차원 값은 항상 1이어야만 한다. 1이외의 숫자가 오면 안된다. 
+                </div>
                 <h6>이동 벡터</h6>
+                <p>
+                    · 이동 변환 행렬은 3X3크기의 정방 행렬이다. <br>
+                    · 그렇기 때문에 변환을 위해 행렬 곱을 사용하려면 회전, 크기 변환도 3X3크기의 정방 행렬로 즉, 아핀 변환을 만들었다. <br>
+                    · 아핀 변환을 사용하여 변환된 벡터들은 모두 아핀 공간에 닫혀있다고 앞서 학습하였다. <br>
+                    · 그렇다면 벡터의 합 연산을 사용하여 아핀 공간의 원소인 점을 이동시켜보자. <br>
+                    · 이 경우도 이동된 점은 아핀공간에 닫혀있어야한다. <br>
+                    · 아핀 공간에 닫히도록 이동시키기 위해 벡터 라는 것을 사용한다. <br>
+                    · 여기서 벡터는 3장의 벡터와는 같은 단어지만 다른 용도로 쓰인다. 이와 구분하기 위해 아핀 공간의 벡터를 <span class = "keyword">이동벡터</span>혹은 <span class = "keyword">변위벡터</span>라고 부른다. 
+                </p>
+                <div class = "equation-h6">
+                    아핀 공간의 점 $P_{1}=(x_{1}, y_{1}, 1)$에 이동 벡터 $\vec{v}$를 더한 결과를 $P_{2}=(x_{2}, y_{2}, 1)$라고 하면 아래와 같다. <br>
+                    <br>
+                    $P_{1}+\vec{v}=P_{2}$<br>
+                    <br>
+                    위 식을 살펴보면, $P_{1}$에서 $\vec{v}$만큼 이동하여 $P_{2}$로 향함을 알 수 있다. <br>
+                    위 식에서 $P_{1}$을 우변 이항하여, 이동 벡터를 구하면 아래와 같다. <br>
+                    <br>
+                    $\vec{v}=P_{2}-P_{1}$<br>
+                    $(x_{1}-x_{2}, y_{1}-y_{2}, 0)=(x_{1}, y_{1}, 1)-(x_{2}, y_{2}, 1)$<br>
+                    <br>
+                    즉, <span class = "emphasis">이동 벡터($\vec{v}$) = 목표 점($P_{2}$) - 시작 점($P_{1}$)</span>이다. <br>
+                    그리고 이동 벡터는 마지막 차원값이 0이므로 점이 있는 아핀 공간과 다른 공간에 위치한다. <br>
+                    (그림 208)<br>
+                    벡터의 뺄셈은 교환 법칙이 성립하지 않으므로 위 식을 반대로 빼면 다른 결과가 나오므로 주의한다. <br>
+                    <br>
+                    $-\vec{v}=-P_{2}+P_{1}$<br>
+                    $\therefore-\vec{v}=P_{1}-P_{2}$<br>
+                    <br>
+                    반대로 빼면 반대 방향의 이동 벡터이다. 
+                </div>
                 <h6>아핀 공간의 성질</h6>
+                <p>
+                    · 물리적 관점에서 현실의 3차원 공간을 <span class = "keyword">유클리드 공간(Euclidean space)</span>(아핀 공간과 대응)<br>
+                    · 유클리드 공간에서 작용하는 힘을 <span class = "keyword">유클리드 벡터(Euclidean vector)</span>(이동 벡터와 대응)<br>
+                    · 이렇듯 콘텐츠를 다룰 때에는 점과 이동벡터를 구분하여 설계하는 것이 효과적이다. <br>
+                    · <span class = "emphasis">앞으로 이 책에서 '이동 벡터'를 '벡터'라고 지칭할 것이다. </span><br>
+                </p>
+                <div class = "content3">
+                    · 점과 벡터의 <span class = "emphasis">마지막 차원 값을 토대</span>로 두 요소사이에는 다음과 같은 연산 규칙이 성립한다. <br>
+                    · 앞서 계속 학습했듯, 아핀공간은 점의 영역, 이동 벡터의 영역은 이동 벡터의 영역이다. <br>
+                    <br>
+                    · 점-점 = 벡터 (1 - 1 = 0)<br>
+                    · 점+벡터 = 점(1 + 0 = 1)<br>
+                    · 벡터+벡터 = 벡터(0 + 0 = 0)<br>
+                    · 점 + 점 != 점 (1 + 1 = 2)
+                </div>
                 <h5>아핀 결합</h5>
+                <p>
+                    · 바로 위에서 학습했듯, 점 + 점으로 점을 생성할 수는 없다. 왜냐하면, 마지막 차원이 2이기때문이다. <br>
+                    · 하지만, 선형 결합의 형태로 '스칼라·점1 + 스칼라2·점2'의 결과는 특정 조건을 만족하면 새로운 점을 생성가능하다. <br>
+                </p>
+                <div class = "equation-h5">
+                    임의의 두 점 $P_{1}=(x_{1}, y_{1}, 1)$, $P_{2}=(x_{2}, y_{2}, 1)$를 선형 결합 형태로 나타내면 아래와 같다. <br>
+                    <br>
+                    $a·P_{1}+b·P_{2}=(ax_{1}+bx_{2},\space ay_{1}+b_y{2},\space a+b)\space\space\space\space\space(s.t.\space\space\space a+b=1)$<br>
+                    <br>
+                    즉, 마지막 차원값을 1로 한정하여 선형 결합의 형태를 사용하면 점을 생성할 수 있게 된다. <br>
+                    <br>
+                    점을 계속 추가하면 다음과 같은 수식이 성립하게 된다. <br>
+                    <br>
+                    $\sum_{n}^{i=1}c_{i}·P_{i} \space\space\space\space\space (s.t.\space\space\space \sum_{n}^{i=1}c_{i}=1)$<br>
+                    <br>
+                    이렇게 여러 개의 점을 결합하여 새로운 점을 생성하는 수식을 <span class = "keyword">아핀 결합</span>이라고 한다. 
+                </div>
                 <h6>두 점의 결합</h6>
+                <div class = "equation-h6">
+                    바로 위 아핀 결합 목차에서 학습한 임의의 두 점$P_{1}=(x_{1}, y_{1}, 1)$, $P_{2}=(x_{2}, y_{2}, 1)$의 선형 결합의 형태로 나타낸 결과$P^{'}$의 식을 보자. <br>
+                    <br>
+                    $a·P_{1}+b·P_{2}=(ax_{1}+bx_{2},\space ay_{1}+b_y{2},\space a+b)=P^{'}\space\space\space\space\space(s.t.\space\space\space a+b=1)$<br>
+                    <br>
+                    두 스칼라의 합이 1인 $a+b=1$식을 b에 관하여 푼 후 위 식에 대입하면 아래와 같다. <br>
+                    <br>
+                    $a+b=1$<br>
+                    $b=1-a$<br>
+                    $\therefore a·P_{1}+(1-a)·P_{2}=P^{'}$<span class = "formula">식 1</span><br>
+                    <br>
+                    <span class = "formula">식 1</span> 을 정리해보자. <br>
+                    <br>
+                    $a(P_{1}-P_{2}) = P^{'}-P_{2}$<br>
+                    <br>
+                    $P_{1}-P_{2}$를 $\vec{v}$, $P^{'}-P_{2}$를 $\vec{u}$라고하면 아래와 같다. <br>
+                    <br>
+                    $a·\vec{v}=\vec{u}$<br>
+                    <br>
+                    즉, $\vec{v}$의 스칼라 배가 $\vec{u}$이므로 두 백터는 서로 평행한 벡터로 <br>
+                    두 점의 아핀 결합으로 생성되는 점은 $P_{2}$에서$P_{1}$을 지나는 직선 상에 모두 위치한다. <br>
+                    결국 <span class = "formula">식 1</span>에 모든 실수 a를 대입하면 양 끝으로 무한이 뻗은 선 직선이 형성된다. <br>
+                    a의 범위에 따라 형성되는 선의 형태는 다음과 같다. <br>
+                    <br>
+                    $-∞&lt;a&lt;∞$ (직선(line))<br>
+                    $0&lt;a&lt;∞$ (반직선(ray))<br>
+                    $0&lt;a&lt;1$ (선분(line segment))<br>
+                    <br>
+                    즉, <span class = "formula">식 1</span>을 정리하면 $L(a)$라 표현하고, <span class = "keyword">직선의 방정식</span>이라고 한다. <br>
+                    <br>
+                    $L(a)=a·P_{1}+(1-a)·P_{2}$
+                </div>
                 <h5>선 그리기 알고리즘</h5>
                 <h6>벡터를 모니터의 점으로 표현</h6>
                 <h6>선 그리기 알고리즘</h6>

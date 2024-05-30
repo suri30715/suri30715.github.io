@@ -3,7 +3,7 @@
  * 목차 안의 내용에서 순서 리스트를 만들 경우 <li>말고 <span class = "number></span>으로 감쌀 것
 */
 /* 폰트 임포트 */
-/* <!--🔗· --> */
+/* <!--🔗·θ --> */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 * 
@@ -23,7 +23,7 @@
 /* https://codingbroker.tistory.com/66 */
 *::-webkit-scrollbar
 {
-    width:5px;
+    width:15px;
 }
 
 *::-webkit-scrollbar-thumb
