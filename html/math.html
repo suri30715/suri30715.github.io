@@ -959,7 +959,7 @@
                     이 되어야 하고 이를 <span class = "keyword">항등 행렬(identity matrix)</span>이라고 한다. 
                 </div>
                 <p>
-                    · 역함수에 대응하는 행렬을 <span class = "keyword">역 행렬(inverse matrix)</span>이라고 한다. <br>
+                    · 역함수에 대응하는 행렬을 <span class = "keyword" id="inverse-matrix">역 행렬(inverse matrix)</span>이라고 한다. <br>
                 </p>
                 <div class = "equation-h5">
                     이제 항등 행렬을 유도 했으므로 유사한 방법으로 역행렬을 유도해보자. <br>
@@ -1060,7 +1060,7 @@
                     $\begin{bmatrix}1&0\\-a&1\end{bmatrix}$<br>
                     <br>
                 </div>
-                <h6>회전 변환행렬의 역행렬</h6>
+                <h6 id = "rotate-inverse-matrix">회전 변환행렬의 역행렬</h6>
                 <div class = "equation-h6">
                     회전 변환행렬의 역행렬은 아래와 같다. <br>
                     <br>
@@ -1084,7 +1084,7 @@
                     <br>
                     $R_{θ}^{-1}=R_{(-θ)}=R_{θ}^{T}$<br>
                     <br>
-                    즉, 회전 변환 행렬의 역행렬는 회전 변환 행렬의 전치와 같다. <br>
+                    즉, <span class = "emphasis">회전 변환 행렬의 역행렬는 회전 변환 행렬의 전치와 같다. </span><br>
                 </div>
                 <h6>행렬 곱의 역행렬</h6>
                 <div class = "equation-h6">
@@ -1242,7 +1242,7 @@
                     <br>
                     이렇게 여러 개의 점을 결합하여 새로운 점을 생성하는 수식을 <span class = "keyword">아핀 결합</span>이라고 한다. 
                 </div>
-                <h6>두 점의 결합</h6>
+                <h6 id = "two-verticies">두 점의 결합</h6>
                 <div class = "equation-h6">
                     바로 위 아핀 결합 목차에서 학습한 임의의 두 점$P_{1}=(x_{1}, y_{1}, 1)$, $P_{2}=(x_{2}, y_{2}, 1)$의 선형 결합의 형태로 나타낸 결과$P^{'}$의 식을 보자. <br>
                     <br>
@@ -1426,18 +1426,255 @@
             <div class = "content2">
                 <h3>7장 내적: 벡터 공간의 분석과 응용</h3>
                 <h5>벡터의 내적</h5>
+                <p>
+                    · 같은 차원의 두 벡터의 성분을 곱한 후 더해 스칼라를 만드는 연산이다. <br>
+                    · 가운뎃점(·)연산자를 사용하는데 곱셈과 동일한 연산자이다. <br>
+                    · 내적은 벡터 응용에서 자주 쓰이는 중요한 공식이다. <br>
+                    · 컴퓨터 그래픽에서 실시간으로 변화하는 효과를 구현하는데 유용하다. 
+                </p>
+                <div class = "equation-h5">
+                    2차원 벡터의 내적 공식은 아래와 같다. <br>
+                    <br>
+                    $\vec{u}=(a, b), \vec{v}=(c, d)$<br>
+                    <br>
+                    $\vec{u}·\vec{v}=a·c+b·d$
+                </div>
                 <h6>내적의 성질</h6>
+                <div class = "content3">
+                    $\vec{u}·\vec{v}=\vec{v}·\vec{u}$: 교환 법칙 > <span class = "emphasis">O</span><br>
+                    $\vec{u}·(\vec{v}·\vec{w})\neq(\vec{u}·\vec{v})·\vec{w}$: 결합 법칙 > <span class = "emphasis">X</span><br>
+                    $\vec{w}·(\vec{u}+\vec{v})=\vec{u}·\vec{w}+\vec{v}·\vec{w}$: 덧셈에 대한 분배법칙 > <span class = "emphasis">O</span><br>
+                </div>
+                <div class = "equation-h6">
+                    <span class = "emphasis">이는 모든 차원의 벡터에서 동일하게 적용된다. </span><br>
+                    <span class = "emphasis">같은 벡터의 내적은 그 벡터 크기의 제곱이다. </span><br>
+                    <br>
+                    $\vec{v}=(x, y)$자체를 내적해보자. <br>
+                    <br>
+                    $\vec{v}·\vec{v}=x·x+y·y=x^{2}+y^{2}$<br>
+                    <br>
+                    $\therefore\vec{v}·\vec{v}=||\vec{v}||^{2}$
+                </div>
+                <br>
+                <div class = "equation-h6">
+                    내적은 교환법칙, 분배법칙을 만족한다. 따라서, <br>
+                    <br>
+                    $(\vec{u}+\vec{v})·(\vec{u}+\vec{v})=\vec{u}·\vec{u}+\vec{v}·\vec{v}+2(\vec{u}·\vec{v})$<br>
+                    <br>
+                    $=||\vec{u}||^{2}+||\vec{v}||^{2}+2(\vec{u}·\vec{v})$
+                </div>
+                <h6><span class = "ref">참고</span> 벡터 크기의 정의</h6>
+                <p>
+                    · 앞서 벡터의 크기를 정의할 때 피타고라스 정의를 활용하여 최단 거리 개념으로 설명했다. <br>
+                    · 그런 기하학적 요소를 완전 배제한다면, 벡터의 크기는 자신을 내적한 결과의 제곱근으로 정의할 수 있다. 
+                </p>
                 <h6>내적과 삼각함수와의 관계</h6>
+                <div class = "equation-h6">
+                    두 벡터 $\vec{u}$, $\vec{v}$의 사잇각을 $θ$라 할때 내적과 $cos$함수의 관계는 아래와 같다. <br>
+                    <figure><img src = "../img/math-02.jpg" width = 80%></figure>
+                    <br>
+                    $\vec{u}·\vec{v}=|\vec{u}||\vec{v}|cosθ$<br>
+                    <br>
+                    따라서, 두 벡터$\vec{u}$, $\vec{v}$의 크기가 1이면 아래의 식이 성립한다. <br>
+                    <br>
+                    $\vec{u}·\vec{v}=cosθ$<br>
+                    <br>
+                    즉, <span class = "emphasis">두 벡터를 정규화한 후 내적의 결과는 두 벡터$\vec{u}$, $\vec{v}$가 이루는 '사잇각'을 cos함수에 전달한 후 도출된 결과값이다. </span><br>
+                    위 식은 자주 사용하므로 꼭 이해하고 넘어가자. <br>
+                    즉, 두 벡터 $\vec{u}$, $\vec{v}$의 내적 값이 0이면<br>
+                    <br>
+                    $cosθ = 0$<br>
+                    <br>
+                    $\therefore cos90˚$, $cos270˚$ 이다. <br>
+                    <br>즉, 두 벡터의 직교성을 판별할 때 유용하다. <br>
+                    <br>
+                    <figure><img src = "../img/math-05.jpg" width = 80%></figure>
+                </div>
                 <h6>행렬의 곱셈을 내적으로 표현하기</h6>
+                <div class = "equation-h6">
+                    행렬 X 벡터 혹은 행렬 X 행렬 = <span class = "emphasis">행렬의 모든 행벡터 와 벡터의 모든 열 벡터끼리의 내적</span>으로 나타낼 수 있다. <br>
+                    행렬 X 벡터의 경우는 아래와 같다. <br>
+                    <br>
+                    $\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}ax+by\\cx+dy\end{bmatrix}=\begin{bmatrix}(a, b)·(x, y)\\(c, d)·(x, y)\end{bmatrix}$<br>
+                    <br>
+                    행렬 X 행렬의 경우도 마찬가지이므로 생략한다. <br>
+                </div>
+                <h6></h6>
+                <p>
+                    · <span class = "keyword">직교 행렬(orthogonal matrix)</span>은 정방 행렬의 모든, 행, 열벡터의 크기가 1이고 벡터가 서로 직교하는 행렬이다. <br>
+                    · $Q$로 표현한다. 
+                </p>
+                <div class = "equation-h6">
+                    $Q=\begin{bmatrix}a&c\\b&d\end{bmatrix}$<br>
+                    <br>
+                    여기서 $(a, b)$, $(c, d)$, $(a, c)$, $(b, d)$의 크기는 1, $(a, b)$, $(c, d)$는 서로 직교(따라서 직교 행렬)한다. <br>
+                    직교 행렬의 전치는 직교행렬의 역행렬이다. 따라서, 아래 식이 성립한다. <br>
+                    <br>
+                    $Q·Q^{T}=I$ <span class = "formula">식 1</span><br>
+                    <br>
+                    회전 변환 행렬은 각 행, 열벡터의 크기가 1, 열벡터가 서로 직교하므로 직교 행렬이다. <br>
+                    <br>
+                    $R_{θ}=\begin{bmatrix}cosθ&-sinθ\\sinθ&cosθ\end{bmatrix}$<br>
+                    <br>
+                    회전 행렬이 직교 행렬인 이유를 다른 방식으로 알아보자. <br>
+                    앞서 학습한 <a href = "#inverse-matrix">🔗역행렬의 조건</a>과 <a href = "#rotate-inverse-matrix">🔗회전 행렬의 역행렬</a>에 의해 아래 식이 성립한다. <br>
+                    <br>
+                    $R_{θ}·R_{θ}^{T}=I$<br>
+                    <br>
+                    위 식은 <span class ="formula">식 1</span>의 형태이므로 <br>
+                    <span class = "emphasis">회전 행렬은 직교 행렬이다. </span>
+                </div>
+                <h6></h6>
+                <p>
+                    · 선형 변환 중 변환 후에도 물체의 형태가 그대로 유지되는 변환을 <span class = "keyword">강체 변환(rigid transformation)</span>이라고 한다. <br>
+                    · 선형 변환이 강체 변환이 되기위한 조건은 다음과 같다. <br>
+                </p>
+                <div class = "content3">
+                    1. 변화된 기저벡터의 크기는 모두 1이어야한다. <br>
+                    2. 모든 기저벡터는 서로 직교해야 한다. <br>
+                    3. 행렬식의 값이 1이어야 한다. <br>
+                </div>
+                <div class = "equation-h6">
+                    회전 변환이 강체 변환의 성질인지 확인해보자. <br>
+                    앞서 학습했듯, 직교 행렬의 성질에 의해 1., 2. 는 만족한다. <br>
+                    3. 행렬식의 값이 1이어야한다. 또한 성립한다. 아래를 보자. <br>
+                    <br>
+                    $R_{θ}=\begin{bmatrix}cosθ&-sinθ\\sinθ&cosθ\end{bmatrix}$<br>
+                    <br>
+                    $cosθ^{2}+sinθ^{2}=1$<br>
+                    <br>
+                    <span class = "emphasis">따라서 회전 변환은 강체 변환의 성질</span>을 가진다. 
+                </div>
                 <h5>시야 판별</h5>
+                <p>
+                    · 벡터의 내적은 공간의 분석에 유용하게 사용된다. 
+                </p>
                 <h6>앞뒤 판별</h6>
+                <p>
+                    · 내적의 부호로 캐릭터를 기준으로 목표물이 앞에 있는지 뒤에 있는지 판별 가능하다. <br>
+                </p>
+                <div class = "equation-h6">
+                    <figure><img src = "../img/math-02.jpg" width = 70%></figure><br>
+                    앞서 조금 전에 학습한 내적과 $cos$함수의 관계로 이해해보자. <br>
+                    <br>
+                    캐릭터의 전방 벡터를 $\vec{u}$<br>
+                    캐릭터에서 목표물 까지의 벡터를 $\vec{v}$라 하면, <br>
+                    사잇각 $θ$에 따른 $cos$함수의 부호로 캐릭터 기준 목표물의 앞에 있는지 뒤에 있는지 내적 결과의 부호로 판별할 수 있다. <br>
+                    (그림 *)
+                    <div class = "content3">
+                        내적 결과 + : 캐릭터의 앞<br>
+                        내적 결과 0 : 캐릭터와 직교 (나란히 옆)<br>
+                        내적 결과 - : 캐릭터의 뒤 <br>
+                    </div>
+                </div>
                 <h6>시야 판별</h6>
+                <p>
+                    · 내적을 이용하여, 캐릭터에 시야각을 부여하고, 그 시야각 안에 목표물이 들어왔는지 확인할 수 있다. <br>
+                </p>
+                <div class = "equation-h6">
+                    (그림 *)
+                    캐릭터의 보편적인 전방시야각의 범위는 [0˚, 180˚]이다. <br>
+                    캐릭터의 전방 벡터를 $\vec{u}$, 캐릭터에서 목표물 까지의 벡터를 $\vec{v}$, 두 벡터의 사잇각을 $α$라고 하자<br>
+                    앞서 학습했듯, 내적과 $cos$함수의 관계에 의해 아래 식이 성립한다. <br>
+                    <br>
+                    $\vec{u}·\vec{v}=|\vec{u}||\vec{v}|cosα$<br>
+                    <br>
+                    계산의 편의를 위해 각각의 벡터를 크기를 1로 만들어 정규화 하자. 그러면 아래 식이 성립한다. <br>
+                    <br>
+                    $\hat{u}·\hat{v}=cosα$<br>
+                    <br>
+                    캐릭터에 부여된 시야각의 특성을 파악해보자. <br>
+                    캐릭터의 시야각 크기를 $β$라고 하면<br>
+                    보편적으로 시야각은 캐릭터의 전방 백터를 기준으로 양쪽으로 반씩 나뉘어지는 형태이다. <br>
+                    따라서, $\vec{u}$, $\vec{v}$의 내적 값인 $cosα$와 <br>
+                    판별을 위해 시야각의 절반을 $cos$함수에 전달한 결과값 $cosβ/2$를 비교하면 <br>
+                    cos함수에 의해 아래가 성립한다. <br>
+                    <div class = "content3">
+                        $cosα \geq cosβ/2$: 목표물이 시야 범위 <span class = "emphasis">안</span>에 있음<br>
+                        $cosα < cosβ/2$: 목표물이 시야 범위 <span class = "emphasis">밖</span>에 있음<br>
+                    </div>
+                </div>
                 <h5>조명 효과의 구현</h5>
+                    <div class = "equation-h5">
+                        <span class = "keyword">렘버트 반사(Lambertian reflection) 모델</span>은 빛을 받아 표면에서 반사되는 빛의 세기는 두 벡터의 사잇각의 코사인 함수에 비례한다는 모델이다.  <br>
+                        (그림 *)<br>
+                        즉, 표면이 향하는 단위 벡터를 $\hat{u}$, <br>
+                        표면에서 광원으로 향하는 단위 벡터를 $\hat{v}$라고 하면, 아래 식이 성립한다. <br>
+                        <br>
+                        $\hat{u}·\hat{v}=cosθ$<br>
+                        <br>
+                        $cos90˚ = 0$(빛이 X), $cos0˚ = 1$(빛이 1)이다. 
+                    </div>
                 <h5>투영 벡터</h5>
+                <p>
+                    · 벡터 내적은 어떤 벡터를 다른 벡터에 직교 투영하는 용도로 사용된다. <br>
+                    · 카메라와 물체 사이의 거리 이외에도 카메라에서 물체까지의 깊이 갚도 필요할 경우도 있다. <br>
+                    · 이 경우 내적을 활용한 투영 벡터를 구하는 공식이 사용된다. <br>
+                </p>
+                <div class = "equation-h5">
+                    벡터 $\vec{u}$, $\vec{v}$가 있고 $\vec{u}$를 $\vec{v}$에 투영한 벡터 $\vec{v}^{'}$가 있다고 하자. <br>
+                    벡터 $\vec{v}$에 투영하였으므로 투영된 벡터는 $\vec{v}^{'}$이다. <br>
+                    따라서 $\vec{v}$와 $\vec{v}^{'}$는 서로 같은 선 상에 놓인다. <br>
+                    <br>
+                    같은 선 상에 놓였으므로 투영 벡터 $\vec{v}^{'}$는 아래와 같은 식으로 구할 수 있다. <br>
+                    <br>
+                    $\vec{v^{'}}=|\vec{v^{'}}|·\hat{v}$<br>
+                    <br>
+                    위 식을 정리해보자. <br>
+                    <br>
+                    <div style = "text-align: left;">
+                        $\vec{v^{'}}=|\vec{v^{'}}|·\frac{\vec{v}} {|\vec{v}|}$&emsp;&emsp;(벡터 $\vec{v}$의 단위 벡터를 구하는 방법을 대입)<br>
+                        $=|\vec{u}|·cosθ·\frac{\vec{v}} {|\vec{v}|}$&emsp;&emsp;($cosθ=\frac{|\vec{v^{'}}} {\vec{u}}, cosθ|\vec{u}|=|\vec{v^{'}|}$ 대입)<br>
+                        $=|\vec{u}|·\frac{\vec{u}·\vec{v}} {|\vec{u}||\vec{v}|}·\frac{\vec{v}} {|\vec{v}|}$<br>
+                        $=\frac{(\vec{u}·\vec{v})} {|\vec{v}|^{2}}·\vec{v}$<br>
+                        $=\frac{(\vec{u}·\vec{v})} {\vec{v}·\vec{v}}·\vec{v}$&emsp;&emsp;($|\vec{v}|^{2}=\vec{v}·\vec{v}$ 대입)<br>
+                    </div>
+                    <br>
+                    위 식에서 투영할 벡터 $\vec{v}$의 크기가 1이면 아래와 같이 단순하게 식이 정리된다. <br>
+                    <br>
+                    $\therefore \vec{v^{'}}=(\vec{u}·\vec{v})·\vec{v}$
+                </div>
             </div>
             <div class = "content2">
                 <h3>8장 삼각형: 물체를 구성하는 가장 작은 단위</h3>
+                <p>
+                    · 8장 이전 까지는 눈에 보이지 않는 가상 공간을 만들고 이를 분석하고 측정하는데 필요한 수학에 대해 정리했다. <br>
+                    · 8장 부터는 눈에 보이는 물체를 다루는 수학을 배울 것이다. 
+                </p>
                 <h5>세 점의 결합</h5>
+                <p>
+                    · 앞서 학습한, <a href = "#two-verticies">🔗두 점의 결합</a>에서 두 점의 결합 결과는 선분, 반직선, 직선 중 하나가 되었다. <br>
+                    · 그렇다면 세 점의 결합의 결과는 무엇일까? 아래에서 알아보자. <br>
+                </p>
+                <span class = "equation-h5">
+                    아핀 결합식을 사용하여 세 점을 결합해보자. <br>
+                    세 점 $P_{1}$, $P_{2}$, $P_{3}$이 있다고 하자, <br>
+                    아핀 결합에 사용되는 스칼라는 그 합이 1이어야 함을 이전에 학습했다. <br>
+                    따라서, 이 세 점의 아핀 결합은 아래와 같다. <br>
+                    <br>
+                    $P^{'}=s·P_{1}+t·P_{2}+(1-s-t)·P_{3}$<br>
+                    <br>
+                    두 점의 결합에서 선분이 만들어지는 조건과 같이 $s$, $t$의 범위를 [0, 1]로 고정하면<br>
+                    세 점의 결합에서는 삼각형이 형성된다. <br>
+                    이렇게 아핀 결합에서 사용되는 모든 스칼라 값을 [0, 1] 범위로 고정하여 결합하는 것을 <br>
+                    <span class = "keyword">컨벡스 결합(convex combination)</span>이라고 한다. <br>
+                    <br>
+                    이는 아핀 결합식에 스칼라의 범위를 [0, 1]로 제한하는 조건을 추가하면 된다. 아래와 같다. <br>
+                    <br>
+                    $\sum_{n}^{i=1}c_{i}·P_{i} \space\space\space\space\space (s.t.\space\space\space \sum_{n}^{i=1}c_{i}=1,\space\space\space0\leq c_{i}\leq1)$<br>
+                    <br>
+                    이렇게 컨벡스 결합으로 생성한 영역을 <span class = "keyword">컨벡스 영역(convex region)</span>이라고 한다. <br>
+                    4점을 컨벡스 결합할 경우 삼각뿔(tetrahedron)이 형성된다. <br>
+                    <br>
+                    컨벡스는 영어로 '볼록한'이라는 뜻인데, <span class = "emphasis">수학에서의 정의는 임의의 두 점을 연결한 선분이 항상 컨벡스 영역 내에 속함을 의미한다. </span><br>
+                    이를 <span class = "keyword">컨벡스 성질</span>이라고 한다. <br>
+                    즉, 컨벡스 결합으로 생성된 컨벡스 영역은 항상 컨벡스 성질을 만족한다. <br>
+                    <br>
+                    컨벡스의 반댓말은 '오목한'이라는 뜻인 컨케이브(concave)이다. <br>
+                    컨케이브 영역은 임의의 두 점을 이은 선분이 영역 밖으로 벗어나는 경우가 존재한다. <br>
+                    컨벡스 결합으로 만들어지는 1차원 선분, 2차원 삼각형, 3차원 삼각뿔 중, <span class = "emphasis">가상 공간의 물체를 표현하는데는 2차원 삼각형을 사용한다. </span> <br>
+                    왜냐하면 삼각형은 2차원 물체를 표현할 수 있고, 3차원 물체도 표면만 표현하면 되므로, 결론적으로 두 경우 모두에 효과적이기 떄문이다. 
+                </span>
                 <h5>메시</h5>
                 <p>
                     · 물체를 구성하기 위해서는 삼각형을 사용하는데 <span class = "emphasis">삼각형은 2차원과 3차원을 가장 효과적으로 표현하게 해주므로</span> 이를 사용한다. <br>
@@ -1454,6 +1691,33 @@
                     (그림 *)<br>
                     · 정점 배열과 인덱스 배열을 채운 후 각 점을 이어 삼각형으로 모두 만들어 외곽선만으로 메시를 표현하는 방법을 <span class = "keyword">와이어프레임(wireframe)이라고 한다. </span>
                 </p>
+                <h5>무게 중심 좌표</h5>
+                <h6>무게 중심 좌표의 계산</h6>
+                <h6>정점에 설정된 부가 정보의 활용</h6>
+                <h5>텍스처 매핑</h5>
+            </div>
+            <div class = "content2">
+                <h3>9장 게임 엔진: 콘텐츠를 만드는 기술</h3>
+                <h5>게임 엔진의 구성 요소</h5>
+                <h6>씬의 구조</h6>
+                <h6>로컬 공간과 로컬 축</h6>
+                <h5>게임 엔진의 워크플로우</h5>
+                <h6>CK소프트렌더러의 워크 플로우</h6>
+                <h6>렌더링 파이프라인</h6>
+                <h5>카메라 시스템</h5>
+                <h6>가상 공간의 카메라</h6>
+            </div>
+            <div class = "content2">
+                <h3>10장 3차원 공간: 입체 공간의 생성</h3>
+                <h5>3차원 공간의 설계</h5>
+                <h5>3차원 공간의 트랜스폼</h5>
+                <h6>오일러 각</h6>
+                <h6>회전행렬의 유도</h6>
+                <h6>3차원 모델링 행렬</h6>
+                <h5>카메라 공간</h5>
+                <h5>오일러 각의 특징</h5>
+                <h6>짐벌락 현상</h6>
+                <h6>회전 보간의 계산</h6>
             </div>
         </div>
     </section>
