@@ -15,11 +15,6 @@
     font-weight: normal;
 }
 
-.colorscripter-code
-{
-    font-weight: lighter;
-}
-
 /* https://codingbroker.tistory.com/66 */
 *::-webkit-scrollbar
 {
@@ -35,6 +30,11 @@
 *::-webkit-scrollbar-track
 {
     background-color:#a9c5ea;
+}
+
+.colorscripter-code
+{
+    font-weight: lighter;
 }
 
 .sidebar

@@ -9,6 +9,25 @@ div [class |= equation]
     margin-bottom: 10px;
 }
 
+.formula, .ref
+{
+    color: white;
+    font-size: 0.9em;
+   
+    border-radius: 5px;
+    padding: 1px 5px 3px 5px;
+}
+
+.formula
+{
+    background-color: tomato;
+}
+
+.ref
+{
+    background-color:cadetblue;
+}
+
 .equation-h5
 {
     margin-left: 2.0em;
@@ -31,21 +50,3 @@ h6 + p
     padding-left: 10px;
 }
 
-.formula, .ref
-{
-    color: white;
-    font-size: 0.9em;
-   
-    border-radius: 5px;
-    padding: 1px 5px 3px 5px;
-}
-
-.formula
-{
-    background-color: tomato;
-}
-
-.ref
-{
-    background-color:cadetblue;
-}
