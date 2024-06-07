@@ -9,6 +9,22 @@ div [class |= equation]
     margin-bottom: 10px;
 }
 
+.equation-h5
+{
+    margin-left: 2.0em;
+}
+
+.equation-h6
+{
+    margin-left: 5.0em;
+}
+
+table[class = "math-binary-operation"] td:nth-child(2)
+{
+    width: 2000px;
+    text-align: left;
+}
+
 .formula, .ref
 {
     color: white;
@@ -28,16 +44,6 @@ div [class |= equation]
     background-color:cadetblue;
 }
 
-.equation-h5
-{
-    margin-left: 2.0em;
-}
-
-.equation-h6
-{
-    margin-left: 5.0em;
-}
-
 h6 ~ .content3
 {
     margin-left: 5.0em;
@@ -49,4 +55,3 @@ h6 + p
     margin-left: 5.0em;
     padding-left: 10px;
 }
-

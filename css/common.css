@@ -37,18 +37,6 @@
     font-weight: lighter;
 }
 
-.sidebar
-{
-    position:fixed;
-    background-color: #6991c7;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
-    grid-column: 1/12;
-    /* https://rgy0409.tistory.com/4997 */
-    overflow-y: auto;
-    top: 0;
-    height: 100%;
-}
-
 a
 {
     color:tomato;
@@ -60,6 +48,7 @@ a
 {
     color:#30b565;
 }
+
 .keyword
 {
     color:firebrick;
@@ -76,12 +65,14 @@ a
     color: tomato;
     font-weight: bold;
 }
+
 .content1
 {
     border: 5px solid #295792;
     border-radius: 8px;
     padding: 60px 55px 60px 55px;
 }
+
 .content2
 {
     border: 3px solid #6991c7;
@@ -89,6 +80,7 @@ a
     padding : 25px;
     margin-bottom: 15px;
 }
+
 .content3
 {
     border: 3px solid #ababab;
@@ -96,77 +88,13 @@ a
     padding: 15px;
     margin-bottom: 15px;
 }
+
 .example
 {
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 5px;
 }   
-
-
-.tag-c11::after, .tag-dep::after, .tag-specifier::after, .tag-datatype::after, .tag-variable::after, .tag-ref::after
-{
-    font-size: 10px;
-    font-weight: bold;
-    color:white;
-    padding: auto 13px;
-    border-radius: 8px;
-    margin: auto 3px;
-    border: 3px solid;
-    font-size: 12px
-}
-
-.tag-specifier::after, .tag-datatype::after, .tag-variable::after
-{
-    font-size: 20px;
-}
-
-.tag-ref::after
-{
-    font-size: 0.8em;
-}
-
-.tag-specifier::after
-{
-    content: "제한자";
-    background-color:red;
-    border-color: red;
-}
-
-.tag-datatype::after
-{
-    content: "데이터형";
-    background-color: blue;
-    border-color: blue;
-}
-
-.tag-variable::after
-{
-    content: "변수명";
-    background-color:#ff6347;
-    border-color:#ff6347;
-}
-
-.tag-c11::after
-{
-    content: "C++11";
-    background-color: red;
-    border-color: red;
-}
-
-.tag-ref::after
-{
-    content: "참고";
-    background-color:brown;
-    border-color:brown
-};
-
-.tag-dep::after
-{
-    content: "Dep";
-    background-color: gray;
-    border-color:  gray;
-}
 
 li
 {
@@ -277,17 +205,38 @@ li
     {
         display: grid;
         grid-template-columns: repeat(32, 1fr);
+        grid-template-rows: 50px;
+    }
+
+    .sidebar
+    {
+        position:fixed;
+        background-color: #6991c7;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+        grid-column: 1/12;
+        /* https://rgy0409.tistory.com/4997 */
+        overflow-y: auto;
+        top: 0;
+        height: 100%;
     }
     
     .header
     {
         display: none;
     }
-    
+
+    .content
+    {
+        grid-row: 1/2;
+        grid-column: 1/21;
+        /* z-index: -1; */
+    }
+
     .body
     {
         /* padding: 100px 250px 100px 450px; */
         grid-column: 10/31;
+        z-index: -2;
     }
     
     /* 폰트 지정 */
@@ -426,64 +375,5 @@ li
     td
     {
         border: 2px solid gray;
-    }
-
-    table[class = var] td:nth-child(1)
-    {
-        width: 180px
-    }
-
-    table[class = var] td:nth-child(2)
-    {
-        width: 50px;
-        text-align:left;
-    }
-
-    table[class = var] td:nth-child(3)
-    {
-        width: 1000px;
-        text-align: left;
-    }
-
-    table[class = specifier] td:nth-child(2)
-    {
-        width: 1500px;
-        text-align: left;
-    }
-
-    table[class = function-param] td:nth-child(2)
-    {
-        width: 1000px;
-        text-align: left;
-    }
-
-    table[class = constructor] td:nth-child(2)
-    {
-        width: 1000px;
-        text-align: left;
-    }
-
-    table[class = classspecifier] td:nth-child(2)
-    {
-        width: 2000px;
-        text-align: left;
-    }
-
-    table[class = classmember] td:nth-child(2)
-    {
-        width: 2000px;
-        text-align: left;
-    }
-
-    table[class = "OOP5"] td:nth-child(2)
-    {  
-        width: 1000px;
-        text-align: left;
-    }
-
-    table[class = "math-binary-operation"] td:nth-child(2)
-    {
-        width: 2000px;
-        text-align: left;
     }
 }
