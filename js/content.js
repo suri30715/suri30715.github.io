@@ -1,64 +1,85 @@
 function init()
 {
-    window.addEventListener("scroll", ()=>{getTitle();});
+    getTitle();
 }
 
 function getTitle()
 {
-    var h3 = document.querySelector("h3");
-    var h5 = document.querySelector("h5");
-    var h6 = document.querySelector("h6");
-
-    var h3B = h3.getBoundingClientRect().bottom + window.scrollY;
-    var h3T = h3.getBoundingClientRect().Top + window.scrollY;
-    
-    var h5B = h5.getBoundingClientRect().bottom + window.scrollY;
-    var h5T = h5.getBoundingClientRect().Top + window.scrollY;
-    
-    var h6B = h6.getBoundingClientRect().bottom + window.scrollY;
-    var h6T = h6.getBoundingClientRect().Top + window.scrollY;
+    const content2List = document.querySelectorAll(".content2");
     
     var index3 = document.getElementById("index-3");
     var index5 = document.getElementById("index-5");
     var index6 = document.getElementById("index-6");
-    
-    if(window.scrollY >= h3B)
-        index3.innerHTML = h3.textContent;
-    
-    if(window.scrollY >= h5B)
-        index5.innerHTML = h5.textContent;
-    
-    if(window.scrollY >= h6B)
-        index6.innerHTML = h6.textContent;
-    
-    // debug
-    // console.log(h3B, window.scrollY);
 
-}
+    var content2TopPosList = [];
+    var content2BottomPosList = [];
 
-function getTitlePos()
-{
-    const h3List = document.querySelectorAll("h3");
-    const h5List = document.querySelectorAll("h5");
-    const h6List = document.querySelectorAll("h6");
-    
-    for(const h3ListItem of h3List)
+    for(var i = 0; i < content2List.length; i++)
     {
-        console.log(h3ListItem.textContent);
+        content2TopPosList.push(content2List[i].getBoundingClientRect().top + window.scrollY);
+        content2BottomPosList.push(content2List[i].getBoundingClientRect().bottom + window.scrollY);
     }
 
-    for(const h5ListItem of h5List)
+    window.addEventListener("scroll", ()=>
     {
-        console.log(h5ListItem.textContent);
-    }
+        var yPos = window.scrollY;
 
-    for(const h6ListItem of h6List)
-    {
-        console.log(h6ListItem.textContent);
-    }
+        // debug
+        console.log(yPos);
+
+        for(var i = 0; i < content2List.length; i++)
+        {
+            if(yPos >= content2TopPosList[i] && yPos <= content2BottomPosList[i])
+            {
+                var content2H3List = content2List[i].querySelectorAll("h3");
+                var content2H5List = content2List[i].querySelectorAll("h5");
+                var content2H6List = content2List[i].querySelectorAll("h6");
+                
+                if(content2H3List[i])
+                {
+                    for(var j = 0; j < content2H3List.length; j++)
+                    {
+                        var c2H3T = content2H3List[j].getBoundingClientRect().top + yPos;
+                        var c2H3B = content2H3List[j].getBoundingClientRect().bottom + yPos;
+
+                        if(yPos >= c2H3T && yPos <=c2H3B)
+                            index3.innerHTML = content2H3List[j].textContent;
+                    }
+                }
+
+                if(content2H5List[i])
+                {
+                    for(var j = 0; j < content2H5List.length; j++)
+                    {
+                        var c2H5T = content2H5List[j].getBoundingClientRect().top + yPos;
+                        var c2H5B = content2H5List[j].getBoundingClientRect().bottom + yPos; 
+
+                        if(yPos >= c2H5T && yPos <=c2H5B)
+                            index5.innerHTML = content2H5List[j].textContent;
+                    }
+                }
+
+                if(content2H6List[i])
+                {
+                    for(var j = 0; j < content2H6List.length; j++)
+                    {
+                        var c2H6T = content2H6List[j].getBoundingClientRect().top + yPos;
+                        var c2H6B = content2H6List[j].getBoundingClientRect().bottom + yPos;
+
+                        if(yPos >= c2H6T && yPos <=c2H6B)
+                            index6.innerHTML = content2H6List[j].textContent;
+                    }
+                }
+            }
+        
+            // if(yPos < content2TopPosList[i] || yPos > content2BottomPosList[i])
+            // {
+            //       index3.innerHTML = "";
+            //       index5.innerHTML = "";
+            //       index6.innerHTML = "";
+            // }
+        }
+    });
 }
 
 init();
-
-// debug
-getTitlePos();
