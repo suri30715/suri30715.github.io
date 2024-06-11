@@ -227,9 +227,10 @@ li
 
     .content
     {
+        /* position:fixed; */
         grid-row: 1/2;
-        grid-column: 1/21;
-        /* z-index: -1; */
+        grid-column: 1/33;
+        z-index: -1;
     }
 
     .body
