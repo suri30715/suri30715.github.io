@@ -1,0 +1,9 @@
+#more::before
+{
+    content: "좀 더 알아보기";
+    color: white;
+    font-weight: normal;
+    background-color:brown;
+    padding: 0 15px;
+    border-radius: 8px;
+}
