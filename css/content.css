@@ -3,7 +3,7 @@
     /* position: fixed; */
 
     background-color: whitesmoke;
-    border: 3px solid #295792;
+    border-right: 3px solid #295792;
     overflow-y: auto;
     top: 0;
     height: 100%;
@@ -12,30 +12,39 @@
 #title
 {
     text-align: center;
+    color: #30b565;
+    font-weight: bold;
     margin: 10px;
 }
 
 /* js 에서 생성되는 요소 */
-.three, .five, .six
+.two, .three, .five, .six
 {
     margin: 10px;
     font-size: 0.8em;
 }
 
-.three
+.two
 {
     border: 2px solid #6991c7;
     border-radius: 3px;
-    color: blue;
+    font-weight: bold;
     margin: 10px;
+    padding: 10px;
+}
+
+.three
+{
+    margin-left: 15px;
+    font-weight: bold;
 }
 
 .five
 {
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .six
 {
-    margin-left: 50px;
+    margin-left: 45px;
 }

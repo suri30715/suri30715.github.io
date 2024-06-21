@@ -11,14 +11,24 @@ function getTitle()
     var content2TopPosList = [];
     var content2BottomPosList = [];
 
-
-
     for(var i = 0; i < content2List.length; i++)
     {
+        var content2H2List = content2List[i].querySelectorAll("h2");
         var content2H3List = content2List[i].querySelectorAll("h3");
         var content2H5List = content2List[i].querySelectorAll("h5");
         var content2H6List = content2List[i].querySelectorAll("h6");
         
+        if(content2H2List)
+        {
+            for(var j = 0; j < content2H2List.length; j++)
+            {
+                var c = document.createElement("div");
+                c.setAttribute("class", "two");
+                c.innerHTML = content2H2List[j].textContent;
+                index.appendChild(c);
+            }
+        }
+
         if(content2H3List)
         {
             for(var j = 0; j < content2H3List.length; j++)

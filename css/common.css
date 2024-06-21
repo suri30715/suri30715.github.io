@@ -117,9 +117,9 @@ li
     border-radius: 8px;
 }
 
-@media only screen and (max-width:1000px)
+/* @media only screen and (max-width:1000px)
 { 
-    /* grid 컨테이너 */
+    grid 컨테이너 
     .layout
     {
         display: grid;
@@ -127,7 +127,7 @@ li
         grid-template-rows: 50px 1fr;
     }
     
-    /* grid 아이템 */
+    grid 아이템
     .header
     {
         position:fixed;
@@ -146,7 +146,7 @@ li
         grid-column: 2/20;
     }
 
-    /* 글자 스타일 */
+    글자 스타일
     p
     {
         font-size: 0.8em;
@@ -164,6 +164,8 @@ li
     {
         color:#30b565;
     }
+    
+
 
     h5
     {
@@ -175,14 +177,14 @@ li
         padding-left: 12px;
     }
 
-    /* div 스타일 */
+    div 스타일
     .content1, .content2, .content3
     {
         padding: 10px;
         margin: 5px 0px 5px 0px;
     }
 
-    /* 이미지 */
+    이미지
     img
     {
         display: block;
@@ -195,7 +197,7 @@ li
         font-size: 5px;
         text-align: center;
     }
-}
+} */
 
 /* 폭: 1000~무한px */
 @media not screen and (max-width:1000px)
@@ -262,21 +264,36 @@ li
         color:#30b565;
     }
 
+    h2
+    {
+        font-size: 1.8em;
+        padding-bottom: 30px;
+    }
+
     h3
     {
         font-size: 1.6em;
         padding-bottom: 30px;
+        padding-left: 25px;
     }
-    h4
+
+    h3 ~ p
     {
-        font-size: 1.4em;
-        padding-bottom: 15px;
+        padding-left: 25px;
     }
+
     h5
     {
         font-size: 1.2em;
         padding-bottom: 15px;
+        padding-left: 50px;
     }
+
+    h5 ~ p
+    {
+        padding-left: 50px;
+    }
+
     h5:last-child
     {
         padding-bottom: 30px;
@@ -286,6 +303,12 @@ li
     {
         font-size: 1em;
         padding-bottom: 5px;
+        padding-left: 75px;
+    }
+
+    h6 ~ p
+    {
+        padding-left: 75px;
     }
 
     p
@@ -308,30 +331,30 @@ li
         text-align: center;
     }
 
-    p, h5
+    /* p, h5
     {
         padding-left: 1.5em;
-    }
+    } */
 
-    h5 + .content3
+    /* h5 + .content3
     {
         margin-left: 1.7em;
-    }
+    } */
 
-    h5 + p + .content3
+    /* h5 + p + .content3
     {
         margin-left: 1.7em;
-    }
+    } */
 
-    h6
+    /* h6
     {
         padding-left: 5.0em;
-    }
+    } */
 
-    h6 + p, h6 + .content3
+    /* h6 + p, h6 + .content3
     {
         padding-left: 5.0em;
-    }
+    } */
 
     .emphasis2
     {
