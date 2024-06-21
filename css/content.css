@@ -1,23 +1,40 @@
-.index
+#index
 {
-    background-color: whitesmoke;
     position: fixed;
-    width: 100%;
-    height: 50px;
-    padding-left: 300px;
-    border-bottom: 3px solid tomato;;
-    color:blue;
+    background-color: whitesmoke;
+    border: 3px solid #295792;
+    overflow-y: auto;
+    top: 0;
+    height: 100%;
 }
 
-#index-3, #index-5, #index-6
+#title
 {
-    margin: 30px;
-    /* background-color: aqua; */
-    padding: 10px;
+    text-align: center;
+    margin: 10px;
 }
 
-#index-3
+/* js 에서 생성되는 요소 */
+.three, .five, .six
 {
-    border: 3px solid #6991c7;
-    border-radius: 8px;
+    margin: 10px;
+    font-size: 0.8em;
+}
+
+.three
+{
+    border: 2px solid #6991c7;
+    border-radius: 3px;
+    color: blue;
+    margin: 10px;
+}
+
+.five
+{
+    margin-left: 25px;
+}
+
+.six
+{
+    margin-left: 50px;
 }
