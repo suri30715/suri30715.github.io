@@ -38,7 +38,7 @@ function init()
     }   
     if(document.getElementById("math"))
     {
-        document.getElementById("math").addEventListener("click", event=>{window.location.href="../html/math.html"})
+        document.getElementById("math").addEventListener("click", event=>{window.location.href="../html/math.html"});
     }
     if(document.getElementById("graphics"))
     {

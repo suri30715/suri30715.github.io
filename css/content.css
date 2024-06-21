@@ -1,6 +1,7 @@
 #index
 {
-    position: fixed;
+    /* position: fixed; */
+
     background-color: whitesmoke;
     border: 3px solid #295792;
     overflow-y: auto;

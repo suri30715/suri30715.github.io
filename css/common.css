@@ -18,7 +18,7 @@
 /* https://codingbroker.tistory.com/66 */
 *::-webkit-scrollbar
 {
-    width:15px;
+    width:10px;
 }
 
 *::-webkit-scrollbar-thumb
@@ -126,18 +126,18 @@ li
         grid-template-columns: repeat(20, 1fr);
         grid-template-rows: 50px 1fr;
     }
-
+    
     /* grid 아이템 */
-    .sidebar
-    {
-        display: none;
-    }
-
     .header
     {
         position:fixed;
         grid-row: 1/2;
         grid-column: 1/21;
+    }
+
+    .sidebar
+    {
+        display: none;
     }
 
     .body
@@ -205,27 +205,37 @@ li
     {
         display: grid;
         grid-template-columns: repeat(32, 1fr);
-        grid-template-rows: 50px;
+        /* grid-template-rows: 50px; */
     }
 
-    .sidebar
-    {
-        grid-column: 1/8;
-    }
-    
     .header
     {
         display: none;
     }
 
+    .sidebar
+    {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        grid-column: 1/7;
+        /* https://rgy0409.tistory.com/4997 */
+        overflow-y: auto;
+    }
+
     .content
     {
-        grid-column: 26/34;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        grid-column: 7/13;
+        /* https://rgy0409.tistory.com/4997 */
+        overflow-y: auto;
     }
 
     .body
     {
-        grid-column: 10/25;   
+        grid-column: 14/32;
     }
     
     /* 폰트 지정 */
