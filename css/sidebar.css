@@ -51,17 +51,10 @@
     text-decoration: underline;
     margin-left: 12px;
 }
-
-#no-datail-style
+.detail:hover
 {
-    text-decoration: none;
+    color: #3b1da8;
 }
-
-.detail :hover
-{
-    color: #ddd;
-}
-
 #go-main
 {
     color: #3b1da8;

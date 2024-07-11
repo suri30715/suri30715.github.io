@@ -36,13 +36,13 @@ function init()
     {
         document.getElementById("csharp").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
     }   
-    if(document.getElementById("d&a"))
+    if(document.getElementById("book:-easy-c-d&a"))
     {
-        document.getElementById("d&a").addEventListener("click", event=>{window.location.href="../html/d&a.html"})
+        document.getElementById("book:-easy-c-d&a").addEventListener("click", event=>{window.location.href="../html/d&a.html"})
     }   
-    if(document.getElementById("math"))
+    if(document.getElementById("book:-Lee-math"))
     {
-        document.getElementById("math").addEventListener("click", event=>{window.location.href="../html/math.html"});
+        document.getElementById("book:-Lee-math").addEventListener("click", event=>{window.location.href="../html/math.html"});
     }
     if(document.getElementById("graphics"))
     {
