@@ -10,6 +10,7 @@ function getTitle()
 
     var content2TopPosList = [];
     var content2BottomPosList = [];
+    var content2H2ForEmphasize;
 
     for(var i = 0; i < content2List.length; i++)
     {
@@ -59,24 +60,25 @@ function getTitle()
                 index.appendChild(c);
             }
         }
-
-        // for(var i = 0; i < content2List.length; i++)
-        // {
-        //     content2TopPosList.push(content2List[i].getBoundingClientRect().top + window.scrollY);
-        //     content2BottomPosList.push(content2List[i].getBoundingClientRect().bottom + window.scrollY);
-        // }
-        
-        // window.addEventListener("scroll", ()=>
-        // {
-        //     for(var i = 0; i < content2List.length; i++)
-        //     {
-        //         if(yPos >= content2TopPosList[i] && yPos <= content2BottomPosList[i])
-        //         {
-                        
-        //         }
-        //     }
-        // });
     }
+
+    // window.addEventListener("scroll", ()=>
+    // {
+    //         var yPos = window.scrollY;
+
+    //         for(var i = 0; i < content2List.length; i++)
+    //         {
+    //             content2H2ForEmphasize = content2List[i].querySelector(".two");
+    //             content2TopPosList.push(content2List[i].getBoundingClientRect().top + window.scrollY);
+    //             content2BottomPosList.push(content2List[i].getBoundingClientRect().bottom + window.scrollY);
+                
+    //             if(yPos >= content2TopPosList[i] && yPos <= content2BottomPosList[i])
+    //             {
+    //                 content2H2ForEmphasize.style.color = "tomato";
+    //             }   
+    //         }
+    //     }
+    //);
 
     // var content2TopPosList = [];
     // var content2BottomPosList = [];

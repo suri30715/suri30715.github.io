@@ -1,12 +1,9 @@
 #index
 {
-    /* position: fixed; */
-
     background-color: whitesmoke;
     border-right: 3px solid #295792;
-    overflow-y: auto;
-    top: 0;
     height: 100%;
+    top: 0;
 }
 
 #title
@@ -17,7 +14,7 @@
     margin: 10px;
 }
 
-/* js 에서 생성되는 요소 */
+/* content.js 에서 생성되는 요소 */
 .two, .three, .five, .six
 {
     margin: 10px;

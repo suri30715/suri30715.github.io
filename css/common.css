@@ -207,7 +207,6 @@ li
     {
         display: grid;
         grid-template-columns: repeat(32, 1fr);
-        /* grid-template-rows: 50px; */
     }
 
     .header
@@ -219,6 +218,7 @@ li
     {
         position: sticky;
         top: 0;
+        /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
         height: 100vh;
         grid-column: 1/7;
         /* https://rgy0409.tistory.com/4997 */
@@ -237,7 +237,16 @@ li
 
     .body
     {
-        grid-column: 14/32;
+        grid-column: 14/31;
+    }
+
+    .console
+    {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        grid-column: 32/33;
+        overflow-y: auto;
     }
     
     /* 폰트 지정 */
