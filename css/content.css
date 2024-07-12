@@ -1,7 +1,5 @@
 #index
 {
-    background-color: whitesmoke;
-    border-right: 3px solid #295792;
     height: 100%;
     top: 0;
 }
@@ -14,6 +12,16 @@
     margin: 10px;
 }
 
+#count
+{
+    margin-left: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 2px solid #295792;
+    border-radius: 8px;
+    padding: 3px;
+}
+
 /* content.js 에서 생성되는 요소 */
 .two, .three, .five, .six
 {
@@ -23,8 +31,8 @@
 
 .two
 {
-    border: 2px solid #6991c7;
-    border-radius: 3px;
+    border: 2px solid #295792;
+    border-radius: 8px;
     font-weight: bold;
     margin: 10px;
     padding: 10px;
