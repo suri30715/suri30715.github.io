@@ -11,22 +11,34 @@
     font-size: 15px;
     font-weight: lighter;
     color: #3f3d3d;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    /* border: 2px solid #ddd;
+    border-radius: 8px; */
     padding: 20px;
 
 }
 
 .title-wrapper
 {
-    padding: 20px 5px 20px 5px;
+    padding: 20px 10px 20px 10px;
+    margin: 10px 0px 10px 0px;
+    border: 3px solid #295792;
+    border-radius: 8px;
 }
 
-.title
+.title-1
 {
     font-size: 15px;
     font-weight: bold;
-    color: #ddd;
+    font-size: 1.0em;
+    color: black;
+}
+
+.title-2
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 25px 10px 25px 15px;
+    color: #3b1da8;
 }
 
 .detail
@@ -36,8 +48,13 @@
     color: #3f3d3d;
     font-weight: bold;
     line-height: 30px;
+    text-decoration: underline;
+    margin-left: 12px;
 }
-
+.detail:hover
+{
+    color: #3b1da8;
+}
 #go-main
 {
     color: #3b1da8;

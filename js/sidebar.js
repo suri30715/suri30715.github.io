@@ -8,10 +8,14 @@ function init()
     {
         document.getElementById("ue5").addEventListener("click", event=>{window.location.href="../html/ue5.html"})
     }   
-    if(document.getElementById("m"))
+    if(document.getElementById("M-Unreal"))
     {
-        document.getElementById("m").addEventListener("click", event=>{window.location.href="../html/m.html"})
-    }   
+        document.getElementById("M-Unreal").addEventListener("click", event=>{window.location.href="../html/m-unreal.html"})
+    }
+    if(document.getElementById("M-Unity"))
+    {
+        document.getElementById("M-Unity").addEventListener("click", event=>{window.location.href="../html/m-unity.html"})
+    }    
     if(document.getElementById("sg"))
     {
         document.getElementById("sg").addEventListener("click", event=>{window.location.href="../html/sg.html"})
@@ -20,10 +24,10 @@ function init()
     {
         document.getElementById("c++").addEventListener("click", event=>{window.location.href="../html/c++.html"})
     }
-    if(document.getElementById("c#"))
-    {
-        document.getElementById("c#").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
-    }
+    // if(document.getElementById("c#"))
+    // {
+    //     document.getElementById("c#").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
+    // }
     if(document.getElementById("stl"))
     {
         document.getElementById("stl").addEventListener("click", event=>{window.location.href="../html/stl.html"})
@@ -32,13 +36,13 @@ function init()
     {
         document.getElementById("csharp").addEventListener("click", event=>{window.location.href="../html/csharp.html"})
     }   
-    if(document.getElementById("d&a"))
+    if(document.getElementById("book:-easy-c-d&a"))
     {
-        document.getElementById("d&a").addEventListener("click", event=>{window.location.href="../html/d&a.html"})
+        document.getElementById("book:-easy-c-d&a").addEventListener("click", event=>{window.location.href="../html/d&a.html"})
     }   
-    if(document.getElementById("math"))
+    if(document.getElementById("book:-Lee-math"))
     {
-        document.getElementById("math").addEventListener("click", event=>{window.location.href="../html/math.html"});
+        document.getElementById("book:-Lee-math").addEventListener("click", event=>{window.location.href="../html/math.html"});
     }
     if(document.getElementById("graphics"))
     {
