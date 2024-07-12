@@ -7,8 +7,7 @@ function getTitle()
 {
     const content2List = document.querySelectorAll(".content2");
     var index = document.getElementById("index")
-
-
+    
     var content2TopPosList = [];
     var content2BottomPosList = [];
     var content2H2ForEmphasize;
