@@ -15,6 +15,11 @@
     font-weight: normal;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 /* https://codingbroker.tistory.com/66 */
 *::-webkit-scrollbar
 {
