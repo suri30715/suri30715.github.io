@@ -56,17 +56,41 @@ function getTitle()
     }
 
     // 목차의 내용 클릭시 해당 위치로 스크롤
-    // https://enai.tistory.com/33
     const indexList = document.querySelectorAll(".two, .three, .five, .six");
     const hList = document.querySelectorAll("h2, h3, h4, h5");
-
+    
     for(let i = 0; i < indexList.length; i++)
     {
-        indexList[i].addEventListener("click", function()
-        {
-            window.scrollTo(0, hList[i].offsetTop);
-        });
+        indexList[i].addEventListener
+        (
+            "click", 
+            function()
+            {
+                // https://enai.tistory.com/33
+                window.scrollTo(0, hList[i].offsetTop);
+            }
+        );
     }
+
+    window.addEventListener
+    (
+        "scroll",
+        function()
+        {
+            console.log(scrollY);
+
+            for(let i = 0; i < indexList.length; i++)
+            {
+                // https://velog.io/@nemo/scroll-offset-property
+                if(scrollY >= hList[i].offsetTop /*&& scrollY <= hList[i].offsetTop + hList[i].offsetHeight*/)
+                {
+                    indexList[i].style.color = "tomato";
+                }
+                else
+                    indexList[i].style.color = "black";
+            }
+        }
+    );
 }
 
 init();

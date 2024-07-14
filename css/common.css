@@ -259,7 +259,7 @@ li
 
     /* h1, h2, h3, h4, h5
     {
-        padding-top: 35px;
+        padding: 15px;
     } */
 
     h1, h1 ~ p
