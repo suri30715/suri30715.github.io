@@ -6,108 +6,66 @@ function init()
 function getTitle()
 {
     const content2List = document.querySelectorAll(".content2");
-
-    var content2H2List;
-    var content2H3List;
-    var content2H5List;
-    var content2H6List;
-    var content2H2ListTopPos = [];
-    var content2H3ListTopPos = [];
-    var content2H5ListTopPos = [];
-    var content2H6ListTopPos = [];
-
-    var index = document.getElementById("index")
+    var content2HList = [];
+    const divisionList = new Array(content2List.length);
     
     document.getElementById("count").innerHTML = "글: " + content2List.length;
-    
-    for(var i = 0; i < content2List.length; i++)
+
+    for(let i = 0; i < content2List.length; i++)
     {
-        var division = document.createElement("div");
-        content2H2List = content2List[i].querySelectorAll("h2");
-        content2H3List = content2List[i].querySelectorAll("h3");
-        content2H5List = content2List[i].querySelectorAll("h5");
-        content2H6List = content2List[i].querySelectorAll("h6");
+        content2HList = content2List[i].querySelectorAll("h2, h3, h5, h6");
 
-        division.setAttribute("class", "division");
-        index.appendChild(division);
-
-        if(content2H2List)
-        {
-            for(var j = 0; j < content2H2List.length; j++)
-            {
-                var c = document.createElement("div");
-            
-                c.setAttribute("class", "two");
-                c.innerHTML = content2H2List[j].textContent;
-                division.appendChild(c);
-
-                content2H2ListTopPos.push(content2H2List[j].getBoundingClientRect().top);
-            }
-        }
-
-        if(content2H3List)
-        {
-            for(var j = 0; j < content2H3List.length; j++)
-            {
-                var c = document.createElement("div");
-
-                c.setAttribute("class", "three");
-                c.innerHTML = content2H3List[j].textContent;
-                division.appendChild(c);
-
-                content2H3ListTopPos.push(content2H3List[j].getBoundingClientRect().top);
-            }
-        }
+        divisionList[i] = document.createElement("div");
+        divisionList[i].setAttribute("class", "division");
+        index.appendChild(divisionList[i]);
         
-        if(content2H5List)
+        if(content2HList)
         {
-            for(var j = 0; j < content2H5List.length; j++)
-            {                
-                var c = document.createElement("div");
-                
-                c.setAttribute("class", "five")
-                c.innerHTML = content2H5List[j].textContent;    
-                division.appendChild(c);
-
-                content2H5ListTopPos.push(content2H5List[j].getBoundingClientRect().top);
-            }
-        }
-
-        if(content2H6List)
-        {
-            for(var j = 0; j < content2H6List.length; j++)
+            for(let j = 0; j < content2HList.length; j++)
             {
-                var c = document.createElement("div");
-
-                c.setAttribute("class", "six");
-                c.innerHTML = content2H6List[j].textContent;    
-                division.appendChild(c);
-
-                content2H6ListTopPos.push(content2H6List[j].getBoundingClientRect().top);
+                if(content2HList[j].tagName == "H2")
+                {
+                    var c = document.createElement("div");
+                    c.setAttribute("class", "two");
+                    c.innerHTML = content2HList[j].textContent;
+                    divisionList[i].appendChild(c);
+                }
+                if(content2HList[j].tagName == "H3")
+                {
+                    var c = document.createElement("div");
+                    c.setAttribute("class", "three");
+                    c.innerHTML = content2HList[j].textContent;
+                    divisionList[i].appendChild(c);
+                }
+                if(content2HList[j].tagName == "H5")
+                {
+                    var c = document.createElement("div");
+                    c.setAttribute("class", "five");
+                    c.innerHTML = content2HList[j].textContent;
+                    divisionList[i].appendChild(c);
+                }
+                if(content2HList[j].tagName == "H6")
+                {
+                    var c = document.createElement("div");
+                    c.setAttribute("class", "six");
+                    c.innerHTML = content2HList[j].textContent;
+                    divisionList[i].appendChild(c);
+                }
             }
         }
     }
 
-    var list2 = document.querySelectorAll(".two");
-    var list3 = document.querySelectorAll(".three");
-    var list5 = document.querySelectorAll(".five");
-    var list6 = document.querySelectorAll(".six");
+    // 목차의 내용 클릭시 해당 위치로 스크롤
+    // https://enai.tistory.com/33
+    const indexList = document.querySelectorAll(".two, .three, .five, .six");
+    const hList = document.querySelectorAll("h2, h3, h4, h5");
 
-    for(let i = 0; i < list2.length; i++)
+    for(let i = 0; i < indexList.length; i++)
     {
-        list2[i].addEventListener("click", ()=>{ window.scrollTo(0, content2H2ListTopPos[i]); });
-    }
-    for(let i = 0; i < list3.length; i++)
-    {
-        list3[i].addEventListener("click", ()=>{ window.scrollTo(0, content2H3ListTopPos[i]); });
-    }
-    for(let i = 0; i < list5.length; i++)
-    {
-        list5[i].addEventListener("click", ()=>{ window.scrollTo(0, content2H5ListTopPos[i]); });
-    }
-    for(let i = 0; i < list6.length; i++)
-    {
-        list6[i].addEventListener("click", ()=>{ window.scrollTo(0, content2H6ListTopPos[i]); });
+        indexList[i].addEventListener("click", function()
+        {
+            window.scrollTo(0, hList[i].offsetTop);
+        });
     }
 }
 

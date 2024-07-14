@@ -54,6 +54,11 @@
     color: #b7a3ff;
 }
 
+.detail:active
+{
+    color: tomato;
+}
+
 #go-main
 {
     color: #ddd;

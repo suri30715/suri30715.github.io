@@ -61,10 +61,10 @@ a
 }
 
 /* 내용 박스 지정 */
-.rights
+.rights, .info
 {
     margin: 30px 0px 30px 0px;
-    border: 2px solid #ff6347;
+    border: 3px solid #ff6347;
     border-radius: 8px;
     padding: 10px;
     color: tomato;
@@ -111,16 +111,6 @@ li
 .colorscripter-code
 {
     text-align: center;
-}
-
-.info
-{
-    color:tomato;
-    margin: 50px 0px 50px 0px;
-    padding: 15px;
-    font-weight: bolder;
-    border: 2px solid tomato;
-    border-radius: 8px;
 }
 
 /* @media only screen and (max-width:1000px)
@@ -267,47 +257,47 @@ li
         font-weight: bolder;
     }
 
-    h1, h2, h3, h4, h5
+    /* h1, h2, h3, h4, h5
     {
         padding-top: 35px;
-    }
+    } */
 
-    h1
+    h1, h1 ~ p
     {
-        font-size: 2em;
-        padding-bottom: 30px;
+        /* font-size: 2em; */
+        /* padding-bottom: 30px; */
         color:#30b565;
     }
 
-    h2
+    h2, h2 ~ p
     {
-        font-size: 1.8em;
+        /* font-size: 1.8em; */
         padding-bottom: 30px;
     }
 
-    h3
+    h3, h3 ~ p
     {
-        font-size: 1.6em;
-        padding-bottom: 30px;
+        /* font-size: 1.6em; */
+        /* padding-bottom: 30px; */
         padding-left: 25px;
     }
 
-    h3 ~ p
+    /* h3 ~ p
     {
         padding-left: 25px;
-    }
+    } */
 
-    h5
+    h5, h5 ~ p
     {
-        font-size: 1.2em;
-        padding-bottom: 15px;
+        /* font-size: 1.2em; */
+        /* padding-bottom: 15px; */
         padding-left: 50px;
     }
 
-    h5 ~ p
+    /* h5 ~ p
     {
         padding-left: 50px;
-    }
+    } */
 
     h5:last-child
     {
@@ -329,14 +319,15 @@ li
     p
     {
         line-height: 27.5px;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
     }
     /* 이미지 크기 지정 */
     img
     {
         display: block;
         margin: auto;
-        padding: 10px 0px 0px 0px;
+        /* margin: auto; */
+        /* padding: 10px 0px 0px 0px; */
     }
 
     figcaption
@@ -345,31 +336,6 @@ li
         font-size: 10px;
         text-align: center;
     }
-
-    /* p, h5
-    {
-        padding-left: 1.5em;
-    } */
-
-    /* h5 + .content3
-    {
-        margin-left: 1.7em;
-    } */
-
-    /* h5 + p + .content3
-    {
-        margin-left: 1.7em;
-    } */
-
-    /* h6
-    {
-        padding-left: 5.0em;
-    } */
-
-    /* h6 + p, h6 + .content3
-    {
-        padding-left: 5.0em;
-    } */
 
     .emphasis2
     {

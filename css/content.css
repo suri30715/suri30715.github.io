@@ -45,6 +45,11 @@
     color: #b7a3ff;
 }
 
+.two:active, .three:active, .five:active, .six:active
+{
+    color: tomato;
+}
+
 .two
 {
     margin-left: 3px;
