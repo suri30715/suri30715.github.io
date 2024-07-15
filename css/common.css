@@ -282,6 +282,11 @@ li
         padding-left: 25px;
     }
 
+    h4, h4 ~ p
+    {
+        padding-left: 50px;
+    }
+
     /* h3 ~ p
     {
         padding-left: 25px;
@@ -291,7 +296,7 @@ li
     {
         /* font-size: 1.2em; */
         /* padding-bottom: 15px; */
-        padding-left: 50px;
+        padding-left: 75px;
     }
 
     /* h5 ~ p
@@ -304,16 +309,9 @@ li
         padding-bottom: 30px;
     }
 
-    h6
+    h6, h6 ~ p
     {
-        font-size: 1em;
-        padding-bottom: 5px;
-        padding-left: 75px;
-    }
-
-    h6 ~ p
-    {
-        padding-left: 75px;
+        padding-left: 100px;
     }
 
     p

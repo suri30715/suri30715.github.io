@@ -13,7 +13,7 @@ function getTitle()
 
     for(let i = 0; i < content2List.length; i++)
     {
-        content2HList = content2List[i].querySelectorAll("h2, h3, h5, h6");
+        content2HList = content2List[i].querySelectorAll("h2, h3, h4, h5, h6");
 
         divisionList[i] = document.createElement("div");
         divisionList[i].setAttribute("class", "division");
@@ -37,6 +37,13 @@ function getTitle()
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
+                if(content2HList[j].tagName == "H4")
+                {
+                    var c = document.createElement("div");
+                    c.setAttribute("class", "four");
+                    c.innerHTML = content2HList[j].textContent;
+                    divisionList[i].appendChild(c);
+                }
                 if(content2HList[j].tagName == "H5")
                 {
                     var c = document.createElement("div");
@@ -56,8 +63,8 @@ function getTitle()
     }
 
     // 목차의 내용 클릭시 해당 위치로 스크롤
-    const indexList = document.querySelectorAll(".two, .three, .five, .six");
-    const hList = document.querySelectorAll("h2, h3, h4, h5");
+    const indexList = document.querySelectorAll(".two, .three, .four, .five, .six");
+    const hList = document.querySelectorAll("h2, h3, h4, h5, h6");
     
     for(let i = 0; i < indexList.length; i++)
     {

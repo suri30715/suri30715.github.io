@@ -31,7 +31,7 @@
 }
 
 /* content.js 에서 생성되는 요소 */
-.two, .three, .five, .six
+.two, .three, .four, .five, .six
 {
     margin: 10px;
     font-size: 0.8em;
@@ -40,12 +40,12 @@
     text-decoration: underline;
 }
 
-.two:hover, .three:hover, .five:hover, .six:hover
+.two:hover, .three:hover, .four:hover .five:hover, .six:hover
 {
     color: #b7a3ff;
 }
 
-.two:active, .three:active, .five:active, .six:active
+.two:active, .three:active, .four:active, .five:active, .six:active
 {
     color: tomato;
 }
@@ -57,15 +57,20 @@
 
 .three
 {
-    margin-left: 17px;
+    margin-left: 15px;
+}
+
+.four
+{
+    margin-left: 27px;
 }
 
 .five
 {
-    margin-left: 32px;
+    margin-left: 39px;
 }
 
 .six
 {
-    margin-left: 47px;
+    margin-left: 51px;
 }
