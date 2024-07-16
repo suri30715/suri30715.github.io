@@ -89,10 +89,8 @@ function getTitle()
             for(let i = 0; i < indexList.length; i++)
             {
                 // https://velog.io/@nemo/scroll-offset-property
-                if(scrollY >= hList[i].offsetTop /*&& scrollY <= hList[i].offsetTop + hList[i].offsetHeight*/)
-                {
+                if(scrollY >= hList[i].offsetTop)
                     indexList[i].style.color = "tomato";
-                }
                 else
                     indexList[i].style.color = "black";
             }

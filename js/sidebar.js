@@ -52,6 +52,10 @@ function init()
     {
         document.getElementById("cs").addEventListener("click", event=>{window.location.href="../html/cs.html"})
     }
+    if(document.getElementById("cs-mine"))
+    {
+        document.getElementById("cs-mine").addEventListener("click", event=>{window.location.href="../html/cs-mine.html"})
+    }
     if(document.getElementById("js"))
     {
         document.getElementById("js").addEventListener("click", event=>{window.location.href="../html/js.html"})

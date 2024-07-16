@@ -15,30 +15,83 @@
             <div class = "rights">개인 공부용이며, 복사, 배포를 금지합니다. <br>
             검색은 ctrl + f!</div>
             <div class = "info">
-                혼자 공부하는 컴퓨터 구조 + 운영체제()를 개인적으로 정리한 내용입니다. 
+                혼자 공부하는 컴퓨터 구조 + 운영체제(강민철 지음)를 개인적으로 정리한 내용입니다. 
             </div>
             <h1>CS study</h1>
-            <div class = "mine">
-            <h2>Library, API, Framework 차이</h2>
-                <p> 
-                    · Library는 어떤 기능을 구현할때 자주쓰거나 유용한 기능을 모아놓은 집합 (예: C++의 STL) <br>
-                    · API는 어떤 프로그램과 내가 구현한 프로그램 사이의 기능을 구현하기 위한 인터페이스 (예: 홈페이지(내 프로그램)의 로그인(기능 구현)기능을 위한 firebase(웹 로그인, DB 프로그램)의 로그인 기능 구현 API)<br>
-                    · Framework는 어떤 기능을 구현하기위해 따라야하는 것 (예: 언리얼 엔진에서 움직이는 캐릭터를 구현하려면 ACharacter클래스를 반드시 상속받는 프레임워크를 따라야한다. )
-                </p>
-            </div>
             <div class = "content2">
                 <h2>chapter01 컴퓨터 구조 시작하기</h2>
                 <h3>컴퓨터 구조를 알아야 하는 이유</h3>
+                <h4 id = "start">시작하기 전에</h4>
                 <h4>문제 해결</h4>
+                <p>
+                    · 컴퓨터 구조를 잘 알면 코드의 문제 해결에 도움이 된다. 
+                </p>
                 <h4>성능, 용량, 비용</h4>
+                <p>
+                    · 예를 들어 서버 컴퓨터를 구매할 때 합리적으로 구매할 수 있다. 
+                </p>
                 <h3>컴퓨터 구조의 큰 그림</h3>
+                <h4 id = "start"></h4>
+                <p>
+                    · 컴퓨터 구조는 크게 2가지로 나뉜다. <br>
+                    · 1. 컴퓨터가 이해하는 정보 <br>
+                    · 2. 컴퓨터의 4가지 부품 
+                </p>
                 <h4>컴퓨터가 이해하는 정보</h4>
+                <p>
+                    · 컴퓨터는 0과 1로 표현된 정보만을 이해한다. 여기에는 2가지가 있다. <br>
+                    · <span class = "keyword">데이터(data)</span>: 숫자, 문자, 이미지, 동영상과 같은 정적 정보<br>
+                    · <span class = "keyword">명령어(instruction)</span>: 데이터를 사용하여 컴퓨터를 작동시키는 정보<br>
+                    · 예: 숫자'1', '2'는 '데이터', '숫자1과 2를 더하라'는 '명령어'이다. <br>
+                    · 예: 'cat.jpg'는 데이터, 'cat.jpg를 USB메모리에 저장하라'는 '명령어'이다. <br>
+                    · 즉, 데이터는 명령어를 위해 존재하는 재료
+                </p>
                 <h4>컴퓨터의 4가지 핵심 부품</h4>
+                <p>
+                    · <span class = "keyword">중앙처리장치(CPU; Central Processing Unit; 이하 CPU)</span><br>
+                    · <span class = "keyword">주기억장치(main memory; 이하 메모리(RAM))</span><br>
+                    · <span class = "keyword">보조기억장치(scondary storage)</span><br>
+                    · <span class = "keyword">입출력장치(input/output; I/O)</span>: 모니터, 키보드, 마우스 등
+                    
+                </p>
+                (그림)
                 <h5>메모리</h5>
+                <p>
+                    · 현재 실행되는 프로그램의 명령어와 데이터를 저장하는 부품<br>
+                    · 즉, 프로그램이 실행되려면 반드시 메모리에 저장되어야한다. <br>
+                    · 명령어와 데이터는 정돈되어 저장되어야하며, 값의 위치는 주소로 알 수 있다. <br>
+                </p>
+                (그림)
                 <h5>cpu</h5>
+                <p>
+                    · 메모리에 저장된 명령어를 읽고, 해석하고, 실행하는 부품<br>
+                    · '컴퓨터의 두뇌' 이다. <br>
+                    · cpu 내부에는 여러 구성요소 중, 가장 중요한 3가지는 아래와 같다. <br>
+                    · <span class = "keyword">산술논리연산장치(ALU; Arithmetic Logic Unit; 이하 ALU)</span>: 계산만을 위해 존재하는 부품, 쉽게 말해 계산기<br>
+                    · <span class = "keyword">레지스터(register)</span>: 작은 임시 저장 부품<br>
+                    · <span class = "keyword">제어장치(CU: Control Unit)</span>: 제어 신호(control signal: 컴퓨터 부품을 관리, 실행시키는 전기 신호)를 내보내고, 명령어를 해석하는 부품<br>
+                    · 예: CPU가 메모리에 저장된 값을 읽고 싶으면 메모리를 향해 메모리 읽기 라는 제어신호를 보낸다. <br>
+                    · 예: CPU가 메모리에 어떤 값을 저장하고 싶으면 메모리를 향헤 메모리 쓰기 라는 제어신호를 보낸다. <br>
+                </p>
                 <h5>보조기억장치</h5>
+                <p>
+                    · 메모리는 전원이 꺼지면 정보가 날아감, 전원이 꺼져도 필요한 정보를 저장하기 위한 부품
+                </p>
                 <h5>입출력장치</h5>
+                <p>
+                    · 컴퓨터 외부에 연결되어 컴퓨터 내부와 정보를 교환하는 부품 <br>
+                    · 키보드, 마우스 등...
+                </p>
                 <h5>메인보드와 시스템 버스</h5>
+                <p>
+                    · <span class = "keyword">메인 보드(main board(mother board))</span>: 앞서 설명한 부품들 모두를 연결하는 판<br>
+                    · <span class = "keyword">버스(bus)</span>: 메인 보드에 연결된 부품들끼리는 정보를 주고받는 통로<br>
+                    · <span class = "keyword">시스템 버스(system bus)</span>: 버스 중 4가지 핵심 부품을 연결하는 가장 중요한 버스<br>
+                    · 시스템 버스는 3가지로 구성되어있다. <br>
+                    · <span class = "keyword">주소 버스(address bus)</span>: 주소를 주고 받는 통로<br>
+                    · <span class = "keyword">데이터 버스(data bus)</span>: 명령어와 데이터를 주고 받는 통로<br>
+                    · <span class = "keyword">제어 버스(control bus)</span>: 제어 신호를 주고 받는 통로<br>
+                </p>
             </div>
             <div class = "content2">
                 <h2>chapter02 데이터</h2>

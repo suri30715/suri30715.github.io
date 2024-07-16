@@ -1,8 +1,3 @@
-/* 아래는 공통 css임
- * 모든 문서의 목차 안의 내용은 <div class = "contentN"></div>(contentN의 N은 숫자)로 감쌀 것
- * 목차 안의 내용에서 순서 리스트를 만들 경우 <li>말고 <span class = "number></span>으로 감쌀 것
-*/
-/* 폰트 임포트 */
 /* <!--·🔗θ˚αβ--> */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
@@ -185,61 +180,44 @@ li
         font-weight: bolder;
     }
 
-    /* h1, h2, h3, h4, h5
+    /* h1 ~ p, h2 ~ p, h3 ~ p, h4 ~ p, h5 ~ p
     {
-        padding: 15px;
+        padding-bottom: 20px;
     } */
 
-    h1, h1 ~ p
+    h1
     {
-        /* font-size: 2em; */
-        /* padding-bottom: 30px; */
         color:#30b565;
     }
 
-    h2, h2 ~ p
+    h3, h4, h5
     {
-        /* font-size: 1.8em; */
-        padding-bottom: 30px;
+        padding-top: 15px;
     }
 
     h3, h3 ~ p
     {
-        /* font-size: 1.6em; */
-        /* padding-bottom: 30px; */
-        padding-left: 25px;
+        padding-left: 10px;
     }
 
     h4, h4 ~ p
     {
-        padding-left: 50px;
+        padding-left: 60px;
     }
-
-    /* h3 ~ p
-    {
-        padding-left: 25px;
-    } */
 
     h5, h5 ~ p
     {
-        /* font-size: 1.2em; */
-        /* padding-bottom: 15px; */
-        padding-left: 75px;
-    }
-
-    /* h5 ~ p
-    {
-        padding-left: 50px;
-    } */
-
-    h5:last-child
-    {
-        padding-bottom: 30px;
+        padding-left: 110px;
     }
 
     h6, h6 ~ p
     {
-        padding-left: 100px;
+        padding-left: 160px;
+    }
+
+    h5
+    {
+        font-size: 0.9em;
     }
 
     p
