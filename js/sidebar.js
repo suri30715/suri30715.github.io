@@ -3,7 +3,6 @@ function init()
     if(document.getElementById("ue4"))
     {
         document.getElementById("ue4").addEventListener("click", event=>{window.location.href="../html/ue4.html"})
-        
     }   
     if(document.getElementById("ue5"))
     {
@@ -24,7 +23,6 @@ function init()
     if(document.getElementById("c++"))
     {
         document.getElementById("c++").addEventListener("click", event=>{window.location.href="../html/c++.html"})
-        
     }
     // if(document.getElementById("c#"))
     // {
@@ -65,6 +63,10 @@ function init()
     if(document.getElementById("html"))
     {
         document.getElementById("html").addEventListener("click", event=>{window.location.href="../html/html.html"})
+    }
+    if(document.getElementById("unity"))
+    {
+        document.getElementById("unity").addEventListener("click", event=>{window.location.href="../html/unity.html"})
     }
     if(document.getElementById("go-main"))
     {

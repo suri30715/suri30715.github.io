@@ -48,6 +48,7 @@ a
     font-weight: bold;
     text-decoration-line: none;
 }
+
 /*내용 지정*/
 .emphasis
 {
@@ -71,6 +72,14 @@ a
     font-weight: bold;
 }
 
+.mine
+{
+    border: 3px solid #30b565;
+    border-radius: 8px;
+    padding : 25px;
+    margin-bottom: 10px;
+}
+
 .content1
 {
     border: 5px solid #295792;
@@ -83,7 +92,6 @@ a
     border: 3px solid #295792;
     border-radius: 8px;
     padding : 25px;
-    /* margin: 15px; */
     margin-bottom: 10px;
 }
 
@@ -113,87 +121,7 @@ li
     text-align: center;
 }
 
-/* @media only screen and (max-width:1000px)
-{ 
-    grid 컨테이너 
-    .layout
-    {
-        display: grid;
-        grid-template-columns: repeat(20, 1fr);
-        grid-template-rows: 50px 1fr;
-    }
-    
-    grid 아이템
-    .header
-    {
-        position:fixed;
-        grid-row: 1/2;
-        grid-column: 1/21;
-    }
-
-    .sidebar
-    {
-        display: none;
-    }
-
-    .body
-    {
-        grid-row: 2/2;
-        grid-column: 2/20;
-    }
-
-    글자 스타일
-    p
-    {
-        font-size: 0.8em;
-        padding-left: 15px;
-        padding-bottom: 15px;
-    }
-
-    h1, h2, h3, h4, h5, h6
-    {
-        font-weight: bolder;
-        padding-bottom: 10px;
-    }
-
-    h1
-    {
-        color:#30b565;
-    }
-    
-
-
-    h5
-    {
-        padding-left: 5px;
-    }
-
-    h6
-    {
-        padding-left: 12px;
-    }
-
-    div 스타일
-    .content1, .content2, .content3
-    {
-        padding: 10px;
-        margin: 5px 0px 5px 0px;
-    }
-
-    이미지
-    img
-    {
-        display: block;
-        margin: auto;
-    }
-
-    figcaption
-    {
-        font-weight: lighter;
-        font-size: 5px;
-        text-align: center;
-    }
-} */
+/* @media only screen and (max-width:1000px)*/
 
 /* 폭: 1000~무한px */
 @media not screen and (max-width:1000px)
