@@ -1,3 +1,8 @@
+#wrapper-sidebar-small
+{
+    display: none;
+}
+
 #wrapper-nav
 {
     /* position:fixed; */
@@ -63,3 +68,29 @@
 {
     color: #ddd;
 }
+
+@media (max-width:1000px)
+{
+    #wrapper-nav
+    {
+        display: none;
+    }
+
+    #wrapper-sidebar-small
+    {
+        display: grid;
+        background-color: #ddd;
+        z-index: 10;
+    }
+
+    #sidebar-icon-menu
+    {
+        width: 50px;
+    }
+
+    #sidebar-checkbox
+    {
+        display: none;
+    }
+}
+

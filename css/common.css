@@ -116,11 +116,41 @@ li
     text-align: center;
 }
 
-/* @media only screen and (max-width:1000px)*/
+@media only screen and (max-width:1000px)
+{
+    .layout
+    {
+        display: grid;
+        grid-template-rows: 50px 50px 1fr;
+        grid-template-areas: 
+        "side-bar"
+        "content"
+        "body";
+    }
+
+    .side-bar
+    {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .content
+    {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
 
 /* 폭: 1000~무한px */
 @media not screen and (max-width:1000px)
 { 
+    body
+    {
+        font-size: 17px;
+    }
+    
     /* 레이아웃 지정 */
     .layout
     {
@@ -168,56 +198,65 @@ li
         overflow-y: auto;
     }
     
-    /* 폰트 지정 */
-    body
-    {
-        font-size: 17px;
-    }
-
     h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a
-    /* h1 > del, h2 > del, h3 > del, h4 > del, h5 > del, h6 > del */
     {
         font-weight: bolder;
     }
-
-    /* h1 ~ p, h2 ~ p, h3 ~ p, h4 ~ p, h5 ~ p
-    {
-        padding-bottom: 20px;
-    } */
 
     h1
     {
         color:#30b565;
     }
 
-    h3, h4, h5
+    h3, h4
     {
-        padding-top: 15px;
+        margin-top: 50px;
     }
 
-    h3, h3 ~ p
+    h5, h6
     {
-        padding-left: 10px;
+        margin-top: 20px;
     }
 
-    h4, h4 ~ p
+    /* h3, h3 + p, h3 + table, .h3-table + p
     {
-        padding-left: 60px;
+        margin-left: 10px;
+    } */
+
+    h4, h4 + p, h4 + table, .h4-table + p
+    {
+        margin-left: 50px;
     }
 
-    h5, h5 ~ p
+    h5, h5 + p, h5 + table, .h5-table + p
     {
-        padding-left: 110px;
+        margin-left: 100px;
     }
 
-    h6, h6 ~ p
+    h6, h6 + p, h6 + table .h6-table + p
     {
-        padding-left: 160px;
+        margin-left: 150px;
     }
 
-    h5
+    h2
     {
-        font-size: 0.9em;
+        font-size: 2.5em;
+        text-decoration: underline;
+    }
+
+    h3
+    {
+        font-size: 2.2em;
+    }
+
+    h4
+    {
+        font-size: 1.5em;
+    }
+
+    h5, h6
+    {
+        font-size: 1.0em;
     }
 
     p
@@ -257,15 +296,15 @@ li
     {
         border: 3px solid #295792;
         border-collapse: collapse;
-        text-align: center;
-        margin: 10px auto;
+        /* text-align: center; */
+        /* margin: 10px auto; */
     }   
 
     th, td
     {
         width: 250px;
         height: 50px;
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
     }
 
     th
