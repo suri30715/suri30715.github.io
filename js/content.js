@@ -18,7 +18,7 @@ function getTitle()
         divisionList[i] = document.createElement("div");
         divisionList[i].setAttribute("class", "division");
         index.appendChild(divisionList[i]);
-        
+
         if(content2HList)
         {
             for(let j = 0; j < content2HList.length; j++)

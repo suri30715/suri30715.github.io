@@ -118,28 +118,51 @@ li
 
 @media only screen and (max-width:1000px)
 {
-    .layout
+    body
     {
         display: grid;
-        grid-template-rows: 50px 50px 1fr;
+        grid-template-rows: 50px 1fr;
         grid-template-areas: 
-        "side-bar"
-        "content"
-        "body";
+        "header"
+        ".body";
     }
 
-    .side-bar
+    header
     {
         position: sticky;
         top: 0;
+        /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
         height: 100vh;
+    }
+
+    .sidebar
+    {
+        display: none;
     }
 
     .content
     {
-        position: sticky;
-        top: 0;
-        height: 100vh;
+        display: none;
+    }
+
+    .sidebar-small
+    {
+        position: fixed;
+    }
+
+    h1
+    {
+        color: #30b565;
+    }
+
+    h1, h2, h3, h4, h5, .h6
+    {
+        font-weight: bold;
+    }
+
+    h2
+    {
+        text-decoration: underline;
     }
 }
 
@@ -151,6 +174,11 @@ li
         font-size: 17px;
     }
     
+    .sidebar-small
+    {
+        display: none;
+    }
+
     /* 레이아웃 지정 */
     .layout
     {
@@ -158,7 +186,7 @@ li
         grid-template-columns: repeat(32, 1fr);
     }
 
-    .header
+    header
     {
         display: none;
     }
