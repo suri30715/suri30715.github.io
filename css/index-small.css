@@ -1,0 +1,79 @@
+.index-dropdown
+{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#title-small
+{
+    text-align: center;
+    color: #30b565;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#count-small
+{
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 3px solid tomato;
+    border-radius: 8px;
+    padding: 3px;
+    margin: 0px 3px 3px 3px;
+    color: tomato;
+}
+
+.division-small
+{
+    border: 3px solid #295792;
+    border-radius: 8px;
+    margin: 3px 3px 0px 3px;
+    text-align: left;
+}
+
+/* content.js 에서 생성되는 요소 */
+.two-small, .three-small, .four-small, .five-small, .six-small
+{
+    margin: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.two-small:hover, .three-small:hover, .four-small:hover .five-small:hover, .six-small:hover
+{
+    color: #b7a3ff;
+}
+
+.two-small:active, .three-small:active, .four-small:active, .five-small:active, .six-small:active
+{
+    color: tomato;
+}
+
+.two-small
+{
+    margin-left: 1px;
+}
+
+.three-small
+{
+    margin-left: 26px;
+}
+
+.four-small
+{
+    margin-left: 51px;
+}
+
+.five-small
+{
+    margin-left: 76px;
+}
+
+.six-small
+{
+    margin-left: 101px;
+}

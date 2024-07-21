@@ -118,22 +118,27 @@ li
 
 @media only screen and (max-width:1000px)
 {
-    body
+    .layout
     {
-        display: grid;
         grid-template-rows: 50px 1fr;
         grid-template-areas: 
         "header"
         ".body";
     }
 
-    header
+    /* header
     {
-        position: sticky;
-        top: 0;
-        /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
-        height: 100vh;
+    } */
+
+    /* .checkbox-menu-small-button
+    {
+        grid-column: 1/2;
     }
+
+    .checkbox-index-small-button
+    {
+        grid-column: 2/3;
+    } */
 
     .sidebar
     {
