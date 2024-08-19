@@ -1,0 +1,37 @@
+.wrapper-sidebar-small
+{
+    display:flex;
+    position: fixed;
+    top: 0;
+}
+
+.menu-dropdown, .index-dropdown
+{
+    visibility: collapse;
+    border: 3px solid #295792;
+    border-radius: 8px;
+    padding: 10px 10px;
+    background-color: white;
+}
+
+#checkbox-menu-small, #checkbox-index-small
+{
+    display: none;
+}
+
+.button1, .button2
+{
+    border: 3px solid #295792;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 10px; 
+    background-color: white;
+    width: auto;
+}
+
+#checkbox-menu-small:checked ~.menu-dropdown, #checkbox-index-small:checked ~.index-dropdown
+{
+    visibility: visible; 
+}
+
+

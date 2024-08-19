@@ -1,23 +1,23 @@
 function init()
 {
-    getTitle();
+    getTitleSmall();
 }
 
-function getTitle()
+function getTitleSmall()
 {
     const content2List = document.querySelectorAll(".content2");
-    const index = document.querySelector("#index");
+    const index = document.querySelector("#index-small");
     var content2HList = [];
     const divisionList = new Array(content2List.length);
     
-    document.getElementById("count").innerHTML = "글: " + content2List.length;
+    document.getElementById("count-small").innerHTML = "글: " + content2List.length;
 
     for(let i = 0; i < content2List.length; i++)
     {
         content2HList = content2List[i].querySelectorAll("h2, h3, h4, h5, h6");
 
         divisionList[i] = document.createElement("div");
-        divisionList[i].setAttribute("class", "division");
+        divisionList[i].setAttribute("class", "division-small");
         index.appendChild(divisionList[i]);
 
         if(content2HList)
@@ -27,35 +27,35 @@ function getTitle()
                 if(content2HList[j].tagName == "H2")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "two");
+                    c.setAttribute("class", "two-small");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H3")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "three");
+                    c.setAttribute("class", "three-small");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H4")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "four");
+                    c.setAttribute("class", "four-small");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H5")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "five");
+                    c.setAttribute("class", "five-small");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H6")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "six");
+                    c.setAttribute("class", "six-small");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
@@ -64,14 +64,9 @@ function getTitle()
     }
 
     // 목차의 내용 클릭시 해당 위치로 스크롤
-    const indexList = document.querySelectorAll(".two, .three, .four, .five, .six");
+    const indexList = document.querySelectorAll(".two-small, .three-small, .four-small, .five-small, .six-small");
     const hList = document.querySelectorAll("h2, h3, h4, h5, h6");
     
-    for(let i = 0; i < hList.length; i++)
-    {
-        console.log(hList[i]);
-    }
-
     for(let i = 0; i < indexList.length; i++)
     {
         indexList[i].addEventListener
