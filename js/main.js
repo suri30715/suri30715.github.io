@@ -37,4 +37,6 @@ setCardItemImg(4, "../img/C++_banner.png", "🔗 C++ 정리", "../html/c++.html"
 setCardItemImg(5, "../img/HTML_banner.png", "🔗 HTML 정리", "../html/html.html" )
 setCardItemImg(5, "../img/CSS_banner.png", "🔗 CSS 정리", "../html/css.html" )
 setCardItemImg(6, "../img/STL_banner.png", "🔗 자료구조&알고리즘 정리", "../html/d&a.html");
-setCardItemImg(7, "../img/trigonometric-function.png", "🔗 수학 정리", "../html/math.html")
+setCardItemImg(7, "../img/trigonometric-function.png", "🔗 수학 정리", "../html/math.html");
+setCardItemImg(8, "", "유니티 메모", "../html/unity.html");
+setCardItemImg(9, "", "cs 정리", "../html/cs.html");

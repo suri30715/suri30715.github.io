@@ -67,10 +67,10 @@ function getTitle()
     const indexList = document.querySelectorAll(".two, .three, .four, .five, .six");
     const hList = document.querySelectorAll("h2, h3, h4, h5, h6");
     
-    for(let i = 0; i < hList.length; i++)
-    {
-        console.log(hList[i]);
-    }
+    // for(let i = 0; i < hList.length; i++)
+    // {
+    //     console.log(hList[i]);
+    // }
 
     for(let i = 0; i < indexList.length; i++)
     {
