@@ -10,7 +10,7 @@ function getTitleSmall()
     var content2HList = [];
     const divisionList = new Array(content2List.length);
     
-    document.getElementById("count").innerHTML = "글: " + content2List.length;
+    document.getElementById("count").innerHTML = "contents " + content2List.length;
 
     for(let i = 0; i < content2List.length; i++)
     {
@@ -71,7 +71,7 @@ function getTitleSmall()
     }
 
     // 목차의 내용 클릭시 해당 위치로 스크롤
-    const indexList = document.querySelectorAll(".two, .three, .four, .five, .six");
+    const indexList = document.querySelectorAll(".one, .two, .three, .four, .five, .six");
     const hList = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
     
     for(let i = 0; i < indexList.length; i++)
@@ -96,9 +96,9 @@ function getTitleSmall()
             {
                 // https://velog.io/@nemo/scroll-offset-property
                 if(scrollY >= hList[i].offsetTop)
-                    indexList[i].style.color = "#30b565";
+                    indexList[i].style.color = "#5390f1";
                 else
-                    indexList[i].style.color = "black";
+                    indexList[i].style.color = "#777777";
             }
         }
     );

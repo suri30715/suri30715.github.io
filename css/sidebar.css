@@ -1,22 +1,30 @@
 /* sidebar.js 에서 생성되는 요소 */
-.one .two, .three, .four, .five, .six
+#count
+{
+    border-radius: 5px;
+    background-color: rgba(120, 120, 120, 0.3);
+    padding: 2px 10px 3px 10px;
+    font-size: 0.5em;
+    font-weight: bold;
+    color: #3d3d3d;
+}
+
+.division
+{
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 5px 5px;
+    padding: 5px;
+}
+
+.one, .two, .three, .four, .five, .six
 {
     margin: 10px;
     font-size: 0.8em;
     font-weight: bold;
     cursor: pointer;
     text-decoration: underline;
-    color: #ddd;
-}
-
-.one:hover, .two:hover, .three:hover, .four:hover .five:hover, .six:hover
-{
-    color: #b7a3ff;
-}
-
-.one:hover, .two:active, .three:active, .four:active, .five:active, .six:active
-{
-    color: tomato;
+    color: #777777;
 }
 
 .two

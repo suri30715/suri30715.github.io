@@ -1,4 +1,20 @@
+/*· <br>*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+:root
+{
+    --alpha-non-transparency: 1.0;
+    --alpha-transparency: 0.5;
+    --content-border-radius: 8px;
+    --content-border-left-width: 3px;
+    --content-interval: 10px;
+    --content-red-background-color: 255, 45, 0;
+    --content-red-left-border-color: red;
+    --content-blue-background-color: 0, 150, 255;
+    --content-blue-left-border-color: blue;
+    --paragraph-interval: 30px;
+    --paragraph-font-size: 0.8em;
+}
 
 * 
 {
@@ -8,6 +24,29 @@
     box-sizing: border-box;
     font-weight: normal;
 }
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+/* https://codingbroker.tistory.com/66 */
+*::-webkit-scrollbar
+{
+    width:5px;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: #7d7d7d;
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-track
+{
+    background-color: #c0c0c0;
+}
+
 
 body
 {
@@ -22,43 +61,48 @@ body
     /* grid-template-columns: 1fr, 1fr, 1fr;
     grid-template-rows: 1fr, 1fr, 1fr; */
 
-    grid-template-areas:
+    /* grid-template-areas:
     "header header header"
     "sidebar section section"
     "sidebar section section"
-    "footer footer footer";
+    "footer footer footer"; */
+    grid-template-columns: repeat(32, 1fr);
 
-}
-
-.header, .navigation, .content, .section, .footer
-{
-    
 }
 
 .header
 {
-    grid-area: header;
+    /* grid-area: header; */
+    position: sticky;
+    top: 0;
+    /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
+    background-color: white;
+    grid-column: 1/33;
     border-bottom: solid gainsboro;
-    padding: 10px;
+    padding: 7px;
+    z-index: 1;
 }
 
 .sidebar
 {
-    grid-area: sidebar;
+    /* grid-area: sidebar; */
     border-right: solid gainsboro;
-}
+    position: sticky;
+    top: 0;
+    /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
+    height: 100vh;
+    grid-column: 1/9;
+    /* https://rgy0409.tistory.com/4997 */
+    overflow-y: auto;
 
-.content
-{
-    /* grid-row: 2/11; */
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
+    padding: 15px;
 }
 
 .section
 {
-    grid-area: section;
+    /* grid-area: section; */
+    grid-column: 10/32;
+    margin: 30px;
 }
 
 .footer
@@ -66,7 +110,54 @@ body
     grid-area: footer;
 }
 
+.content
+{
+    border: 2px solid #ddd;
+    border-radius: var(--content-border-radius);
+    margin-bottom: var(--content-interval);
+    padding: 30px;
+}
+
+.content-red, .content-blue
+{
+    border-radius: var(--content-border-radius);
+    border-left-width: var(--content-border-left-width);
+    font-size: var(--paragraph-font-size);
+    margin-bottom: var(--content-interval);
+    padding: 10px;
+}
+
+.content-red
+{
+    background-color : rgba(var(--content-red-background-color), var(--alpha-transparency));
+    border-left: solid rgba(var(--content-red-background-color), var(--alpha-non-transparency));
+}
+
+.content-blue
+{
+    background-color : rgba(var(--content-blue-background-color), var(--alpha-transparency));
+    border-left: solid rgba(var(--content-blue-background-color), var(--alpha-non-transparency));
+}
+
 h1
 {
     font-size: 1.5em;
+}
+
+p
+{
+    font-size: var(--paragraph-font-size);
+    margin-bottom: var(--paragraph-interval);
+}
+
+a
+{
+    text-decoration: none;
+    color:#0062ff;
+    font-weight: bold;
+}
+
+a:hover
+{
+    text-decoration: underline;
 }
