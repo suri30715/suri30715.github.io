@@ -1,5 +1,3 @@
-/* <!--·🔗θ˚αβ--> */
-/*· <br>*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 * 
@@ -11,347 +9,64 @@
     font-weight: normal;
 }
 
-html
+body
 {
-    scroll-behavior: smooth;
+    margin: 0;
 }
 
-/* https://codingbroker.tistory.com/66 */
-*::-webkit-scrollbar
+.layout
 {
-    width:10px;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(10%, auto));
+    grid-template-rows: repeat(auto-fill, minmax(10%, auto)); */
+    /* grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr; */
+
+    grid-template-areas:
+    "header header header"
+    "sidebar section section"
+    "sidebar section section"
+    "footer footer footer";
+
 }
 
-*::-webkit-scrollbar-thumb
+.header, .navigation, .content, .section, .footer
 {
-    background-color: #7d7d7d;
-    border-radius: 3px;
+    
 }
 
-*::-webkit-scrollbar-track
+.header
 {
-    background-color: #c0c0c0;
-}
-
-.colorscripter-code
-{
-    font-weight: lighter;
-}
-
-a
-{
-    color:tomato;
-    font-weight: bold;
-    text-decoration-line: none;
-}
-
-/*내용 지정*/
-.emphasis
-{
-    color:#30b565;
-}
-
-.keyword
-{
-    color:firebrick;
-    font-weight: bold;
-}
-
-/* 내용 박스 지정 */
-.rights, .info
-{
-    margin: 30px 0px 30px 0px;
-    border: 3px solid #ff6347;
-    border-radius: 8px;
+    grid-area: header;
+    border-bottom: solid gainsboro;
     padding: 10px;
-    color: tomato;
-    font-weight: bold;
 }
 
-.mine
+.sidebar
 {
-    border: 3px solid #30b565;
-    border-radius: 8px;
-    padding : 25px;
-    margin-bottom: 10px;
+    grid-area: sidebar;
+    border-right: solid gainsboro;
 }
 
-.content1
+.content
 {
-    border: 5px solid #295792;
-    border-radius: 8px;
-    padding: 60px 55px 60px 55px;
-}
-
-.content2
-{
-    border: 3px solid #295792;
-    border-radius: 8px;
-    padding : 25px;
-    margin-bottom: 10px;
-}
-
-.content3
-{
-    border: 3px solid #ababab;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-.example
-{
+    /* grid-row: 2/11; */
     border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 5px;
-}   
-
-li
-{
-    list-style-type: none;
-    padding: 1px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-.colorscripter-code
+.section
 {
-    text-align: center;
+    grid-area: section;
 }
 
-@media only screen and (max-width:1000px)
+.footer
 {
-    .layout
-    {
-        grid-template-rows: 50px 1fr;
-        grid-template-areas: 
-        "header"
-        ".body";
-    }
-
-    /* header
-    {
-    } */
-
-    /* .checkbox-menu-small-button
-    {
-        grid-column: 1/2;
-    }
-
-    .checkbox-index-small-button
-    {
-        grid-column: 2/3;
-    } */
-
-    .sidebar
-    {
-        display: none;
-    }
-
-    .content
-    {
-        display: none;
-    }
-
-    .sidebar-small
-    {
-        position: fixed;
-    }
-
-    h1
-    {
-        color: #30b565;
-    }
-
-    h1, h2, h3, h4, h5, .h6
-    {
-        font-weight: bold;
-    }
-
-    h2
-    {
-        text-decoration: underline;
-    }
+    grid-area: footer;
 }
 
-/* 폭: 1000~무한px */
-@media not screen and (max-width:1000px)
-{ 
-    body
-    {
-        font-size: 17px;
-    }
-    
-    .sidebar-small
-    {
-        display: none;
-    }
-
-    /* 레이아웃 지정 */
-    .layout
-    {
-        display: grid;
-        grid-template-columns: repeat(32, 1fr);
-    }
-
-    header
-    {
-        display: none;
-    }
-
-    .sidebar
-    {
-        position: sticky;
-        top: 0;
-        /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
-        height: 100vh;
-        grid-column: 1/7;
-        /* https://rgy0409.tistory.com/4997 */
-        overflow-y: auto;
-    }
-
-    .content
-    {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        grid-column: 7/13;
-        /* https://rgy0409.tistory.com/4997 */
-        overflow-y: auto;
-    }
-
-    .body
-    {
-        grid-column: 14/31;
-    }
-
-    .console
-    {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        grid-column: 32/33;
-        overflow-y: auto;
-    }
-    
-    h1, h2, h3, h4, h5, h6, .emphasis, .keyword, a, .emphasis > a
-    {
-        font-weight: bolder;
-    }
-
-    h1
-    {
-        color:#30b565;
-    }
-
-    h3, h4
-    {
-        margin-top: 50px;
-    }
-
-    h5, h6
-    {
-        margin-top: 20px;
-    }
-
-    /* h3, h3 + p, h3 + table, .h3-table + p
-    {
-        margin-left: 10px;
-    } */
-
-    h4, h4 + p, h4 + table, .h4-table + p
-    {
-        margin-left: 50px;
-    }
-
-    h5, h5 + p, h5 + table, .h5-table + p
-    {
-        margin-left: 100px;
-    }
-
-    h6, h6 + p, h6 + table .h6-table + p
-    {
-        margin-left: 150px;
-    }
-
-    h2
-    {
-        font-size: 2.5em;
-        text-decoration: underline;
-    }
-
-    h3
-    {
-        font-size: 2.2em;
-    }
-
-    h4
-    {
-        font-size: 1.5em;
-    }
-
-    h5, h6
-    {
-        font-size: 1.0em;
-    }
-
-    p
-    {
-        line-height: 27.5px;
-        /* padding-bottom: 20px; */
-    }
-    /* 이미지 크기 지정 */
-    img
-    {
-        display: block;
-        margin: auto;
-        /* margin: auto; */
-        /* padding: 10px 0px 0px 0px; */
-    }
-
-    figcaption
-    {
-        font-weight: lighter;
-        font-size: 10px;
-        text-align: center;
-    }
-
-    .emphasis2
-    {
-        font-weight: bolder;
-    }
-
-    /* 내용 순서 리스트 숫자 지정 */
-    .number
-    {
-        color: lightseagreen;
-    }
-
-    /* 테이블 */
-    table
-    {
-        border: 3px solid #295792;
-        border-collapse: collapse;
-        /* text-align: center; */
-        /* margin: 10px auto; */
-    }   
-
-    th, td
-    {
-        width: 250px;
-        height: 50px;
-        /* box-sizing: border-box; */
-    }
-
-    th
-    {
-        background-color: #295792;
-        border: 2px solid #ababab;
-        border-bottom: none;
-        color: white;
-        font-weight: 400
-    }
-
-    td
-    {
-        border: 2px solid gray;
-    }
+h1
+{
+    font-size: 1.5em;
 }

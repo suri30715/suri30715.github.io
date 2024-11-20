@@ -1,70 +1,45 @@
-#wrapper-sidebar-small
+/* sidebar.js 에서 생성되는 요소 */
+.one .two, .three, .four, .five, .six
 {
-    display: none;
-}
-
-#wrapper-nav
-{
-    /* position:fixed; */
-    padding: 15px;
-    background-color: #6991c7;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
-}
-
-.profile
-{
-    font-size: 15px;
-    font-weight: lighter;
-    color: #3f3d3d;
-    /* border: 2px solid #ddd;
-    border-radius: 8px; */
-    padding: 20px;
-
-}
-
-.title-wrapper
-{
-    padding: 20px 10px 20px 10px;
-    margin: 10px 0px 10px 0px;
-    border: 3px solid #295792;
-    border-radius: 8px;
-}
-
-.title-1
-{
-    font-size: 1.15em;
+    margin: 10px;
+    font-size: 0.8em;
     font-weight: bold;
-}
-
-.title-2
-{
-    font-size: 0.9em;
-    font-weight: bold;
-    margin: 25px 10px 25px 15px;
-}
-
-.detail
-{
     cursor: pointer;
-    font-size: 15px;
-    color: #3f3d3d;
-    font-weight: bold;
-    line-height: 30px;
     text-decoration: underline;
-    margin-left: 12px;
+    color: #ddd;
 }
 
-.detail:hover
+.one:hover, .two:hover, .three:hover, .four:hover .five:hover, .six:hover
 {
     color: #b7a3ff;
 }
 
-.detail:active
+.one:hover, .two:active, .three:active, .four:active, .five:active, .six:active
 {
     color: tomato;
 }
 
-#go-main
+.two
 {
-    color: #ddd;
+    margin-left: 1px;
+}
+
+.three
+{
+    margin-left: 26px;
+}
+
+.four
+{
+    margin-left: 51px;
+}
+
+.five
+{
+    margin-left: 76px;
+}
+
+.six
+{
+    margin-left: 101px;
 }
