@@ -1,4 +1,5 @@
 /*· <br>*/
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 :root
@@ -15,7 +16,7 @@
     --content-yellow-background-color: 255, 215, 0;
     --content-yellow-left-border-color: yellow;
     --keyword-color: 255, 115, 0;
-    --paragraph-interval: 30px;
+    --paragraph-interval: 10px;
     --paragraph-font-size: 0.8em;
 }
 
@@ -154,30 +155,35 @@ img
     display:block;
 }
 
-/* h2, h2~p, h2~div, h2~table
+.h2-content
 {
     margin-left: 10px;
 }
 
-h3, h3~p, h3~div, h3~table
+.h3-content
 {
     margin-left: 30px;
 }
 
-h4, h4~p, h4~div, h4~table
+.h4-content
 {
     margin-left: 50px;
 }
 
-h5, h5~p, h5~div, h5~table
+.h5-content
 {
     margin-left: 70px;
 }
 
-h6, h6~p, h6~div, h6~table
+.h6-content
 {
     margin-left: 90px;
-} */
+}
+
+.h1-content, .h2-content
+{
+    margin-top: 70px;
+}
 
 h1, h2, h3, h4, h5, h6
 {
@@ -208,17 +214,34 @@ img
     margin: auto;
 }
 
+figcaption
+{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 0.5em;
+}
+
 .keyword
 {
     font-weight: bold;
     color: rgba(var(--keyword-color), var(--alpha-non-transparency));
 }
 
-.ref
+.ref, .formula
 {
     color: white;
     font-size: 0.9em;
     background-color:cadetblue;
     border-radius: 5px;
     padding: 1px 5px 3px 5px;
+}
+
+.ref
+{
+    background-color:cadetblue;
+}
+
+.formula
+{
+    background-color: rgb(224, 75, 75);
 }

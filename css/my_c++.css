@@ -1,0 +1,16 @@
+table[class = var] td:nth-child(1)
+{
+    width: 180px
+}
+
+table[class = var] td:nth-child(2)
+{
+    width: 50px;
+    text-align:left;
+}
+
+table[class = var] td:nth-child(3)
+{
+    width: 1000px;
+    text-align: left;
+}
