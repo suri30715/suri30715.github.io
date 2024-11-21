@@ -4,7 +4,7 @@
 :root
 {
     --alpha-non-transparency: 1.0;
-    --alpha-transparency: 0.5;
+    --alpha-transparency: 0.2;
     --content-border-radius: 8px;
     --content-border-left-width: 3px;
     --content-interval: 10px;
@@ -12,6 +12,9 @@
     --content-red-left-border-color: red;
     --content-blue-background-color: 0, 150, 255;
     --content-blue-left-border-color: blue;
+    --content-yellow-background-color: 255, 215, 0;
+    --content-yellow-left-border-color: yellow;
+    --keyword-color: 255, 115, 0;
     --paragraph-interval: 30px;
     --paragraph-font-size: 0.8em;
 }
@@ -33,13 +36,13 @@ html
 /* https://codingbroker.tistory.com/66 */
 *::-webkit-scrollbar
 {
-    width:5px;
+    width:8px;
 }
 
 *::-webkit-scrollbar-thumb
 {
     background-color: #7d7d7d;
-    border-radius: 3px;
+    border-radius: 8px;
 }
 
 *::-webkit-scrollbar-track
@@ -118,7 +121,7 @@ body
     padding: 30px;
 }
 
-.content-red, .content-blue
+.content-red, .content-blue, .content-yellow
 {
     border-radius: var(--content-border-radius);
     border-left-width: var(--content-border-left-width);
@@ -139,9 +142,46 @@ body
     border-left: solid rgba(var(--content-blue-background-color), var(--alpha-non-transparency));
 }
 
-h1
+.content-yellow
 {
-    font-size: 1.5em;
+    background-color : rgba(var(--content-yellow-background-color), var(--alpha-transparency));
+    border-left: solid rgba(var(--content-yellow-background-color), var(--alpha-non-transparency));
+}
+
+img
+{
+    /*중앙 정렬 https://www.freecodecamp.org/korean/news/how-to-center-an-image-in-css/*/
+    display:block;
+}
+
+/* h2, h2~p, h2~div, h2~table
+{
+    margin-left: 10px;
+}
+
+h3, h3~p, h3~div, h3~table
+{
+    margin-left: 30px;
+}
+
+h4, h4~p, h4~div, h4~table
+{
+    margin-left: 50px;
+}
+
+h5, h5~p, h5~div, h5~table
+{
+    margin-left: 70px;
+}
+
+h6, h6~p, h6~div, h6~table
+{
+    margin-left: 90px;
+} */
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: bold;
 }
 
 p
@@ -160,4 +200,25 @@ a
 a:hover
 {
     text-decoration: underline;
+}
+
+img
+{
+    display: block;
+    margin: auto;
+}
+
+.keyword
+{
+    font-weight: bold;
+    color: rgba(var(--keyword-color), var(--alpha-non-transparency));
+}
+
+.ref
+{
+    color: white;
+    font-size: 0.9em;
+    background-color:cadetblue;
+    border-radius: 5px;
+    padding: 1px 5px 3px 5px;
 }

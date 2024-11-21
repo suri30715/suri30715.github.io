@@ -11,10 +11,8 @@
 
 .division
 {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    margin: 5px 5px;
-    padding: 5px;
+    border-bottom: 3px solid #ddd;
+    padding: 10px;
 }
 
 .one, .two, .three, .four, .five, .six
