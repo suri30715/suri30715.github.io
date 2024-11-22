@@ -1,0 +1,18 @@
+.h1-content, .h2-content
+{
+    margin-top: 70px;
+}
+
+.tag-c11::after
+{
+    border-radius: 5px;
+    color: white;
+    font-size: 0.5em;
+}
+
+.tag-c11::after
+{
+    content: "C++11";
+    background-color: red;
+    border-color: red;
+}
