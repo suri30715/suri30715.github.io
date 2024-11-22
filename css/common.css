@@ -260,6 +260,7 @@ th
 th
 {
     color: white;
+    font-weight: bold;
     text-align: left;
     padding: 10px;
 }
@@ -267,6 +268,7 @@ th
 td
 {
     padding: 5px;
+    font-size: 0.85em;
 }
 
 li
