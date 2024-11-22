@@ -157,32 +157,32 @@ img
 
 .h2-content
 {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .h3-content
 {
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .h4-content
 {
-    margin-left: 50px;
+    margin-left: 90px;
 }
 
 .h5-content
 {
-    margin-left: 70px;
+    margin-left: 120px;
 }
 
 .h6-content
 {
-    margin-left: 90px;
+    margin-left: 150px;
 }
 
-.h1-content, .h2-content
+h1, h2
 {
-    margin-top: 70px;
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6
 p
 {
     font-size: var(--paragraph-font-size);
-    margin-bottom: var(--paragraph-interval);
+    margin: var(--paragraph-interval) var(--paragraph-interval);
 }
 
 a
@@ -244,4 +244,32 @@ figcaption
 .formula
 {
     background-color: rgb(224, 75, 75);
+}
+
+table, th, td
+{
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+th
+{
+    background-color: rgb(152, 152, 152);
+}
+
+th
+{
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+td
+{
+    padding: 5px;
+}
+
+li
+{
+    list-style-type: none;
 }
