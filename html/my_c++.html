@@ -18,8 +18,7 @@
         <div class = "section">
             <!-- 여기는 본문 내용이 오는 자리입니다.  -->
             <div class = "content-red">개인 공부용이며, 복사, 배포를 금지합니다. <br>
-                검색은 ctrl + f를 사용하여 원하는 키워드를 입력한 후 찾으면됩니다. <br>
-                만약 내용상 오류가 있어 수정을 원한다면 게시판에 문의부탁드립니다. (구현 예정)
+                검색은 ctrl + f! <br>
             </div>
             <h1>C++ 정리</h1>
             <span class = "tag-c11"></span>
@@ -99,6 +98,11 @@
                         · 변수 초기화 방법 3가지는 아래와 같다. <br>
                     </p>
                     <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="line-height:100%">1</div><div style="line-height:100%">2</div><div style="line-height:100%">3</div><div style="line-height:100%">4</div><div style="line-height:100%">5</div><div style="line-height:100%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">int&nbsp;number1&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;<span style="color:#C302ED">1</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;대입&nbsp;연산자를&nbsp;사용한&nbsp;할당&nbsp;(Copy&nbsp;Initialization)</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">int&nbsp;number2(<span style="color:#C302ED">2</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;괄호를&nbsp;사용한&nbsp;할당(Direct&nbsp;Initialization)</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">int&nbsp;nubmer3{<span style="color:#C302ED">3</span>};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;중괄호(Brace)를&nbsp;사용한&nbsp;할당(Brace&nbsp;Initialization,&nbsp;Uniform&nbsp;Initialization,&nbsp;List&nbsp;Initialization)</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">int&nbsp;number4&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;{<span style="color:#C302ED">4</span>};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;이렇게도&nbsp;가능</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">int&nbsp;number0&nbsp;{};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;중괄호가&nbsp;비면&nbsp;0이&nbsp;할당된다.&nbsp;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    <h2 id = "variable-declaration-sum">변수 선언의 결합</h2>
+                    <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;b,&nbsp;c&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;<span style="color:#C302ED">0</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;int&nbsp;a&nbsp;=&nbsp;0,&nbsp;int&nbsp;b&nbsp;=&nbsp;0와&nbsp;같음</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    <p>
+                        · 변수 선언시 같은 데이터형의 변수를 선언할 경우 위와 같이 할 수 있다. <br>
+                    </p>
                     <h2>변수의 분류</h2>
                     <table class = "var">
                         <tr>
@@ -255,17 +259,172 @@
                         ·  전역 변수는 정적 생명 주기를 가지므로 스택과 같은 구조가 필요 없이 그냥 데이터 영역에 저장만 하면 된다.<br>
                         · new, malloc()을 사용한 동적 메모리는 사용범위나 링크 규칙에 의해서가 아니라, new와 delete연산자에 의해 결정된다. (heap 영역)<br>
                     </p>
+                    <h2>자료형(data type)</h2>
+                    <table class = "datatype">
+                        <tr>
+                            <th colspan = "2">분류</th>
+                            <th colspan = "2">이름</th>
+                            <th>크기(byte)</th>
+                            <th>저장 범위</th>
+                        </tr>
+                        <tr>
+                            <td rowspan = "18  ">기본형</td>
+                            <td rowspan = "13">정수형</td>
+                            <td rowspan = "2">short</td>
+                            <td>(signed) short (int)</td>
+                            <td>2</td>
+                            <td>-32,768 ~ 32,767</td>
+                        </tr>
+                        <tr>
+                            <td>unsigned short (int)</td>
+                            <td>4</td>
+                            <td>0 ~ 65,535</td>
+                        </tr>
+                        <tr>
+                            <td rowspan = "2">int</td>
+                            <td>(signed) int</td>
+                            <td>4</td>
+                            <td>-2,147,483,648 ~ 2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td>unsgined int</td>
+                            <td>4</td>
+                            <td>0 ~ 4,294,967,295</td>
+                        </tr>
+                        <tr>
+                            <td rowspan = "2">long</td>
+                            <td>(signed) long (int)</td>
+                            <td>4</td>
+                            <td>-2,147,483,648 ~ 2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td>unsgined long (int)</td>
+                            <td>4</td>
+                            <td>0 ~ 4,294,967,295</td>
+                        </tr>
+                        <tr>
+                            <td rowspan = "2">long long</td><span class = "tag-c11"></span>
+                            <td>long long</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>unsinged long long</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>bool</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>0 ~ 1</td>
+                        </tr>
+                        <tr>
+                            <td>__int8</td>
+                            <td rowspan = "4"></td>
+                            <td>1</td>
+                            <td>-128 ~ 127</td>
+                        </tr>
+                        <tr>
+                            <td>__int16</td>
+                            <td>2</td>
+                            <td>-32,768 ~ 37,767</td>
+                        </tr>
+                        <tr>
+                            <td>__int32</td>
+                            <td>4</td>
+                            <td>-2,147,483,648 ~ 2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td>__int64</td>
+                            <td>8</td>
+                            <td>-9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807</td>
+                        </tr>
+                        <tr>
+                            <td rowspan = "3">문자형</td>
+                            <td rowspan = "3">char</td>
+                            <td>(signed)char</td>
+                            <td>1</td>
+                            <td>-128 ~ 127</td>
+                        </tr>
+                        <tr>
+                            <td>unsgined char</td>
+                            <td>1</td>
+                            <td>0 ~ 255</td>
+                        </tr>
+                        <tr>
+                            <td>w_tchar</td>
+                            <td>2</td>
+                            <td>0 ~ 65,535</td>
+                        </tr>
+                        <tr>
+                            <td rowspan = "2">부동 소수점형</td>
+                            <td>float</td>
+                            <td rowspan = "2"></td>
+                            <td>4</td>
+                            <td>3.4E-38 ~ 3.4E+38 <br>(대략 정밀도 7자리)</td>
+                        </tr>
+                        <tr>
+                            <td>(long) double</td>
+                            <td>8</td>
+                            <td>1.79E-308 ~ 1.79E+308 <br>(대략 정밀도 15자리)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan = "8" colspan = "2">복합형</td>
+                            <td>배열</td>
+                        </tr>
+                        <tr>
+                            <td>문자열</td>
+                        </tr>
+                        <tr>
+                            <td>String 클래스</td>
+                        </tr>
+                        <tr>
+                            <td>구조체</td>
+                        </tr>
+                        <tr>
+                            <td>공용체</td>
+                        </tr>
+                        <tr>
+                            <td>열거체</td>
+                        </tr>
+                    </table>
+                    <p>
+                        · 자료형은 메모리 블록에 할당된 비트를 어떤 형식의 값으로 읽을 것인지를 결정해준다. <br>
+                        · 자료형의 크기는 x86, x64 시스템에 따라 조금씩 다르다. <br>
+                        · <span class = "keyword">int</span>: 시스템 기본 연산 단위를 따름 (16bit = 2byte, x86 = 4byte, x64 = 4byte)<br>
+                        · <span class = "keyword">long</span>: x32부터 8byte로 커짐
+                    </p>
+                </div>
+                <div class = "h3-content">
+                    <h3>자료형 이름을 대체하는 방법</h3>
+                </div>
+                <div class = "h4-content">
+                    <h4>#define, typedef</h4>
+                    <p>
+                        · 자료형의 대체 이름을 만드는 방법에는 #define과 typedef 2가지가 존재한다. <br>
+                        · 아래의 '#define의 문제' 부분의 코드 예제의 형태로 작성한다. <br>
+                    </p>
+                </div>
+                <div class = "h5-content">
+                    <h5>#define의 문제</h5>
+                    <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="line-height:100%">1</div><div style="line-height:100%">2</div><div style="line-height:100%">3</div><div style="line-height:100%">4</div><div style="line-height:100%">5</div><div style="line-height:100%">6</div><div style="line-height:100%">7</div><div style="line-height:100%">8</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">#define&nbsp;D_FLOAT_PTR&nbsp;float<span style="color:#33FFBA"></span><span style="color:#F1AD0B">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;#define을&nbsp;사용&nbsp;끝에&nbsp;세미콜론&nbsp;붙지&nbsp;않음에&nbsp;주의</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">typedef&nbsp;T_FLOAT_PTR&nbsp;float<span style="color:#33FFBA"></span><span style="color:#F1AD0B">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;typedef를&nbsp;사용</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:100%">{</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;D_FLOAT_PTR&nbsp;pDA,&nbsp;pDB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;float*&nbsp;pDA,&nbsp;float&nbsp;pDB&nbsp;의도치&nbsp;않은&nbsp;결과임</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;T_FLOAT_PTR&nbsp;pTA,&nbsp;pTB;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;float*&nbsp;pTA,&nbsp;float*&nbsp;pTB&nbsp;의도한&nbsp;</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    <p>
+                        · #define은 전처리기가 위 코드 예제의 경우 주석의 설명과 같이 처리하므로 문제가 발생한다. <br>
+                        · 따라서 데이터형의 대용 이름을 만들 때는 2가지 방법이 있지만 typedef를사용하는 것이 #define보다 좋으며, 위와 같은 코드 예제의 경우는 typedef가 유일한 선택이 되겠다.
+                    </p>
+                </div>
+                <div class = "h2-content">
                     <h2>제한자(storage class specifier)</h2>
                     <table class = "specifier" >
                         <tr>
-                           <th>이름</th>
-                           <th>설명</th>
+                            <th>이름</th>
+                            <th>설명</th>
                         </tr>
                         <tr>
                             <td class = "tag-dep">auto</td>
                             <td>
                                 <p>
-
+                                    
                                     · C++ 이전에는 어떤 변수가 자동 변수라는 선언에 사용되었음<br>
                                     · C++11 이후는 자동 변수의 선언에 사용
                                 </p>
@@ -337,18 +496,224 @@
                             </td>
                         </tr>
                     </table>
+                    <h2>lvalue, rvalue</h2>
+                    <p>
+                        · C부터 내려온 것으로 일반적으로 대입 연산자(=)의 피연산자 중 좌항을 lvalue 우항을 rvalue라고 한다. <br>
+                        · 틀린이야기는 아니나, 다른 관점에서 볼 필요가 있다.
+                    </p>
+                    </div>
+                    <div class = h3-content>
+                        <h3>C++에서 lvalue, rvalue란? </h3>
+                        <p> · lvalue는 메모리상에서 지속적인 주소를 가진 값이다. 즉, 변수인데 표현식(expression) 이후에도 없어지지 않는다. <br>
+                            · rvalue는 지속적인 메모리 주소와 관계 없는 값이다. 즉, 숫자나 표현식(2, x + 2 등...), 표현식 이후에는 사라지는 값이다.
+                        </p>
+                        <h3>rvalue 참조형</h3>
+                        <p>
+                            · 말 그대로 rvalue를 참조하는 데이터형이다. <br>
+                            · 엠퍼샌드(&) 연산자 2개를 이어쓴다. <br>
+                            · (코드 추가) int&& a = 3; // rvalue인 3을 참조 하지만 이렇게 쓰지 않는다. <br>
+                            · 클래스의 이동 생성자, 이동 대입 연산자에서 쓰인다. 뒤에 가서 더 자세히 다뤄보자. <br>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class = "content">
-                <h1>함수</h1>
-            </div>
-            <div class = "content">
-                <h1>클래스</h1>
+                <div class = "content">
+                    <h1>함수</h1>
+                    <p>
+                        · 프로그래머가 함수를 사용하려면 3가지를 반드시 해야한다. <br>
+                        <div class="content-blue">
+                            1. 함수 원형 제공 <br>
+                            2. 함수 정의 제공 <br>
+                            3. 함수 호출 <br>
+                        </div>
+                    </p>
+                    <div class = "h2-content">
+                        <h2>함수의 구조</h2>
+                        <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="line-height:100%">1</div><div style="line-height:100%">2</div><div style="line-height:100%">3</div><div style="line-height:100%">4</div><div style="line-height:100%">5</div><div style="line-height:100%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;sum(<span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;<span style="color:#05F6D5">int</span>&nbsp;b);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;함수의&nbsp;원형&nbsp;'반환형&nbsp;함수명(매개변수1,&nbsp;매개변수2);'&nbsp;의&nbsp;형태이다.&nbsp;</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;sum(<span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;<span style="color:#05F6D5">int</span>&nbsp;b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;함수의&nbsp;정의</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">{</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;a&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">+</span>&nbsp;b;</div><div style="padding:0 6px; white-space:pre; line-height:100%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    </div>
+                    <div class="h3-content">
+                        <h3>반환형</h3>
+                        <p>
+                            · 함수의 반환형이다. 크게 반환값이 있으면 반환하고자하는 데이터형, 없으면 void형을 적는다. 
+                        </p>
+                        <h3>함수명</h3>
+                        <p>
+                            · 함수의 이름으로 함수가 수행하는 기능에 중점을 맞추어 짓는것이 권장된다. 
+                        </p>
+                        <h3>매개변수</h3>
+                        <p>
+                            · 함수내에서 사용하는 변수로 있을 경우 변수 선언 처럼 '데이터형 변수명'의 형태로 작성하며 여러 개일 경우 콤마(,)를 작성한후 연속 작성한다. 
+                        </p>
+                    </div>
+                    <div class="h2-content">
+                        <h2>시그니처(signature)</h2>
+                        <p>
+                            · 컴파일러는 시그니처로 함수를 구분한다. <br>
+                            · 시그니처는 아래와 같다. <br>
+                            <div class="content-blue">
+                                · 함수 이름 <br>
+                                · 함수 반환형 <br>
+                                · 매개변수의 개수 <br>
+                                · 매개변수의 자료형
+                            </div>
+                        </p>
+                        <h2>함수 원형</h2>
+                        <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="line-height:100%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;sum(<span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;<span style="color:#05F6D5">int</span>&nbsp;b);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;함수&nbsp;원형</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                        <p>
+                            · 함수 원형은 하나의 구문으로 세미콜론(;)으로 끝나야 한다. <br>
+                            · C++에서는 함수 호철전에 필수로 작성해야만 한다. <br>
+                            · 매개 변수를 여러개 작성할 경우 , 로 분리한다. <a href = "#variable-declaration-sum">🔗변수 선언 결합</a>은 불가능하다. <br>
+                            <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="line-height:100%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;sum(<span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;b);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;불가능</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                            · 매개변수의 이름은 시그니처가 아니므로 생략할 수 있다. <br>
+                            <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;sum(<span style="color:#05F6D5">int</span>,&nbsp;<span style="color:#05F6D5">int</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;가능</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                        </p>
+                    </div>
+                    <div class="h3-content">
+                        <h3>함수 원형의 반환형</h3>
+                        <p>
+                            · 컴파일러에게 리턴값이 저장된 메모리를 몇 바이트를 읽고, 어떻게 해석할지 알려준다. <br>
+                            · 프로그래머에게는 '리턴값을 바르게 처리하니까 걱정하지마!' 를 보장해준다.
+                        </p>
+                        <h3>함수 원형의 매개변수 자료형</h3>
+                        <p>
+                            · 반환형과 같이 컴파일러에게 어떤 매개 변수를 가지는지 알려준다. <br>
+                            · 프로그래머에게는 '컴파일러가 정확한 갯수, 데이터형을 썼고 데이터형이 다르면 변환 가능하면 변환할게(자동 변환)' 를 보장해준다.
+                        </p>
+                    </div>
+                    <div class="h2-content">
+                        <h2>함수의 저장 공간, 생명 주기, 링크</h2>
+                        <p>
+                            · C++에서 함수는 다른 함수 안에 정의할 수 없다. 따라서 모든 함수는 <span class = "emphasis">정적 생명주기</span>이다. <br>
+                            · 함수는 디폴트가 <span class = "emphasis">외부 링크</span>를 가진다. 따라서 여러 파일에서 함수를 공유할 수 있다. <br>
+                            · 함수 원형에 extern 키워드를 붙이면 다른 파일에 정의되어있음을 나타낼 수 있으나 그것은 선택사항이다. <br>
+                            · <span class = "emphasis">static 키워드</span>를 함수 원형, 정의 둘 다 작성하면 <span class = "emphasis">내부 링크</span>가 부여된다. <br>
+                            · 내부 링크가 부여되면 같은 이름을 가지는 함수를 외부에서 정의할 수 있다. <br>
+                            · 파일 내부에서는 외부 같은 이름 함수를 무시하고 파일 내부의 정적 함수를 사용한다. <br>
+                            · 단일 정의 원칙에 의해 함수도 인라인이 아니면 프로그램 내에서 단 하나의 정의만 가져야한다. <br>
+                            · 인라인 함수는 단일 정의 원칙을 따르지 않는다. 따라서 헤더 파일에 인라인 함수 정의를 넣어도된다. <br>
+                            (#include 되면 각 파일에 그 코드가 복사되니까 결국 각 파일이 인라인 함수 정의를 가지게 됨)<br>
+                            · 프로그램의 코드 파일들 중 이 헤더 파일을 포함한다면 각각은 모두 인라인 함수 정의를 가지게되는 것이다. <br>
+                            · 그러나 C++은 특정 인라인 함수의 정의가 모두 동일해야함을 요구한다.
+                        </p>
+                        <h2>함수의 매개변수</h2>
+                        <table class = "function-param">
+                            <tr>
+                                <th>전달 방법</th>
+                                <th>설명</th>
+                            </tr>
+                            <tr>
+                                <td>pass by value</td>
+                                <td>
+                                    <p>
+                                        · 실인수(인수)는 값이고, 그 값이 가인수(매개변수)에 할당되어 함수에 전달
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pass by address</td>
+                                <td>
+                                    <p>
+                                        · 실인수(인수)는 주소이고, 그 주소값이 가인수(매개변수)에 할당되어 함수에 전달 <br>
+                                        · 즉, 값으로 전달인데 그 값이 주소임 <br>
+                                        · 메모리의 주소가 가인수에 할당되므로 실인수와 가인수가 서로 연결 <br>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pass by reference</td>
+                                <td>
+                                    <p>
+                                        · 실인수(인수)는 변수(l-value)이고, 그 변수는 가인수(매개변수)가 참조하여 함수에 전달 <br>
+                                        · <span class = "keyword">pass by const reference</span>: 참조로 전달하지만 함수안에서 변경을 하기 싫다면 이걸 사용
+                                    </p>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pass by function</td>
+                                <td>
+                                    <!-- https://mynameisdabin.tistory.com/17 -->
+                                    <p>
+                                        · <span class = "keyword">function pointer를 전달</span><br>
+                                        · 반환형(*함수 포인터명)(매개변수1 데이터형, 매개변수2 데이터형...)의 형식
+                                        <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">반환형식(<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>포인터&nbsp;변수명)(매개변수1&nbsp;데이터형,&nbsp;매개변수2&nbsp;테이터형,&nbsp;...);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3">#include</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>iostream<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;sum(<span style="color:#4be6fa">int</span>&nbsp;a,&nbsp;<span style="color:#4be6fa">int</span>&nbsp;b)</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;a&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>&nbsp;b;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;multi(<span style="color:#4be6fa">int</span>&nbsp;a,&nbsp;<span style="color:#4be6fa">int</span>&nbsp;b)</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;a&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>&nbsp;b;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;calc(<span style="color:#4be6fa">int</span>(<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>func_fp)(<span style="color:#4be6fa">int</span>,&nbsp;<span style="color:#4be6fa">int</span>),&nbsp;<span style="color:#4be6fa">int</span>&nbsp;a,&nbsp;<span style="color:#4be6fa">int</span>&nbsp;b)&nbsp;<span style="color:#999999">//&nbsp;함수&nbsp;포인터를&nbsp;매개변수로&nbsp;사용</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;func_fp(a,&nbsp;b);&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">int</span>(<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>sum_fp)(<span style="color:#4be6fa">int</span>,&nbsp;<span style="color:#4be6fa">int</span>)&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;sum;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">int</span>(<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span>mul_fp)(<span style="color:#4be6fa">int</span>,&nbsp;<span style="color:#4be6fa">int</span>)&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;multi;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;calc(sum_fp,&nbsp;<span style="color:#c10aff">1</span>,&nbsp;<span style="color:#c10aff">2</span>)&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;&nbsp;<span style="color:#999999">//&nbsp;3</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;calc(mul_fp,&nbsp;<span style="color:#c10aff">2</span>,&nbsp;<span style="color:#c10aff">3</span>)&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;&nbsp;<span style="color:#999999">//&nbsp;6</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                        · <span class = "keyword">Functor(=함수 객체)를 전달</span><br>
+                                        · 함수 객체란 클래스 객체 자체를 함수처럼 사용하는 것
+                                        <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3">#include</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>iostream<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">using</span>&nbsp;<span style="color:#ff3399">namespace</span>&nbsp;<span style="color:#4be6fa">std</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">class</span>&nbsp;Hello</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">public</span>:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">operator</span>()()&nbsp;{&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#ffd500">"Hello"</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>&nbsp;}&nbsp;<span style="color:#999999">//&nbsp;연산자&nbsp;'()'&nbsp;오버로딩1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">operator</span>()(<span style="color:#ff3399">const</span>&nbsp;<span style="color:#4be6fa">char</span><span style="color:#ff3399">*</span>&nbsp;toWho&nbsp;)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#ffd500">"Hello&nbsp;"</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;toWho&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;&nbsp;}&nbsp;<span style="color:#999999">//&nbsp;연산자&nbsp;'()'&nbsp;오버로딩2</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">};</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:130%">{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;Hello&nbsp;hello;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;hello()&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;&nbsp;<span style="color:#999999">//&nbsp;Hello&nbsp;클래스&nbsp;객체&nbsp;hello를&nbsp;오버로딩한&nbsp;연산자&nbsp;'()'를&nbsp;사용하여&nbsp;함수처럼&nbsp;사용&nbsp;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;객체를&nbsp;함수처럼&nbsp;사용한다고&nbsp;하여&nbsp;함수&nbsp;객체라고&nbsp;함</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">cout</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;hello(<span style="color:#ffd500">"My&nbsp;Friend"</span>)&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span>&nbsp;<span style="color:#4be6fa">endl</span>;&nbsp;<span style="color:#999999">//&nbsp;Hello&nbsp;My&nbsp;Friend</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                        · <span class = "keyword">Lamda(= 람다 표현식)를 전달</span><br>
+                                        · <span class = "keyword">function&lt;T&gt;를 전달</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pass by array</td>
+                                <td>
+                                    <p>
+                                        · C++은 배열 이름을 '배열의 첫번 째 원소의 주소'로 인식<br>
+                                        · 매개 변수로 typename arr[]혹은 typename* arr의 형태로 작성하고, 배열의 크기를 넘겨주면 됨<br>
+                                        · 배열 첫 원소의 포인터가 전달되므로 함수 내에서 원본을 보호하고 싶다면 const를 앞에 붙이면 됨<br>
+                                        · 포인터이기 때문에 배열의 크기를 보내는 것이 아니므로, 크기를 따로 넘겨주거나, STL의 알고리즘 처럼 배열의 시작 끝을 포인터로 전달하기도함. <br>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>함수 객체(Functor)</h2>
+                        <p>
+                            · 클래스 객체를 마치 함수의 형태로 사용한다고 하여 함수 객체라고 함<br>
+                        </p>
+                        <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">#include&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#FD0AAC">iostream</span><span style="color:#F1AD0B">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">using</span>&nbsp;<span style="color:#05F6D5">namespace</span>&nbsp;std;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">class&nbsp;Hello</div><div style="padding:0 6px; white-space:pre; line-height:100%">{</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">public:</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;operator()()&nbsp;{&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;<span style="color:#A5F112">"Hello"</span>&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl&nbsp;}	<span style="color:#B0B0B0">//&nbsp;연산자&nbsp;'()'&nbsp;오버로딩1</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;operator()(const&nbsp;<span style="color:#05F6D5">char</span><span style="color:#F1AD0B">*</span>&nbsp;toWho&nbsp;)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;<span style="color:#A5F112">"Hello&nbsp;"</span>&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;toWho&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;&nbsp;}	<span style="color:#B0B0B0">//&nbsp;연산자&nbsp;'()'&nbsp;오버로딩2</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">};</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:100%">{</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;Hello&nbsp;hello;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;hello()&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;		<span style="color:#B0B0B0">//&nbsp;Hello&nbsp;클래스&nbsp;객체&nbsp;hello를&nbsp;오버로딩한&nbsp;연산자&nbsp;'()'를&nbsp;사용하여&nbsp;함수처럼&nbsp;사용</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;hello(<span style="color:#A5F112">"My&nbsp;Friend"</span>)&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;		<span style="color:#B0B0B0">//&nbsp;객체를&nbsp;함수처럼&nbsp;사용한다고&nbsp;하여&nbsp;함수&nbsp;객체라고&nbsp;함,&nbsp;출력&nbsp;결과:&nbsp;Hello&nbsp;My&nbsp;Friend</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">}</div></pre><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                        <h2>람다(Lamda)</h2>
+                        <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">[캡처&nbsp;변수]&nbsp;(매개변수)&nbsp;mutable&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">-</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&gt;</span>&nbsp;반환형&nbsp;{&nbsp;함수내용&nbsp;};</div></pre></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    </div>
+                    <div class="h3-content">
+                        <h3>[캡처 변수]</h3>
+                        <p>
+                            · 람다 밖의 변수를 말 그대로 캡처하여 람다 안에서 사용<br>
+                            · 캡처할 밖의 변수명과 동일해야함<br>
+                            · 캡처할 밖의 변수가 없으면 []로 적어야함 []가 람다의 시작을 알림<br>
+                        </p>
+                        <h3>(매개 변수)</h3>
+                        <p>
+                            · 람다 안에서 사용하는 파라미터<br>
+                        </p>
+                        <h3>mutable</h3>
+                        <p>
+                            · <span class="emphasis">생략 가능</span><br>
+                            · [캡처 변수]안의 변수는 람다 외부 변수이므로 읽기 전용이 됨<br>
+                            · 따라서 람다 안에서 캡처 변수에 값을 대입하지 못함<br>
+                            · mutable은 2가지 기능을 제공함<br>
+                            <div class="content-blue">
+                                · 1. 람다안에서 캡처 변수가 복제됨, 그래서 읽기 쓰기는 가능하나, 밖의 변수에는 영향이 없음, 즉 일반 함수의 값으로 전달과 같음<br>
+                                · 2. <span class="keyword">클로저 변수</span>: 캡처 변수가 복제되고 람다가 종료되도 복제된 캡처변수는 '람다 내부에서만은' 그 값이 유지됨<br>
+                            </div>
+                        </p>
+                        <h3>-> 반환형</h3>
+                        <p>
+                            · <span class="emphasis">생략 가능</span><br>
+                            · void, 반환 데이터형 둘 중 하나를 적으며, 반환 데이터형이 있어도 생략가능하며, 알아서 추론함<br>
+                        </p>
+                        <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">#include&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#FD0AAC">iostream</span><span style="color:#F1AD0B">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">using</span>&nbsp;<span style="color:#05F6D5">namespace</span>&nbsp;std;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:100%">{</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#05F6D5">int</span>&nbsp;num1&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;<span style="color:#C302ED">2</span>;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#05F6D5">int</span>&nbsp;num2&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;<span style="color:#C302ED">3</span>;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;auto&nbsp;sum_l1&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;[](<span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;<span style="color:#05F6D5">int</span>&nbsp;b)<span style="color:#33FFBA"></span><span style="color:#F1AD0B">-</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&gt;</span><span style="color:#05F6D5">int</span>&nbsp;{&nbsp;return&nbsp;a&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">+</span>&nbsp;b;&nbsp;};</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//auto&nbsp;sum_l2&nbsp;=&nbsp;[num1](int&nbsp;a)&nbsp;{&nbsp;num1&nbsp;+=&nbsp;a;&nbsp;}	//&nbsp;오류&nbsp;num1은&nbsp;읽기&nbsp;전용이므로&nbsp;값&nbsp;할당&nbsp;불가</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;auto&nbsp;m_sum_l2&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;[num1](<span style="color:#05F6D5">int</span>&nbsp;a)&nbsp;mutable&nbsp;{&nbsp;num1&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">+</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;a;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;num1&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;&nbsp;};		<span style="color:#B0B0B0">//&nbsp;가능&nbsp;mutable&nbsp;키워드가&nbsp;num1을&nbsp;복제하여&nbsp;람다에&nbsp;전달,&nbsp;복제된&nbsp;num1는&nbsp;값&nbsp;할당&nbsp;가능,&nbsp;람다가&nbsp;종료되어도&nbsp;'람다&nbsp;내부에서만'&nbsp;그&nbsp;값이&nbsp;유지</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;auto&nbsp;sum_l3&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;[<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&amp;</span>num2](<span style="color:#05F6D5">int</span>&nbsp;a)&nbsp;{&nbsp;num2&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">+</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;a;&nbsp;};	<span style="color:#B0B0B0">//&nbsp;캡처&nbsp;참조&nbsp;변수,&nbsp;참조형&nbsp;이므로&nbsp;람다&nbsp;내부에서&nbsp;캡처&nbsp;변수로&nbsp;외부&nbsp;변수의&nbsp;값&nbsp;변경&nbsp;가능</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;sum_l1(<span style="color:#C302ED">1</span>,&nbsp;<span style="color:#C302ED">2</span>)&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;	<span style="color:#B0B0B0">//&nbsp;3</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;m_sum_l2(<span style="color:#C302ED">1</span>);	<span style="color:#B0B0B0">//&nbsp;3</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;m_sum_l2(<span style="color:#C302ED">2</span>);	<span style="color:#B0B0B0">//&nbsp;5</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;sum_l3(<span style="color:#C302ED">7</span>);</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;num2&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;	<span style="color:#B0B0B0">//&nbsp;10</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">}</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div></pre><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                        <h3>활용</h3>
+                        <p>
+                            · STL 라이브러리와 함께 사용<br>
+                        </p>
+                    </div>
+                    <div class="h2-content">
+                        <h2>function&lt;T&gt;</h2>
+                        <p>
+                            · #include <functional>에 존재<br>
+                            · 템플릿이라서 거의 모든 종류의 함수를 담을 수 있음<br>
+                        </p>
+                        <div class="colorscripter-code" style="color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#222222;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#FEFEFE;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:100%"><div style="padding:0 6px; white-space:pre; line-height:100%">#include&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#FD0AAC">iostream</span><span style="color:#F1AD0B">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">#include&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>functional<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&gt;</span>&nbsp;<span style="color:#B0B0B0">//&nbsp;추가</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">using</span>&nbsp;<span style="color:#05F6D5">namespace</span>&nbsp;std;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">class&nbsp;Hello&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">{</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">public:</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#05F6D5">void</span>&nbsp;operator()()&nbsp;{&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;<span style="color:#A5F112">"Hello"</span>&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#05F6D5">void</span>&nbsp;operator()(const&nbsp;<span style="color:#05F6D5">char</span><span style="color:#F1AD0B">*</span>&nbsp;toWho)&nbsp;{&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;<span style="color:#A5F112">"Hello&nbsp;"</span>&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;toWho&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">};</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">void</span>&nbsp;Hello()&nbsp;{&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;<span style="color:#A5F112">"Hello!"</span>&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%"><span style="color:#05F6D5">int</span>&nbsp;main()</div><div style="padding:0 6px; white-space:pre; line-height:100%">{&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;func1&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;[](<span style="color:#05F6D5">int</span>&nbsp;a,&nbsp;<span style="color:#05F6D5">int</span>&nbsp;b){&nbsp;return&nbsp;a&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">+</span>&nbsp;b;&nbsp;};&nbsp;<span style="color:#B0B0B0">//&nbsp;람다&nbsp;표현식&nbsp;할당</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;func2&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;Hello;&nbsp;<span style="color:#B0B0B0">//&nbsp;함수&nbsp;주소&nbsp;할당</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;func3&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">=</span>&nbsp;hello();&nbsp;<span style="color:#B0B0B0">//&nbsp;펑크터&nbsp;할당</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;func1(<span style="color:#C302ED">1</span>,&nbsp;<span style="color:#C302ED">2</span>)&nbsp;<span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span><span style="color:#33FFBA"></span><span style="color:#F1AD0B">&lt;</span>&nbsp;endl;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;3</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;func2();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;&nbsp;Hello!</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;&nbsp;&nbsp;&nbsp;func3();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#B0B0B0">//&nbsp;Hello</span></div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:100%">}</div><div style="padding:0 6px; white-space:pre; line-height:100%">&nbsp;</div></pre><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                    </div>
+                </div>
+                <div class = "content">
+                    <h1>클래스</h1>
+                </div>
             </div>
         </div>
         <div class = "footer">
-        <!-- 여기는 홈페이지의 저작권등의 정보가 오는 자리입니다.  -->
+            <!-- 여기는 홈페이지의 저작권등의 정보가 오는 자리입니다.  -->
         </div>
+    </div>
 </body>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src = "../js/common.js" type = "module"></script>

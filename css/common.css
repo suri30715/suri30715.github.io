@@ -15,9 +15,9 @@
     --content-blue-left-border-color: blue;
     --content-yellow-background-color: 255, 215, 0;
     --content-yellow-left-border-color: yellow;
-    --keyword-color: 255, 115, 0;
+    --emphasis-color: 255, 115, 0;
     --paragraph-interval: 10px;
-    --paragraph-font-size: 0.8em;
+    --paragraph-font-size: 0.95em;
 }
 
 * 
@@ -224,7 +224,7 @@ figcaption
 .keyword
 {
     font-weight: bold;
-    color: rgba(var(--keyword-color), var(--alpha-non-transparency));
+    color: brown
 }
 
 .ref, .formula
@@ -262,16 +262,22 @@ th
     color: white;
     text-align: left;
     padding: 5px;
-    font-size: 0.8em;
+    font-size: 0.95em;
 }
 
 td
 {
     padding: 5px;
-    font-size: 0.85em;
+    font-size: 0.9em;
 }
 
 li
 {
     list-style-type: none;
+}
+
+.emphasis
+{
+    color: rgba(var(--emphasis-color), var(--alpha-non-transparency));
+    font-weight: bold;
 }
