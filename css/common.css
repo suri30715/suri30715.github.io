@@ -8,7 +8,7 @@
     --alpha-transparency: 0.2;
     --content-border-radius: 8px;
     --content-border-left-width: 3px;
-    --content-interval: 10px;
+    --content-interval: 10px; 
     --content-red-background-color: 255, 45, 0;
     --content-red-left-border-color: red;
     --content-blue-background-color: 0, 150, 255;
@@ -18,6 +18,8 @@
     --emphasis-color: 255, 115, 0;
     --paragraph-interval: 10px;
     --paragraph-font-size: 0.95em;
+
+    --paragraph-small-font-size: 0.5em;
 }
 
 * 
@@ -57,61 +59,370 @@ body
     margin: 0;
 }
 
-.layout
+/* 가로 넓이 1200 px 이상 레이아웃 */
+@media all and (min-width: 1200px)
 {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(10%, auto));
-    grid-template-rows: repeat(auto-fill, minmax(10%, auto)); */
-    /* grid-template-columns: 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr; */
+    .layout
+    {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fill, minmax(10%, auto));
+        grid-template-rows: repeat(auto-fill, minmax(10%, auto)); */
+        /* grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-rows: 1fr, 1fr, 1fr; */
 
-    /* grid-template-areas:
-    "header header header"
-    "sidebar section section"
-    "sidebar section section"
-    "footer footer footer"; */
-    grid-template-columns: repeat(32, 1fr);
+        /* grid-template-areas:
+        "header header header"
+        "sidebar section section"
+        "sidebar section section"
+        "footer footer footer"; */
+        grid-template-columns: repeat(32, 1fr);
+    }
 
+    .header
+    {
+        /* grid-area: header; */
+        position: sticky;
+        top: 0;
+        /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
+        background-color: white;
+        grid-column: 1/35;
+        border-bottom: solid gainsboro;
+        padding: 7px;
+        z-index: 1;
+    }
+
+    /* #small-sidebar
+    {
+        visibility: hidden;
+    } */
+
+    .sidebar
+    {
+        /* grid-area: sidebar; */
+        border-right: solid gainsboro;
+        position: sticky;
+        top: 0;
+        /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
+        height: 100vh;
+        grid-column: 1/9;
+        /* https://rgy0409.tistory.com/4997 */
+        overflow-y: auto;
+
+        padding: 15px;
+    }
+
+    .section
+    {
+        /* grid-area: section; */
+        grid-column: 10/32;
+        margin: 30px;
+    }
+
+    .footer
+    {
+        grid-area: footer;
+    }
+
+    img
+    {
+        /*중앙 정렬 https://www.freecodecamp.org/korean/news/how-to-center-an-image-in-css/*/
+        display:block;
+    }
+
+    .h2-content
+    {
+        margin-left: 30px;
+    }
+
+    .h3-content
+    {
+        margin-left: 60px;
+    }
+
+    .h4-content
+    {
+        margin-left: 90px;
+    }
+
+    .h5-content
+    {
+        margin-left: 120px;
+    }
+
+    .h6-content
+    {
+        margin-left: 150px;
+    }
+
+    h1, h2
+    {
+        text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6
+    {
+        font-weight: bold;
+    }
+
+    p
+    {
+        font-size: var(--paragraph-font-size);
+        margin: var(--paragraph-interval) var(--paragraph-interval);
+    }
+
+    a
+    {
+        text-decoration: none;
+        color:#0062ff;
+        font-weight: bold;
+    }
+
+    a:hover
+    {
+        text-decoration: underline;
+    }
+
+    img
+    {
+        display: block;
+        margin: auto;
+    }
+
+    figcaption
+    {
+        text-align: center;
+        font-weight: lighter;
+        font-size: 0.5em;
+    }
+
+    .keyword
+    {
+        font-weight: bold;
+        color: brown
+    }
+
+    .ref, .formula
+    {
+        color: white;
+        font-size: 0.9em;
+        background-color:cadetblue;
+        border-radius: 5px;
+        padding: 1px 5px 3px 5px;
+    }
+
+    .ref
+    {
+        background-color:cadetblue;
+    }
+
+    .formula
+    {
+        background-color: rgb(224, 75, 75);
+    }
+
+    table, th, td
+    {
+        border: 1px solid #c0c0c0;
+        border-collapse: collapse;
+    }
+
+    th
+    {
+        background-color: rgb(152, 152, 152);
+    }
+
+    th
+    {
+        color: white;
+        text-align: left;
+        padding: 5px;
+        font-size: 0.95em;
+    }
+
+    td
+    {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    li
+    {
+        list-style-type: none;
+    }
+
+    .emphasis
+    {
+        color: rgba(var(--emphasis-color), var(--alpha-non-transparency));
+        font-weight: bold;
+    }
 }
 
-.header
+/* 가로 넓이 1200 px 미만 레이아웃 */
+@media all and (max-width: 1200px)
 {
-    /* grid-area: header; */
-    position: sticky;
-    top: 0;
-    /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
-    background-color: white;
-    grid-column: 1/33;
-    border-bottom: solid gainsboro;
-    padding: 7px;
-    z-index: 1;
-}
+    .header
+    {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        border-bottom: solid gainsboro;
+        padding: 7px;
+        z-index: 1;
+    }
 
-.sidebar
-{
-    /* grid-area: sidebar; */
-    border-right: solid gainsboro;
-    position: sticky;
-    top: 0;
-    /*이렇게 하면 position: fixed를 사용하지 않고 position: sticky를 쓰면서 grid까지 사용 가능*/
-    height: 100vh;
-    grid-column: 1/9;
-    /* https://rgy0409.tistory.com/4997 */
-    overflow-y: auto;
+    /* #small-sidebars
+    {
+        visibility: visible;
+    } */
 
-    padding: 15px;
-}
+    .sidebar
+    {
+        display: none;
+    }
 
-.section
-{
-    /* grid-area: section; */
-    grid-column: 10/32;
-    margin: 30px;
-}
+    .section
+    {
+        grid-column: 1/32;
+        margin: 30px;
+    }
 
-.footer
-{
-    grid-area: footer;
+    .footer
+    {
+        grid-area: footer;
+    }
+
+    img
+    {
+        /*중앙 정렬 https://www.freecodecamp.org/korean/news/how-to-center-an-image-in-css/*/
+        display:block;
+    }
+
+    .h3-content
+    {
+        margin-left: 5px;
+    }
+
+    .h4-content
+    {
+        margin-left: 10px;
+    }
+
+    .h5-content
+    {
+        margin-left: 15px;
+    }
+
+    .h6-content
+    {
+        margin-left: 20px;
+    }
+
+    h1, h2
+    {
+        text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6
+    {
+        font-weight: bold;
+    }
+
+    p
+    {
+        font-size: var(--paragraph-small-font-size);
+        margin: var(--paragraph-interval) var(--paragraph-interval);
+    }
+
+    table, .content-blue, .content-red, .content-yellow
+    {
+        font-size: 0.5em;
+    }
+
+    a
+    {
+        text-decoration: none;
+        color:#0062ff;
+        font-weight: bold;
+    }
+
+    a:hover
+    {
+        text-decoration: underline;
+    }
+
+    img
+    {
+        display: block;
+        margin: auto;
+    }
+
+    figcaption
+    {
+        text-align: center;
+        font-weight: lighter;
+        font-size: 0.5em;
+    }
+
+    .keyword
+    {
+        font-weight: bold;
+        color: brown
+    }
+
+    .ref, .formula
+    {
+        color: white;
+        font-size: 0.9em;
+        background-color:cadetblue;
+        border-radius: 5px;
+        padding: 1px 5px 3px 5px;
+    }
+
+    .ref
+    {
+        background-color:cadetblue;
+    }
+
+    .formula
+    {
+        background-color: rgb(224, 75, 75);
+    }
+
+    table, th, td
+    {
+        border: 1px solid #c0c0c0;
+        border-collapse: collapse;
+    }
+
+    th
+    {
+        background-color: rgb(152, 152, 152);
+    }
+
+    th
+    {
+        color: white;
+        text-align: left;
+        padding: 5px;
+        font-size: 0.95em;
+    }
+
+    td
+    {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    li
+    {
+        list-style-type: none;
+    }
+
+    .emphasis
+    {
+        color: rgba(var(--emphasis-color), var(--alpha-non-transparency));
+        font-weight: bold;
+    }
 }
 
 .content
@@ -149,135 +460,3 @@ body
     border-left: solid rgba(var(--content-yellow-background-color), var(--alpha-non-transparency));
 }
 
-img
-{
-    /*중앙 정렬 https://www.freecodecamp.org/korean/news/how-to-center-an-image-in-css/*/
-    display:block;
-}
-
-.h2-content
-{
-    margin-left: 30px;
-}
-
-.h3-content
-{
-    margin-left: 60px;
-}
-
-.h4-content
-{
-    margin-left: 90px;
-}
-
-.h5-content
-{
-    margin-left: 120px;
-}
-
-.h6-content
-{
-    margin-left: 150px;
-}
-
-h1, h2
-{
-    text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, h6
-{
-    font-weight: bold;
-}
-
-p
-{
-    font-size: var(--paragraph-font-size);
-    margin: var(--paragraph-interval) var(--paragraph-interval);
-}
-
-a
-{
-    text-decoration: none;
-    color:#0062ff;
-    font-weight: bold;
-}
-
-a:hover
-{
-    text-decoration: underline;
-}
-
-img
-{
-    display: block;
-    margin: auto;
-}
-
-figcaption
-{
-    text-align: center;
-    font-weight: lighter;
-    font-size: 0.5em;
-}
-
-.keyword
-{
-    font-weight: bold;
-    color: brown
-}
-
-.ref, .formula
-{
-    color: white;
-    font-size: 0.9em;
-    background-color:cadetblue;
-    border-radius: 5px;
-    padding: 1px 5px 3px 5px;
-}
-
-.ref
-{
-    background-color:cadetblue;
-}
-
-.formula
-{
-    background-color: rgb(224, 75, 75);
-}
-
-table, th, td
-{
-    border: 1px solid #c0c0c0;
-    border-collapse: collapse;
-}
-
-th
-{
-    background-color: rgb(152, 152, 152);
-}
-
-th
-{
-    color: white;
-    text-align: left;
-    padding: 5px;
-    font-size: 0.95em;
-}
-
-td
-{
-    padding: 5px;
-    font-size: 0.9em;
-}
-
-li
-{
-    list-style-type: none;
-}
-
-.emphasis
-{
-    color: rgba(var(--emphasis-color), var(--alpha-non-transparency));
-    font-weight: bold;
-}
