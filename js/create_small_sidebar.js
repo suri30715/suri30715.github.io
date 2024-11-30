@@ -6,18 +6,18 @@ function init()
 function getTitleSmall()
 {
     const content2List = document.querySelectorAll(".content");
-    const index = document.querySelector("#index");
+    const index = document.querySelector("#small-sidebar-index");
     var content2HList = [];
     const divisionList = new Array(content2List.length);
     
-    document.getElementById("count").innerHTML = "contents " + content2List.length;
+    document.getElementById("small-sidebar-count").innerHTML = "contents " + content2List.length;
 
     for(let i = 0; i < content2List.length; i++)
     {
         content2HList = content2List[i].querySelectorAll("h1, h2, h3, h4, h5, h6");
 
         divisionList[i] = document.createElement("div");
-        divisionList[i].setAttribute("class", "division");
+        divisionList[i].setAttribute("class", "small-sidebar-division");
         index.appendChild(divisionList[i]);
 
         if(content2HList)
@@ -27,42 +27,42 @@ function getTitleSmall()
                 if(content2HList[j].tagName == "H1")
                 {
                    var c = document.createElement("div");
-                   c.setAttribute("class", "one");
+                   c.setAttribute("class", "small-sidebar-one");
                    c.innerHTML = content2HList[j].textContent;
                    divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H2")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "two");
+                    c.setAttribute("class", "small-sidebar-two");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H3")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "three");
+                    c.setAttribute("class", "small-sidebar-three");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H4")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "four");
+                    c.setAttribute("class", "small-sidebar-four");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H5")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "five");
+                    c.setAttribute("class", "small-sidebar-five");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
                 if(content2HList[j].tagName == "H6")
                 {
                     var c = document.createElement("div");
-                    c.setAttribute("class", "six");
+                    c.setAttribute("class", "small-sidebar-six");
                     c.innerHTML = content2HList[j].textContent;
                     divisionList[i].appendChild(c);
                 }
@@ -71,7 +71,7 @@ function getTitleSmall()
     }
 
     // 목차의 내용 클릭시 해당 위치로 스크롤
-    const indexList = document.querySelectorAll(".one, .two, .three, .four, .five, .six");
+    const indexList = document.querySelectorAll(".small-sidebar-one, .small-sidebar-two, .small-sidebar-three, .small-sidebar-four, .small-sidebar-five, .small-sidebar-six");
     const hList = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
     
     for(let i = 0; i < indexList.length; i++)
