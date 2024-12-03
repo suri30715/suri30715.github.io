@@ -33,3 +33,9 @@ h2
     background-color: rgb(152, 152, 152);
     color: white;
 }
+
+
+li
+{
+    list-style-type: none;
+}

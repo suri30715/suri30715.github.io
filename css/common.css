@@ -245,11 +245,6 @@ body
         font-size: 0.9em;
     }
 
-    li
-    {
-        list-style-type: none;
-    }
-
     .emphasis
     {
         color: rgba(var(--emphasis-color), var(--alpha-non-transparency));
